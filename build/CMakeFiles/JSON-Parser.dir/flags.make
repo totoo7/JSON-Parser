@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/g++
 CXX_DEFINES = 
 
-CXX_INCLUDES = 
+CXX_INCLUDES = -I/home/totoo/Documents/OOP_2024/JSON-Parser/include/controllers -I/home/totoo/Documents/OOP_2024/JSON-Parser/include/services -I"/home/totoo/Documents/OOP_2024/JSON-Parser/include/view>"
 
 CXX_FLAGS = -g
 

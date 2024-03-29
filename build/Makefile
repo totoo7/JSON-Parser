@@ -547,6 +547,54 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/JSON-Parser.dir/build.make CMakeFiles/JSON-Parser.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+src/controllers/controller.o: src/controllers/controller.cpp.o
+.PHONY : src/controllers/controller.o
+
+# target to build an object file
+src/controllers/controller.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/JSON-Parser.dir/build.make CMakeFiles/JSON-Parser.dir/src/controllers/controller.cpp.o
+.PHONY : src/controllers/controller.cpp.o
+
+src/controllers/controller.i: src/controllers/controller.cpp.i
+.PHONY : src/controllers/controller.i
+
+# target to preprocess a source file
+src/controllers/controller.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/JSON-Parser.dir/build.make CMakeFiles/JSON-Parser.dir/src/controllers/controller.cpp.i
+.PHONY : src/controllers/controller.cpp.i
+
+src/controllers/controller.s: src/controllers/controller.cpp.s
+.PHONY : src/controllers/controller.s
+
+# target to generate assembly for a file
+src/controllers/controller.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/JSON-Parser.dir/build.make CMakeFiles/JSON-Parser.dir/src/controllers/controller.cpp.s
+.PHONY : src/controllers/controller.cpp.s
+
+src/controllers/validator.o: src/controllers/validator.cpp.o
+.PHONY : src/controllers/validator.o
+
+# target to build an object file
+src/controllers/validator.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/JSON-Parser.dir/build.make CMakeFiles/JSON-Parser.dir/src/controllers/validator.cpp.o
+.PHONY : src/controllers/validator.cpp.o
+
+src/controllers/validator.i: src/controllers/validator.cpp.i
+.PHONY : src/controllers/validator.i
+
+# target to preprocess a source file
+src/controllers/validator.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/JSON-Parser.dir/build.make CMakeFiles/JSON-Parser.dir/src/controllers/validator.cpp.i
+.PHONY : src/controllers/validator.cpp.i
+
+src/controllers/validator.s: src/controllers/validator.cpp.s
+.PHONY : src/controllers/validator.s
+
+# target to generate assembly for a file
+src/controllers/validator.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/JSON-Parser.dir/build.make CMakeFiles/JSON-Parser.dir/src/controllers/validator.cpp.s
+.PHONY : src/controllers/validator.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -590,6 +638,12 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... src/controllers/controller.o"
+	@echo "... src/controllers/controller.i"
+	@echo "... src/controllers/controller.s"
+	@echo "... src/controllers/validator.o"
+	@echo "... src/controllers/validator.i"
+	@echo "... src/controllers/validator.s"
 .PHONY : help
 
 

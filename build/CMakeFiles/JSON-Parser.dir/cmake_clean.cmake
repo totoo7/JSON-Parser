@@ -1,6 +1,10 @@
 file(REMOVE_RECURSE
   "CMakeFiles/JSON-Parser.dir/main.cpp.o"
   "CMakeFiles/JSON-Parser.dir/main.cpp.o.d"
+  "CMakeFiles/JSON-Parser.dir/src/controllers/controller.cpp.o"
+  "CMakeFiles/JSON-Parser.dir/src/controllers/controller.cpp.o.d"
+  "CMakeFiles/JSON-Parser.dir/src/controllers/validator.cpp.o"
+  "CMakeFiles/JSON-Parser.dir/src/controllers/validator.cpp.o.d"
   "JSON-Parser"
   "JSON-Parser.pdb"
 )

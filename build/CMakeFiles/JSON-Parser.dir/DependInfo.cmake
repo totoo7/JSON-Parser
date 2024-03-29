@@ -9,6 +9,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/totoo/Documents/OOP_2024/JSON-Parser/main.cpp" "CMakeFiles/JSON-Parser.dir/main.cpp.o" "gcc" "CMakeFiles/JSON-Parser.dir/main.cpp.o.d"
+  "/home/totoo/Documents/OOP_2024/JSON-Parser/src/controllers/controller.cpp" "CMakeFiles/JSON-Parser.dir/src/controllers/controller.cpp.o" "gcc" "CMakeFiles/JSON-Parser.dir/src/controllers/controller.cpp.o.d"
+  "/home/totoo/Documents/OOP_2024/JSON-Parser/src/controllers/validator.cpp" "CMakeFiles/JSON-Parser.dir/src/controllers/validator.cpp.o" "gcc" "CMakeFiles/JSON-Parser.dir/src/controllers/validator.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

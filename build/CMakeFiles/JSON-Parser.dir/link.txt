@@ -1,1 +1,1 @@
-/usr/bin/g++ -g -rdynamic "CMakeFiles/JSON-Parser.dir/main.cpp.o" -o JSON-Parser 
+/usr/bin/g++ -g -rdynamic "CMakeFiles/JSON-Parser.dir/main.cpp.o" "CMakeFiles/JSON-Parser.dir/src/controllers/validator.cpp.o" "CMakeFiles/JSON-Parser.dir/src/controllers/controller.cpp.o" -o JSON-Parser 

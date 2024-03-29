@@ -83,17 +83,49 @@ CMakeFiles/JSON-Parser.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/JSON-Parser.dir/main.cpp.s"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/totoo/Documents/OOP_2024/JSON-Parser/main.cpp -o CMakeFiles/JSON-Parser.dir/main.cpp.s
 
+CMakeFiles/JSON-Parser.dir/src/controllers/validator.cpp.o: CMakeFiles/JSON-Parser.dir/flags.make
+CMakeFiles/JSON-Parser.dir/src/controllers/validator.cpp.o: /home/totoo/Documents/OOP_2024/JSON-Parser/src/controllers/validator.cpp
+CMakeFiles/JSON-Parser.dir/src/controllers/validator.cpp.o: CMakeFiles/JSON-Parser.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/totoo/Documents/OOP_2024/JSON-Parser/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/JSON-Parser.dir/src/controllers/validator.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/JSON-Parser.dir/src/controllers/validator.cpp.o -MF CMakeFiles/JSON-Parser.dir/src/controllers/validator.cpp.o.d -o CMakeFiles/JSON-Parser.dir/src/controllers/validator.cpp.o -c /home/totoo/Documents/OOP_2024/JSON-Parser/src/controllers/validator.cpp
+
+CMakeFiles/JSON-Parser.dir/src/controllers/validator.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/JSON-Parser.dir/src/controllers/validator.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/totoo/Documents/OOP_2024/JSON-Parser/src/controllers/validator.cpp > CMakeFiles/JSON-Parser.dir/src/controllers/validator.cpp.i
+
+CMakeFiles/JSON-Parser.dir/src/controllers/validator.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/JSON-Parser.dir/src/controllers/validator.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/totoo/Documents/OOP_2024/JSON-Parser/src/controllers/validator.cpp -o CMakeFiles/JSON-Parser.dir/src/controllers/validator.cpp.s
+
+CMakeFiles/JSON-Parser.dir/src/controllers/controller.cpp.o: CMakeFiles/JSON-Parser.dir/flags.make
+CMakeFiles/JSON-Parser.dir/src/controllers/controller.cpp.o: /home/totoo/Documents/OOP_2024/JSON-Parser/src/controllers/controller.cpp
+CMakeFiles/JSON-Parser.dir/src/controllers/controller.cpp.o: CMakeFiles/JSON-Parser.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/totoo/Documents/OOP_2024/JSON-Parser/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/JSON-Parser.dir/src/controllers/controller.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/JSON-Parser.dir/src/controllers/controller.cpp.o -MF CMakeFiles/JSON-Parser.dir/src/controllers/controller.cpp.o.d -o CMakeFiles/JSON-Parser.dir/src/controllers/controller.cpp.o -c /home/totoo/Documents/OOP_2024/JSON-Parser/src/controllers/controller.cpp
+
+CMakeFiles/JSON-Parser.dir/src/controllers/controller.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/JSON-Parser.dir/src/controllers/controller.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/totoo/Documents/OOP_2024/JSON-Parser/src/controllers/controller.cpp > CMakeFiles/JSON-Parser.dir/src/controllers/controller.cpp.i
+
+CMakeFiles/JSON-Parser.dir/src/controllers/controller.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/JSON-Parser.dir/src/controllers/controller.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/totoo/Documents/OOP_2024/JSON-Parser/src/controllers/controller.cpp -o CMakeFiles/JSON-Parser.dir/src/controllers/controller.cpp.s
+
 # Object files for target JSON-Parser
 JSON__Parser_OBJECTS = \
-"CMakeFiles/JSON-Parser.dir/main.cpp.o"
+"CMakeFiles/JSON-Parser.dir/main.cpp.o" \
+"CMakeFiles/JSON-Parser.dir/src/controllers/validator.cpp.o" \
+"CMakeFiles/JSON-Parser.dir/src/controllers/controller.cpp.o"
 
 # External object files for target JSON-Parser
 JSON__Parser_EXTERNAL_OBJECTS =
 
 JSON-Parser: CMakeFiles/JSON-Parser.dir/main.cpp.o
+JSON-Parser: CMakeFiles/JSON-Parser.dir/src/controllers/validator.cpp.o
+JSON-Parser: CMakeFiles/JSON-Parser.dir/src/controllers/controller.cpp.o
 JSON-Parser: CMakeFiles/JSON-Parser.dir/build.make
 JSON-Parser: CMakeFiles/JSON-Parser.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/totoo/Documents/OOP_2024/JSON-Parser/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable JSON-Parser"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/totoo/Documents/OOP_2024/JSON-Parser/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable JSON-Parser"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/JSON-Parser.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

@@ -1,8 +1,20 @@
 [
 {
   "directory": "/home/totoo/Documents/OOP_2024/JSON-Parser/build",
-  "command": "/usr/bin/g++   -g -o CMakeFiles/JSON-Parser.dir/main.cpp.o -c /home/totoo/Documents/OOP_2024/JSON-Parser/main.cpp",
+  "command": "/usr/bin/g++  -I/home/totoo/Documents/OOP_2024/JSON-Parser/include/controllers -I/home/totoo/Documents/OOP_2024/JSON-Parser/include/services -I\"/home/totoo/Documents/OOP_2024/JSON-Parser/include/view>\" -g -o CMakeFiles/JSON-Parser.dir/main.cpp.o -c /home/totoo/Documents/OOP_2024/JSON-Parser/main.cpp",
   "file": "/home/totoo/Documents/OOP_2024/JSON-Parser/main.cpp",
   "output": "CMakeFiles/JSON-Parser.dir/main.cpp.o"
+},
+{
+  "directory": "/home/totoo/Documents/OOP_2024/JSON-Parser/build",
+  "command": "/usr/bin/g++  -I/home/totoo/Documents/OOP_2024/JSON-Parser/include/controllers -I/home/totoo/Documents/OOP_2024/JSON-Parser/include/services -I\"/home/totoo/Documents/OOP_2024/JSON-Parser/include/view>\" -g -o CMakeFiles/JSON-Parser.dir/src/controllers/validator.cpp.o -c /home/totoo/Documents/OOP_2024/JSON-Parser/src/controllers/validator.cpp",
+  "file": "/home/totoo/Documents/OOP_2024/JSON-Parser/src/controllers/validator.cpp",
+  "output": "CMakeFiles/JSON-Parser.dir/src/controllers/validator.cpp.o"
+},
+{
+  "directory": "/home/totoo/Documents/OOP_2024/JSON-Parser/build",
+  "command": "/usr/bin/g++  -I/home/totoo/Documents/OOP_2024/JSON-Parser/include/controllers -I/home/totoo/Documents/OOP_2024/JSON-Parser/include/services -I\"/home/totoo/Documents/OOP_2024/JSON-Parser/include/view>\" -g -o CMakeFiles/JSON-Parser.dir/src/controllers/controller.cpp.o -c /home/totoo/Documents/OOP_2024/JSON-Parser/src/controllers/controller.cpp",
+  "file": "/home/totoo/Documents/OOP_2024/JSON-Parser/src/controllers/controller.cpp",
+  "output": "CMakeFiles/JSON-Parser.dir/src/controllers/controller.cpp.o"
 }
 ]

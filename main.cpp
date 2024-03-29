@@ -1,5 +1,4 @@
-#include <iostream>
-
+#include "controller.h"
 int main(int, char**){
-    std::cout << "Hello, from JSON-Parser!\n";
+    
 }

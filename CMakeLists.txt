@@ -4,7 +4,16 @@ project(JSON-Parser VERSION 0.1.0 LANGUAGES C CXX)
 include(CTest)
 enable_testing()
 
-add_executable(JSON-Parser main.cpp)
+set(sources 
+    main.cpp
+
+    src/controllers/validator.cpp
+    src/controllers/controller.cpp
+)
+
+add_executable(JSON-Parser ${sources})
+list(APPEND includePath "include/controllers" "include/services" "include/view")
+target_include_directories(${PROJECT_NAME} PUBLIC ${includePath}>)
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
