@@ -1,0 +1,8 @@
+[
+{
+  "directory": "/home/totoo/Documents/OOP_2024/JSON-Parser/build",
+  "command": "/usr/bin/g++   -g -o CMakeFiles/JSON-Parser.dir/main.cpp.o -c /home/totoo/Documents/OOP_2024/JSON-Parser/main.cpp",
+  "file": "/home/totoo/Documents/OOP_2024/JSON-Parser/main.cpp",
+  "output": "CMakeFiles/JSON-Parser.dir/main.cpp.o"
+}
+]
