@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Site BuildName="Linux-g++"
+	BuildStamp="20240330-0911-Experimental"
+	Name="totoo"
+	Generator="ctest-3.28.3"
+	CompilerName="/usr/bin/g++"
+	CompilerVersion="11.4.0"
+	OSName="Linux"
+	Hostname="totoo"
+	OSRelease="6.5.0-26-generic"
+	OSVersion="#26~22.04.1-Ubuntu SMP PREEMPT_DYNAMIC Tue Mar 12 10:22:43 UTC 2"
+	OSPlatform="x86_64"
+	Is64Bits="1"
+	VendorString="GenuineIntel"
+	VendorID="Intel Corporation"
+	FamilyID="6"
+	ModelID="140"
+	ProcessorCacheSize="6144"
+	NumberOfLogicalCPU="4"
+	NumberOfPhysicalCPU="2"
+	TotalVirtualMemory="2047"
+	TotalPhysicalMemory="7629"
+	LogicalProcessorsPerPhysical="2"
+	ProcessorClockFrequency="3800"
+	>
+	<Testing>
+		<StartDateTime>Mar 30 11:11 EET</StartDateTime>
+		<StartTestTime>1711789877</StartTestTime>
+		<TestList/>
+		<EndDateTime>Mar 30 11:11 EET</EndDateTime>
+		<EndTestTime>1711789877</EndTestTime>
+		<ElapsedMinutes>0</ElapsedMinutes>
+	</Testing>
+</Site>

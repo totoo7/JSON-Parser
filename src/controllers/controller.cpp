@@ -1,16 +1,27 @@
 #include "controller.h"
 
 void Controller::processUserInput(const string& userInput) {
-    if (!Validator::isValidCommand(userInput)) {
+    vector<string> userCommands = Validator::splitCommand(userInput, ' ');
+    string command = userCommands[0];
+    if (!Validator::isValidCommand(command)) {
         cerr << "Invalid command" << endl; 
         return;
     }
-    if (userInput == "open") {
-        //call for service
-    } else if (userInput == "close ") {
-        //call for service
+    if (command == "open") {
+
+    } else if (command == "close") {
+        //TODO
+    } else if (command == "save") {
+        //TODO
+    } else if (command == "saveas") {
+        //TODO
+    } else if (command == "exit") {
+        //TODO
     }
     //TODO etc
+}
+
+
     //?
     /*
     using CommandFunction = void (Controller::*)();
@@ -28,4 +39,3 @@ void Controller::processUserInput(const string& userInput) {
     }
     */
    //?
-}

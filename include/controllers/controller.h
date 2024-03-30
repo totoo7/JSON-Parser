@@ -3,5 +3,5 @@
 
 class Controller {
     public: 
-        void processUserInput(const string& userInput);
+        static void processUserInput(const string& userInput);
 };
