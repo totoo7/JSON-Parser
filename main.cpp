@@ -1,6 +1,6 @@
 #include "controller.h"
 int main(int, char**){
-    string balls;
-    getline(cin, balls);
-    Controller::processUserInput(balls);
+    string input;
+    getline(cin, input);
+    Controller::processUserInput(input);
 }

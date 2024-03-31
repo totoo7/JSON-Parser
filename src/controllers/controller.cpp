@@ -9,8 +9,6 @@ void Controller::processUserInput(const string& userInput) {
     }
     if (command == "open") {
 
-    } else if (command == "close") {
-        //TODO
     } else if (command == "save") {
         //TODO
     } else if (command == "saveas") {

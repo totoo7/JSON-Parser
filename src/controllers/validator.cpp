@@ -26,7 +26,6 @@ bool Validator::isValidCommand(const string& command) {
 }
 
 const vector<string> Validator::splitCommand(const string& command, char delimeter) {
-    if (command.empty()) return;
     vector<string> tokens;
     string token;
     int start = 0, end = 0;
