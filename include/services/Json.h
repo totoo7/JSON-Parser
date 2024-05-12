@@ -1,3 +1,6 @@
+#ifndef JSON_H
+#define JSON_H
+
 #include <iostream>
 #include <vector>
 #include <string>
@@ -24,3 +27,5 @@ public:
 protected:
     static size_t format_spaces;
 };
+
+#endif

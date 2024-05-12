@@ -1,5 +1,5 @@
 #include "controller.h"
-
+#include "JsonFactory.h"
 void Controller::processUserInput(const string& userInput) {
     vector<string> userCommands = Validator::splitCommand(userInput, ' ');
     string command = userCommands[0];
@@ -8,7 +8,7 @@ void Controller::processUserInput(const string& userInput) {
         return;
     }
     if (command == "open") {
-
+        JsonFactory::get().parseFile(userCommands[1]);
     } else if (command == "save") {
         //TODO
     } else if (command == "saveas") {

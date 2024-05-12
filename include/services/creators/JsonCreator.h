@@ -10,8 +10,3 @@ public:
 protected:
     string value;
 };
-
-namespace JsonParse
-{
-    string parseValue(const string& value, size_t& index);
-} 

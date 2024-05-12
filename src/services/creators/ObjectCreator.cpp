@@ -9,3 +9,5 @@ string ObjectCreator::removeCurlyBraces(const string& value) const {
     }
     return content;
 }
+
+static ObjectCreator creator;

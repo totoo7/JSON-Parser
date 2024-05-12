@@ -1,0 +1,14 @@
+#include "Json.h"
+
+class JsonPair {
+    public: 
+        JsonPair();
+        JsonPair(const Json* value);
+        JsonPair(const Json* value, const string& key);
+        JsonPair(const JsonPair& other);
+        JsonPair& operator=(const JsonPair& other);
+        ~JsonPair();
+    private:
+        Json* value;
+        string key;     
+};

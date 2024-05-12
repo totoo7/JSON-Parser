@@ -10,13 +10,17 @@ set(sources
     src/controllers/validator.cpp
     src/controllers/controller.cpp
     src/services/Json.cpp
+    src/services/JsonPair.cpp
     src/services/JsonFactory.cpp
     src/services/creators/JsonCreator.cpp
     src/services/creators/ObjectCreator.cpp
+    src/services/creators/StringCreator.cpp
+    src/services/children/JsonString.cpp
+
 )
 
 add_executable(JSON-Parser ${sources})
-list(APPEND includePath "include/controllers" "include/services/creators" "include/services" "include/view")
+list(APPEND includePath "include/controllers" "include/services/creators" "include/services/children" "include/services" "include/view")
 target_include_directories(${PROJECT_NAME} PUBLIC ${includePath}>)
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})

@@ -13,7 +13,7 @@ void JsonFactory::registerValidJson(const JsonCreator* rhs)
 
 Json* JsonFactory::parseValue(string content) const
 {
-    const char *nonWhitespaceChar = content.c_str();
+    const char* nonWhitespaceChar = content.c_str();
     while (std::isspace(*nonWhitespaceChar))
         ++nonWhitespaceChar;
 
