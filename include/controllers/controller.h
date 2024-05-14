@@ -1,7 +1,8 @@
 #pragma once
 #include "validator.h"
 
-class Controller {
-    public: 
-        static void processUserInput(const string& userInput);
+class Controller
+{
+public:
+    static void processUserInput(const string &userInput);
 };

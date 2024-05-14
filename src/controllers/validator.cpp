@@ -15,21 +15,25 @@ const vector<string> Validator::validCommands =
         "delete",
         "move",
         "save",
-        "saveas"
-    };
+        "saveas"};
 
-bool Validator::isValidCommand(const string& command) {
-    for (const auto& validCommand : validCommands) {
-        if (command == validCommand) return true;
+bool Validator::isValidCommand(const string &command)
+{
+    for (const auto &validCommand : validCommands)
+    {
+        if (command == validCommand)
+            return true;
     }
     return false;
 }
 
-const vector<string> Validator::splitCommand(const string& command, char delimeter) {
+const vector<string> Validator::splitCommand(const string &command, char delimeter)
+{
     vector<string> tokens;
     string token;
     int start = 0, end = 0;
-    while ((end = command.find(delimeter, start)) != string::npos) {
+    while ((end = command.find(delimeter, start)) != string::npos)
+    {
         token = command.substr(start, end - start);
         tokens.push_back(token);
         start = end + 1;
@@ -39,6 +43,7 @@ const vector<string> Validator::splitCommand(const string& command, char delimet
     return tokens;
 }
 
-const vector<string> Validator::getValidCommands() {
+const vector<string> Validator::getValidCommands()
+{
     return validCommands;
 }
