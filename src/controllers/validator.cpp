@@ -1,4 +1,4 @@
-#include "validator.h"
+#include "validator.hpp"
 
 const vector<string> Validator::validCommands =
     {

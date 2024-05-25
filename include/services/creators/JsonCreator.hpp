@@ -1,8 +1,8 @@
 #ifndef JSON_CREATOR_H
 #define JSON_CREATOR_H
 
-#include "Json.h"
-#include "JsonPair.h"
+#include "Json.hpp"
+#include "JsonPair.hpp"
 class JsonCreator
 {
 public:

@@ -1,4 +1,4 @@
-#include "StringCreator.h"
+#include "StringCreator.hpp"
 
 StringCreator::StringCreator() : JsonCreator("string") {}
 
@@ -9,14 +9,11 @@ Json *StringCreator::createJson(const string &value) const
 
 bool StringCreator::isString(const string &value) const
 {
-    if (value[0] == '"' && value[value.length() - 1] == '"')
-        return true;
-    return false;
+    return value[0] == '"' && value[value.length() - 1] == '"';
 }
 
 bool StringCreator::getValue(const string &object) const
 {
-    cout << object;
     return isString(object);
 }
 

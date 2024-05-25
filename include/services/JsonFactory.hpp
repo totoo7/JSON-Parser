@@ -4,7 +4,7 @@
 #include <iostream>
 #include <string>
 #include <fstream>
-#include "JsonCreator.h"
+#include "JsonCreator.hpp"
 using namespace std;
 
 class Json;

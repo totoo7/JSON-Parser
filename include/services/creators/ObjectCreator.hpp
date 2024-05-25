@@ -1,8 +1,8 @@
 #ifndef OBJECT_CREATOR_H
 #define OBJECT_CREATOR_H
 
-#include "JsonCreator.h"
-#include "JsonFactory.h"
+#include "JsonCreator.hpp"
+#include "JsonFactory.hpp"
 
 class ObjectCreator : public JsonCreator
 {

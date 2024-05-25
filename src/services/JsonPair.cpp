@@ -1,4 +1,4 @@
-#include "JsonPair.h"
+#include "JsonPair.hpp"
 
 JsonPair::JsonPair() : value(nullptr), key("") {}
 

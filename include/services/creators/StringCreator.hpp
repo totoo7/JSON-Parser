@@ -1,8 +1,8 @@
 #ifndef STRING_CREATOR_H
 #define STRING_CREATOR_H
 
-#include "JsonCreator.h"
-#include "JsonString.h"
+#include "JsonCreator.hpp"
+#include "JsonString.hpp"
 
 class StringCreator : public JsonCreator
 {

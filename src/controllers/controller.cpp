@@ -1,5 +1,5 @@
-#include "controller.h"
-#include "JsonFactory.h"
+#include "controller.hpp"
+#include "JsonFactory.hpp"
 void Controller::processUserInput(const string &userInput)
 {
     vector<string> userCommands = Validator::splitCommand(userInput, ' ');

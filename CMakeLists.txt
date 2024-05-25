@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.0.0)
+cmake_minimum_required(VERSION 3.5.0)
 project(JSON-Parser VERSION 0.1.0 LANGUAGES C CXX)
 
 include(CTest)
@@ -15,8 +15,15 @@ set(sources
     src/services/creators/JsonCreator.cpp
     src/services/creators/ObjectCreator.cpp
     src/services/creators/StringCreator.cpp
+    src/services/creators/BoolCreator.cpp
+    src/services/creators/FloatCreator.cpp
+    src/services/creators/IntCreator.cpp
+    src/services/creators/NullCreator.cpp
     src/services/children/JsonString.cpp
-
+    src/services/children/JsonInt.cpp
+    src/services/children/JsonBool.cpp
+    src/services/children/JsonFloat.cpp
+    src/services/children/JsonNull.cpp
 )
 
 add_executable(JSON-Parser ${sources})

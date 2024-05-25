@@ -1,4 +1,7 @@
-#include "Json.h"
+#ifndef JSON_STRING_H
+#define JSON_STRING_H
+
+#include "Json.hpp"
 
 class JsonString : public Json
 {
@@ -16,3 +19,5 @@ public:
 private:
   string value;
 };
+
+#endif

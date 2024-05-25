@@ -1,6 +1,6 @@
 #ifndef JSON_PAIR_H
 #define JSON_PAIR_H
-#include "Json.h"
+#include "Json.hpp"
 
 class JsonPair
 {

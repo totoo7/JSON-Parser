@@ -1,4 +1,4 @@
-#include "JsonFactory.h"
+#include "JsonFactory.hpp"
 
 JsonCreator::JsonCreator(const string &value) : value(value)
 {

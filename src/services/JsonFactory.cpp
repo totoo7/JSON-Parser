@@ -1,4 +1,4 @@
-#include "JsonFactory.h"
+#include "JsonFactory.hpp"
 
 JsonFactory &JsonFactory::get()
 {
@@ -17,8 +17,7 @@ Json *JsonFactory::parseValue(string content) const
     while (std::isspace(*nonWhitespaceChar))
         ++nonWhitespaceChar;
 
-    string value = content;
-    cout << value;
+    string value = nonWhitespaceChar;
     const JsonCreator *crt = getCreator(value);
     if (!crt)
     {

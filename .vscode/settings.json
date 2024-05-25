@@ -1,6 +1,16 @@
 {
     "makefile.extensionOutputFolder": "./.vscode",
     "files.associations": {
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "optional": "cpp",
+        "system_error": "cpp",
+        "array": "cpp",
+        "functional": "cpp",
+        "tuple": "cpp",
+        "type_traits": "cpp",
+        "utility": "cpp",
+        "string_view": "cpp",
+        "stdexcept": "cpp",
+        "new": "cpp"
     }
 }

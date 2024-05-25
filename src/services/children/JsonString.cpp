@@ -1,4 +1,4 @@
-#include "JsonString.h"
+#include "JsonString.hpp"
 
 JsonString::JsonString() : value("") {}
 

@@ -1,11 +1,9 @@
-#include "ObjectCreator.h"
+#include "ObjectCreator.hpp"
 ObjectCreator::ObjectCreator() : JsonCreator("object") {}
 
 bool ObjectCreator::getValue(const string &value) const
 {
-    if (value[0] == '{')
-        return true;
-    return false;
+    return value[0] == '{';
 }
 
 Json *ObjectCreator::createJson(const string &value) const
