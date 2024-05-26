@@ -19,11 +19,14 @@ set(sources
     src/services/creators/FloatCreator.cpp
     src/services/creators/IntCreator.cpp
     src/services/creators/NullCreator.cpp
+    src/services/creators/ArrayCreator.cpp
     src/services/children/JsonString.cpp
     src/services/children/JsonInt.cpp
     src/services/children/JsonBool.cpp
     src/services/children/JsonFloat.cpp
     src/services/children/JsonNull.cpp
+    src/services/children/JsonObject.cpp
+    src/services/children/JsonArray.cpp
 )
 
 add_executable(JSON-Parser ${sources})

@@ -3,6 +3,7 @@
 
 #include "JsonCreator.hpp"
 #include "JsonFactory.hpp"
+#include "JsonObject.hpp"
 
 class ObjectCreator : public JsonCreator
 {
