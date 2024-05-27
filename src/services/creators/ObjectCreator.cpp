@@ -8,10 +8,10 @@ bool ObjectCreator::getValue(const string &value) const
 
 Json *ObjectCreator::createJson(const string &value) const
 {
-    string content = removeCurlyBraces(value);
+    string content = JsonCreator::removeDelimeters(value, '[', ']');
     return parseObject(value);
 }
-// the fuck is going on
+
 string parseValue(const string &value, size_t &index)
 {
     string newValue;
@@ -106,23 +106,12 @@ Json *ObjectCreator::parseObject(const string &value) const
             continue;
 
         Json *json = JsonFactory::get().parseValue(element);
-        if (json)
+        if (json) {
             pair.push_back({json, key});
+        }
         delete json;
     }
-    return nullptr;
-    // return jsonobject(pair)
-}
-string ObjectCreator::removeCurlyBraces(const string &value) const
-{
-    size_t startPos = value.find("{");
-    size_t endPos = value.find("}");
-    string content;
-    if (startPos != string::npos && endPos != string::npos)
-    {
-        content = value.substr(startPos + 1, endPos - startPos - 1);
-    }
-    return content;
+    return new JsonObject(pair);
 }
 
 string ObjectCreator::parseObjectKey(const string &value, size_t &index) const
@@ -152,7 +141,6 @@ string ObjectCreator::parseObjectKey(const string &value, size_t &index) const
     {
         index++;
     }
-
     return key;
 }
 

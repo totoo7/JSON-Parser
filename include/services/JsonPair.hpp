@@ -10,6 +10,7 @@ public:
     JsonPair(const Json *value, const string &key);
     JsonPair(const JsonPair &other);
     JsonPair &operator=(const JsonPair &other);
+    void print() const;
     ~JsonPair();
 
 private:

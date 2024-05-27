@@ -14,7 +14,6 @@ public:
     ~ArrayCreator() = default;
 
 private:
-    string removeSquareBraces(const string &value) const;
     Json *parseArray(const string &value) const;
 };
 

@@ -13,11 +13,7 @@ void JsonFactory::registerValidJson(const JsonCreator *rhs)
 
 Json *JsonFactory::parseValue(string content) const
 {
-    const char *nonWhitespaceChar = content.c_str();
-    while (std::isspace(*nonWhitespaceChar))
-        ++nonWhitespaceChar;
-
-    string value = nonWhitespaceChar;
+    string value = content;
     const JsonCreator *crt = getCreator(value);
     if (!crt)
     {
@@ -65,6 +61,5 @@ const JsonCreator *JsonFactory::getCreator(const string &value) const
             return creators[i];
         }
     }
-
     return nullptr;
 }

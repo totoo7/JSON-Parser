@@ -2,16 +2,9 @@
 
 JsonPair::JsonPair() : value(nullptr), key("") {}
 
-JsonPair::JsonPair(const Json *value) : key("")
-{
-    value = value->clone();
-}
+JsonPair::JsonPair(const Json *value) : key(""), value(value->clone()) {}
 
-JsonPair::JsonPair(const Json *value, const string &key)
-{
-    value = value->clone();
-    this->key = key;
-}
+JsonPair::JsonPair(const Json *value, const string &key) : value(value->clone()), key(key) {}
 
 JsonPair::JsonPair(const JsonPair &other) : value(other.value->clone()), key(other.key) {}
 
@@ -24,6 +17,10 @@ JsonPair &JsonPair::operator=(const JsonPair &other)
         delete value;
     value = other.value->clone();
     return *this;
+}
+
+void JsonPair::print() const {
+    cout << "<" << key << ", " << value->toString() << ">" << endl;
 }
 
 JsonPair::~JsonPair()

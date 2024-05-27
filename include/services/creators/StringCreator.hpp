@@ -14,7 +14,6 @@ public:
 
 private:
     bool isString(const string &value) const;
-    string removeQuotes(const string &val) const;
 };
 
 #endif
