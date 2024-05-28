@@ -13,7 +13,6 @@ public:
     ~FloatCreator() = default;
 private:
     bool isFloat(const string &value) const;
-    int stringToFloat(const string &val) const;
 };
 
 #endif

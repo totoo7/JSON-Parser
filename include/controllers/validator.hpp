@@ -1,4 +1,6 @@
-#pragma once
+#ifndef VALIDATOR_H
+#define VALIDATOR_H
+
 #include <iostream>
 #include <string>
 #include <vector>
@@ -14,3 +16,5 @@ public:
 private:
     static const vector<string> validCommands;
 };
+
+#endif

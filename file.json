@@ -1,5 +1,13 @@
 {
-    "fruit": "Apple",
-    "size": "Large",
-    "color": "Red"
+    "integer": 1,
+    "float": 1.2,
+    "null": null,
+    "boolT": true,
+    "boolF": false,
+    "string": "some text", 
+    "array": ["arrayElement", "arrayElement2"],
+    "object": {
+        "fruit": "Apple",
+        "color": "White"
+    }
 }

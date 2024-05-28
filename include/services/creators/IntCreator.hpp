@@ -13,7 +13,6 @@ public:
     ~IntCreator() = default;
 private:
     bool isInt(const string &value) const;
-    int stringToInt(const string &val) const;
 };
 
 #endif

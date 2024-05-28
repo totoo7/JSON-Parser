@@ -17,5 +17,4 @@ private:
     Json *parseArray(const string &value) const;
 };
 
-
 #endif

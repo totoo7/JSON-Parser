@@ -1,10 +1,11 @@
 #include "StringCreator.hpp"
+#include "Utilities.hpp"
 
 StringCreator::StringCreator() : JsonCreator("string") {}
 
 Json *StringCreator::createJson(const string &value) const
 {
-    return new JsonString(JsonCreator::removeDelimeters(value, '"', '"'));
+    return new JsonString(UTILITIES::removeDelimeters(value, '"', '"'));
 }
 
 bool StringCreator::isString(const string &value) const

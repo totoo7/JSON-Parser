@@ -4,10 +4,9 @@
 JsonObject::JsonObject() {}
 JsonObject::JsonObject(const vector<JsonPair> &other)
 {
-    for (size_t i = 0; i < other.size(); i++)
+    cout << "-----------" << endl;
+    for (size_t i = 0; i < other.size(); i++) {
         value.push_back(other[i]);
-    
-    for (int i = 0; i < other.size(); i++) {
         value[i].print();
     }
 }

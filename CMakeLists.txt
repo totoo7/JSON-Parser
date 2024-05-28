@@ -32,7 +32,7 @@ set(sources
 add_executable(JSON-Parser ${sources})
 list(APPEND includePath "include/controllers" "include/services/creators" "include/services/children" "include/services" "include/view")
 target_include_directories(${PROJECT_NAME} PUBLIC ${includePath}>)
-
+set(EXECUTABLE_OUTPUT_PATH ${CMAKE_SOURCE_DIR})
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
 include(CPack)

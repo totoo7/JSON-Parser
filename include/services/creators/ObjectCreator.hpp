@@ -12,7 +12,6 @@ public:
     Json *createJson(const string &value) const override;
     bool getValue(const string &object) const override;
     ~ObjectCreator() = default;
-
 private:
     string parseObjectKey(const string &value, size_t &index) const;
     Json *parseObject(const string &value) const;
