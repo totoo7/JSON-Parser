@@ -1,26 +1,16 @@
 {
-  "integer": 1,
-  "float": 1.2,
-  "null": null,
-  "boolT": true,
-  "boolF": false,
-  "string": "some text",
-  "array": ["arrayElement", "arrayElement2"],
-  "object": {
-    "fruit": "Apple",
-    "color": "White",
-    "object1": {
-      "another array": [1, 4.2, "string"]
+  "integer" : 1,
+  "float" : 1.200000,
+  "null" : null,
+  "boolT" : true,
+  "boolF" : false,
+  "string" : "some text",
+  "array" : ["arrayElement", "arrayElement2"],
+  "object" : {
+    "fruit" : "Apple",
+    "color" : "White",
+    "object1" : {
+      "another array" : [1, 4.200000, "string"]
     }
-  },
-  "offices": [
-    {
-      "name": "Headquarters",
-      "address": "Sofia"
-    },
-    {
-      "name": "Front Office",
-      "address": "New York City"
-    }
-  ]
+  }
 }

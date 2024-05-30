@@ -1,13 +1,16 @@
-#ifndef CONTROLLER_H
-#define CONROLLER_H
+// #ifndef CONTROLLER_H
+// #define CONROLLER_H
 
-#include "validator.hpp"
-#include "JsonFactory.hpp"
+// #include "Validator.hpp"
+// #include "JsonFactory.hpp"
 
-class Controller
-{
-public:
-    static void processUserInput(const string &userInput);
-};
+// class Controller
+// {
+// public:
+//     Controller();
+//     inline static void processUserInput(const string &userInput);
+// private:
+//     Json *current;
+// };
 
-#endif
+// #endif

@@ -1,4 +1,4 @@
-#include "validator.hpp"
+#include "Validator.hpp"
 
 const vector<string> Validator::validCommands =
     {
@@ -6,16 +6,10 @@ const vector<string> Validator::validCommands =
         "close",
         "saveas",
         "exit",
-        "validate",
-        "print",
-        "search",
-        "contains",
-        "set",
-        "create",
-        "delete",
-        "move",
+        "parse",
         "save",
-        "saveas"};
+        "saveas"
+    };
 
 bool Validator::isValidCommand(const string &command)
 {
@@ -25,6 +19,14 @@ bool Validator::isValidCommand(const string &command)
             return true;
     }
     return false;
+}
+
+void Validator::toLowerCase(string& value) {
+    for(int i = 0; i < value.size(); i++) {
+        if (value[i] >= 'A' && value[i] <=  'Z'){
+            value[i] += 32;
+        }
+    }
 }
 
 const vector<string> Validator::splitCommand(const string &command, char delimeter)

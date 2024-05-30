@@ -1,7 +1,6 @@
-#include "controller.hpp"
+#include "Interface.hpp"
 int main(int, char **)
 {
-    string input;
-    getline(cin, input);
-    Controller::processUserInput(input);
+    Interface interface;
+    interface.run();
 }
