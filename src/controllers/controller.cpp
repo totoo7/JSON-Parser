@@ -11,7 +11,11 @@ void Controller::processUserInput(const string &userInput)
     }
     if (command == "open")
     {
-        JsonFactory::get().parseFile(userCommands[1]);
+        Json* json = JsonFactory::get().parseFile(userCommands[1]);
+        if (json) {
+            json->print();
+        }
+        delete json;
     }
     else if (command == "save")
     {

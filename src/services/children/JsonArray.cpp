@@ -34,10 +34,19 @@ void JsonArray::print() const
     cout << toString();
 }
 
-string JsonArray::toString() const
+string JsonArray::toString(int indentLevel) const
 {
-    //TODO
-    return "";
+    string temp;
+    temp += "[";
+    for (size_t i = 0; i < value.size(); i++)
+    {
+        temp += value[i]->toString();  
+        if (i != value.size() - 1) 
+            temp += ", ";
+    }
+    
+    temp += "]";
+    return temp;
 }
 
 const bool JsonArray::search(const string &key) const

@@ -18,8 +18,7 @@ public:
     Json *clone() const override;
     void print() const override;
     void printSearchResults() const override;
-    string toString() const override;
-    bool printSpace() const override { return true; }
+    string toString(int indentLevel = 0) const override;
     ~JsonObject();
 protected:
     bool containsRecursive(const string &value, const string &currentKey, vector<string> &keys) const override;

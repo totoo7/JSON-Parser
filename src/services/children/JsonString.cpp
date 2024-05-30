@@ -25,7 +25,7 @@ bool JsonString::containsRecursive(const string &value, const string &currentKey
     // TODO
 }
 
-string JsonString::toString() const
+string JsonString::toString(int indentLevel) const
 {
     string temp;
     temp += "\"";

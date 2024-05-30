@@ -11,6 +11,8 @@ public:
     JsonPair(const JsonPair &other);
     JsonPair &operator=(const JsonPair &other);
     void print() const;
+    Json *getValue() const;
+    string getKey() const;
     ~JsonPair();
 
 private:

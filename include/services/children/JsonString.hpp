@@ -12,7 +12,7 @@ public:
   JsonString &operator=(const JsonString &other);
   Json *clone() const override;
   void print() const override;
-  string toString() const override;
+  string toString(int indentLevel = 0) const override;
   bool containsRecursive(const string &value, const string &currentKey, vector<string> &keys) const override;
   ~JsonString() = default;
 

@@ -27,7 +27,7 @@ bool JsonBool::containsRecursive(const string &value, const string &currentKey, 
     return true;
 }
 
-string JsonBool::toString() const
+string JsonBool::toString(int indentLevel) const
 {
     if (value) {
         return "true";

@@ -23,6 +23,14 @@ void JsonPair::print() const {
     cout << "<" << key << ", " << value->toString() << ">" << endl;
 }
 
+Json* JsonPair::getValue() const {
+    return value;
+}
+
+string JsonPair::getKey() const {
+    return key;
+}
+
 JsonPair::~JsonPair()
 {
     delete value;

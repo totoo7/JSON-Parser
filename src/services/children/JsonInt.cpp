@@ -27,7 +27,7 @@ bool JsonInt::containsRecursive(const string &value, const string &currentKey, v
     return true;
 }
 
-string JsonInt::toString() const
+string JsonInt::toString(int indentLevel) const
 {
     return to_string(value).c_str();
 }

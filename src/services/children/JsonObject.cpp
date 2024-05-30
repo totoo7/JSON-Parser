@@ -4,10 +4,8 @@
 JsonObject::JsonObject() {}
 JsonObject::JsonObject(const vector<JsonPair> &other)
 {
-    cout << "-----------" << endl;
     for (size_t i = 0; i < other.size(); i++) {
         value.push_back(other[i]);
-        value[i].print();
     }
 }
 JsonObject::JsonObject(const JsonObject &other)
@@ -67,10 +65,28 @@ void JsonObject::print() const
     cout << toString();
 }
 
-string JsonObject::toString() const
+string JsonObject::toString(int indentLevel) const
 {
-    //TODO
-    return "string";
+    string temp;
+    string indent(indentLevel, ' ');
+
+    temp += "{\n";
+
+    for (size_t i = 0; i < value.size(); i++)
+    {
+        temp += indent + "  ";
+        temp += '"';
+        temp += value[i].getKey();
+        temp += '"';
+        temp += " : ";
+        
+        temp += value[i].getValue()->toString(indentLevel + 2);
+        if (i != value.size() - 1)
+            temp += ",";
+        temp += "\n";
+    }
+    temp += indent + "}";
+    return temp;
 }
 
 JsonObject::~JsonObject() {}

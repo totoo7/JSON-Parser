@@ -21,7 +21,7 @@ bool JsonNull::containsRecursive(const string &value, const string &currentKey, 
     return true;
 }
 
-string JsonNull::toString() const
+string JsonNull::toString(int indentLevel) const
 {
     return "null";
 }

@@ -27,7 +27,7 @@ bool JsonFloat::containsRecursive(const string &value, const string &currentKey,
     return true;
 }
 
-string JsonFloat::toString() const
+string JsonFloat::toString(int indentLevel) const
 {
     return to_string(value).c_str();
 }
