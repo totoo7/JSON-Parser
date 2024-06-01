@@ -13,6 +13,8 @@ public:
     void print() const;
     Json *getValue() const;
     string getKey() const;
+    void setValue(const Json *value);
+    void setKey(const string &key);
     ~JsonPair();
 
 private:

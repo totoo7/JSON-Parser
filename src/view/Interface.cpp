@@ -1,5 +1,5 @@
 #include "Interface.hpp"
-
+#include "Utilities.hpp"
 Interface::Interface() : current(nullptr), isRunning(true), filename("Null"), isLoadedFile(false) {}
 
 bool Interface::openFile(const string &filename)
@@ -76,12 +76,15 @@ void Interface::printMenu() const
     {
         cout << ">Enter 'parse' to parse and print the loaded file." << endl;
         cout << ">Enter 'save' to save the loaded file." << endl;
-        cout << ">Enter 'saveas' then 'path' and 'filename' to save the loaded file to a new location" << endl;
+        cout << ">Enter 'saveas' then 'path' and 'filename' to save the loaded file to a new location." << endl;
+        cout << ">Enter 'search' then 'key' to check if an object with this key exists. Result is printed in the terminal." << endl;
+        cout << ">Enter 'set' then 'path' and 'value' to set new value of existing key." << endl;
+        cout << ">Enter 'erase' then 'path' to erase the given key." << endl;
     }
 }
 
 void Interface::processUserInput(const string& userInput) {
-    vector<string> userCommands = Validator::splitCommand(userInput, ' ');
+    vector<string> userCommands = UTILITIES::split(userInput, ' ');
     Validator::toLowerCase(userCommands[0]);
     string command = userCommands[0];
     if (!Validator::isValidCommand(command))
@@ -111,8 +114,33 @@ void Interface::processUserInput(const string& userInput) {
     {
         isRunning = false;
         cout << "Exiting..." << endl;
+    } 
+    else if (command == "search") 
+    {
+        current->search(userCommands[1]);
+    } 
+    else if (command == "set") 
+    {
+        if (userCommands[1] == "" && userCommands[2] == "" )
+        {
+            cerr << "Invalid path or value." << endl;
+        } 
+        else 
+        {
+            current->set(userCommands[1], userCommands[2]);
+        }
     }
-    // TODO etc
+    else if (command == "erase")
+    {
+        if (userCommands[1] == "")
+        {
+            cerr << "Invalid path or value." << endl;
+        } 
+        else 
+        {
+            current->erase(userCommands[1]);
+        }
+    }
 }
 
 Interface::~Interface() {

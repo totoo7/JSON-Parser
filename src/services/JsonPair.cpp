@@ -19,16 +19,29 @@ JsonPair &JsonPair::operator=(const JsonPair &other)
     return *this;
 }
 
-void JsonPair::print() const {
+void JsonPair::print() const
+{
     cout << "<" << key << ", " << value->toString() << ">" << endl;
 }
 
-Json* JsonPair::getValue() const {
+Json *JsonPair::getValue() const
+{
     return value;
 }
 
-string JsonPair::getKey() const {
+string JsonPair::getKey() const
+{
     return key;
+}
+
+void JsonPair::setValue(const Json *value)
+{
+    this->value = value->clone();
+}
+
+void JsonPair::setKey(const string &key)
+{
+    this->key = key;
 }
 
 JsonPair::~JsonPair()

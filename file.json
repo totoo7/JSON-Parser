@@ -1,5 +1,5 @@
 {
-  "integer" : 1,
+  "integer" : 8,
   "float" : 1.200000,
   "null" : null,
   "boolT" : true,
@@ -7,10 +7,11 @@
   "string" : "some text",
   "array" : ["arrayElement", "arrayElement2"],
   "object" : {
-    "fruit" : "Apple",
+    "fruit" : "Banana",
+    "integer" : 17,
     "color" : "White",
     "object1" : {
-      "another array" : [1, 4.200000, "string"]
+      "anotherArray" : [1, 4.200000, "string"]
     }
   }
 }

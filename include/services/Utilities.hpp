@@ -10,6 +10,19 @@ using namespace std;
 namespace UTILITIES
 {
 
+    inline vector<string> split(const string &value, char delimeter) 
+    {
+        vector<string> tokens;
+        size_t start = 0, end = 0;
+        while ((end = value.find(delimeter, start)) != string::npos)
+        {
+            tokens.push_back(value.substr(start, end - start));
+            start = end + 1;
+        }
+        tokens.push_back(value.substr(start));
+        return tokens;
+    }
+
     inline string removeDelimeters(const string &value, char openingDelimeter, char closingDelimeter)
     {
         size_t startPos = value.find_first_of(openingDelimeter);
