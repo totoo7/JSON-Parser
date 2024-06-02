@@ -80,6 +80,8 @@ void Interface::printMenu() const
         cout << ">Enter 'search' then 'key' to check if an object with this key exists. Result is printed in the terminal." << endl;
         cout << ">Enter 'set' then 'path' and 'value' to set new value of existing key." << endl;
         cout << ">Enter 'erase' then 'path' to erase the given key." << endl;
+        cout << ">Enter 'move' then 'path from' then 'path to' to move key" << endl;
+        cout << ">Enter 'create' then 'path' then 'new value' to create new value." << endl;
     }
 }
 
@@ -139,6 +141,28 @@ void Interface::processUserInput(const string& userInput) {
         else 
         {
             current->erase(userCommands[1]);
+        }
+    }
+    else if (command == "move") 
+    {
+        if (userCommands[1] == "" && userCommands[2] == "")
+        {
+            cerr << "Invalid path from or path to." << endl;
+        }
+        else 
+        {
+            current->move(userCommands[1], userCommands[2]);
+        }
+    }
+    else if (command == "create")
+    {
+        if (userCommands[1] == "" && userCommands[2] == "")
+        {
+            cerr << "Invalid path from or new value." << endl;
+        } 
+        else 
+        {
+            current->create(userCommands[1], userCommands[2]);
         }
     }
 }

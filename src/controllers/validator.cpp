@@ -11,7 +11,9 @@ const vector<string> Validator::validCommands =
         "saveas",
         "search",
         "set",
-        "erase"
+        "erase",
+        "move",
+        "create"
     };
 
 bool Validator::isValidCommand(const string &command)

@@ -67,7 +67,45 @@ bool JsonObject::containsRecursive(const string &value, const string &currentKey
 
 void JsonObject::create(const string &path, const string &newValue, int depth)
 {
-    // TODO
+    vector<string> tokens;
+    try
+    {
+        tokens = UTILITIES::split(path, '/');
+    }
+    catch (...)
+    {
+        cerr << "Invalid path." << endl;
+    }
+
+    if (depth == tokens.size() - 1)
+    {
+        for (JsonPair &pair : value)
+        {
+            if (pair.getKey() == tokens.back())
+            {
+                cerr << "Such element already exists in this path." << endl;
+                return;
+            }
+        }
+        JsonPair temp { JsonFactory::get().parseValue(newValue), tokens.back() };
+        if (temp.getValue())
+        {
+            value.push_back(temp);
+        }
+        else
+        {
+            cerr << "Invalid json syntax.";
+        }
+        return;
+    }
+
+    for (JsonPair &pair : value)
+    {
+        if (pair.getKey() == tokens[depth])
+        {
+            pair.getValue()->create(path, newValue, depth + 1);
+        }
+    }
 }
 
 void JsonObject::set(const string &path, const string &newValue, int depth)
@@ -131,7 +169,6 @@ void JsonObject::erase(const string &path, int depth)
         return;
     }
     
-
     if (depth == tokens.size() - 1)
     {
         for (size_t i = 0; i < value.size(); i++)
@@ -146,7 +183,6 @@ void JsonObject::erase(const string &path, int depth)
         return;
     }
 
-    // Recur into the nested objects.
     for (JsonPair &pair : value)
     {
         if (pair.getKey() == tokens[depth])
@@ -158,11 +194,51 @@ void JsonObject::erase(const string &path, int depth)
 
     cerr << "Invalid path." << endl;
 }
-
+// not working
 void JsonObject::move(const string &from, string &to, int depth)
 {
-    // TODO
+    vector<string> tokens;
+    try
+    {
+        tokens = UTILITIES::split(from, '/');
+    }
+    catch (...)
+    {
+        cerr << "Invalid path." << endl;
+    }
+
+    if (depth == tokens.size() - 1)
+    {
+        bool found = false;
+        for (size_t i = 0; i < value.size(); i++)
+            if (value[i].getKey() == tokens[depth])
+            {
+                found = true;
+                if (to != "" && to[to.size() - 1] != '/') 
+                {
+                    to += "/";
+                }
+                string temp = value[i].getKey() + "\\" + value[i].getValue()->toString();
+                to += temp;
+                value.erase(value.begin() + i);
+                return;
+            }
+        if (!found) 
+        {
+            cerr << "Invalid path." << endl;
+            return;
+        }
+    }
+
+    for (JsonPair &pair : value) 
+    {
+        if (pair.getKey() == tokens[depth]) 
+        {
+            pair.getValue()->move(from, to, depth + 1);
+        }
+    }
 }
+
 
 Json *JsonObject::clone() const
 {
