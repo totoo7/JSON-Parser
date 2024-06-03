@@ -8,8 +8,8 @@ set(sources
     main.cpp
 
     src/view/Interface.cpp
-    src/controllers/validator.cpp
-    src/controllers/controller.cpp
+    src/controllers/Validator.cpp
+    src/controllers/Controller.cpp
     src/services/Json.cpp
     src/services/JsonPair.cpp
     src/services/JsonFactory.cpp
