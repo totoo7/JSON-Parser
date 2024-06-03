@@ -145,9 +145,9 @@ void Interface::processUserInput(const string& userInput) {
     }
     else if (command == "move") 
     {
-        if (userCommands[1] == "" && userCommands[2] == "")
+        if (userCommands[1] == "")
         {
-            cerr << "Invalid path from or path to." << endl;
+            cerr << "Invalid path from" << endl;
         }
         else 
         {
