@@ -9,13 +9,13 @@ bool Interface::openFile(const string &filename)
     {
         current = JsonFactory::get().parseFile(filename);
     }
-    catch (const std::invalid_argument &e)
+    catch (invalid_argument &e)
     {
         cout << e.what();
         return false;
     }
     this->filename = filename;
-    isLoadedFile = static_cast<bool>(current);
+    if (current) isLoadedFile = true;
     return isLoadedFile;
 }
 
