@@ -51,7 +51,7 @@ string JsonArray::toString(int indentLevel) const
 
 const bool JsonArray::search(const string &key) const
 {
-    for (size_t i = 0; i < value.size(); ++i)
+    for (size_t i = 0; i < value.size(); i++)
         value[i]->search(key);
     return true;
 }

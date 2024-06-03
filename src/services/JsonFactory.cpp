@@ -6,9 +6,9 @@ JsonFactory &JsonFactory::get()
     return instance;
 }
 
-void JsonFactory::registerValidJson(const JsonCreator *rhs)
+void JsonFactory::registerValidJson(const JsonCreator *creator)
 {
-    creators[count++] = rhs;
+    creators.push_back(creator);
 }
 
 Json *JsonFactory::parseValue(string content) const
@@ -17,7 +17,7 @@ Json *JsonFactory::parseValue(string content) const
     const JsonCreator *crt = getCreator(value);
     if (!crt)
     {
-        cerr << "Couldn't parse Json.\n";
+        cerr << "Couldn't parse Json." << endl;
         return nullptr;
     }
     return crt->createJson(value);
@@ -39,7 +39,7 @@ Json *JsonFactory::parseValue(ifstream &ifs) const
     }
 
     ifs.close();
-    return parseValue(content.c_str());
+    return parseValue(content);
 }
 
 Json *JsonFactory::parseFile(string fileName) const
@@ -54,7 +54,7 @@ Json *JsonFactory::parseFile(string fileName) const
 
 const JsonCreator *JsonFactory::getCreator(const string &value) const
 {
-    for (size_t i = 0; i < count; i++)
+    for (size_t i = 0; i < creators.size(); i++)
     {
         if (creators[i]->getValue(value))
         {

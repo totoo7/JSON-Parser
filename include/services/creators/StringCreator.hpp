@@ -11,9 +11,6 @@ public:
     Json *createJson(const string &value) const override;
     bool getValue(const string &object) const override;
     ~StringCreator() = default;
-
-private:
-    bool isString(const string &value) const;
 };
 
 #endif

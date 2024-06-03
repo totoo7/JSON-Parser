@@ -70,7 +70,7 @@ void Interface::printMenu() const
     else 
         cout << "There is no loaded file." << endl;
 
-    cout << ">Enter 'open' then 'filename'' to open a new file." << endl;
+    cout << ">Enter 'open' then 'filename' to open a new file." << endl;
     cout << ">Enter 'exit' to quit." << endl;
     if (isLoadedFile) 
     {
@@ -123,14 +123,11 @@ void Interface::processUserInput(const string& userInput) {
     } 
     else if (command == "set") 
     {
-        if (userCommands[1] == "" && userCommands[2] == "" )
+        if (userCommands[1] == "" && userCommands[2] == "")
         {
             cerr << "Invalid path or value." << endl;
         } 
-        else 
-        {
-            current->set(userCommands[1], userCommands[2]);
-        }
+        current->set(userCommands[1], userCommands[2]);
     }
     else if (command == "erase")
     {
@@ -151,7 +148,15 @@ void Interface::processUserInput(const string& userInput) {
         }
         else 
         {
-            current->move(userCommands[1], userCommands[2]);
+            if (userCommands[2] != "") 
+            {
+                string temp = "";
+                current->move(userCommands[1], temp);
+            }
+            else 
+            {
+                current->move(userCommands[1], userCommands[2]);
+            }
         }
     }
     else if (command == "create")

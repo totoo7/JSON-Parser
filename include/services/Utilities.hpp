@@ -9,7 +9,7 @@ using namespace std;
 
 namespace UTILITIES
 {
-
+    
     inline vector<string> split(const string &value, char delimeter) 
     {
         vector<string> tokens;

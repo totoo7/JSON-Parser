@@ -25,38 +25,27 @@ const bool JsonObject::search(const string &key) const
 {
     vector<JsonPair> search_values;
     bool found = false;
-
     for (size_t i = 0; i < value.size(); i++)
     {
         if (value[i].getKey() == key)
         {
             search_values.push_back(value[i]);
             found = true;
-        }
-
-        if (value[i].getValue()->search(key))
+        } 
+        else if (value[i].getValue()->search(key))
         {
             found = true;
         }
     }
 
-    if (!found)
-    {
-        return false;
-    }
-
+    if (!found) return false;
+    
     for (size_t i = 0; i < search_values.size(); i++)
     {
         search_values[i].getValue()->print();
         cout << endl;
     }
-
     return true;
-}
-
-void JsonObject::printSearchResults() const
-{
-    // TODO
 }
 
 bool JsonObject::containsRecursive(const string &value, const string &currentKey, vector<string> &keys) const
@@ -94,16 +83,18 @@ void JsonObject::create(const string &path, const string &newValue, int depth)
         }
         else
         {
-            cerr << "Invalid json syntax.";
+            cerr << "Invalid JSON syntax.";
         }
         return;
     }
-
-    for (JsonPair &pair : value)
+    else 
     {
-        if (pair.getKey() == tokens[depth])
+        for (JsonPair &pair : value)
         {
-            pair.getValue()->create(path, newValue, depth + 1);
+            if (pair.getKey() == tokens[depth])
+            {
+                pair.getValue()->create(path, newValue, depth + 1);
+            }
         }
     }
 }
@@ -143,16 +134,17 @@ void JsonObject::set(const string &path, const string &newValue, int depth)
         cerr << "Invalid path." << endl;
         return;
     }
-
-    for (JsonPair &pair : value)
+    else 
     {
-        if (pair.getKey() == tokens[depth])
+        for (JsonPair &pair : value)
         {
-            pair.getValue()->set(path, newValue, depth + 1);
-            return;
+            if (pair.getKey() == tokens[depth])
+            {
+                pair.getValue()->set(path, newValue, depth + 1);
+                return;
+            }
         }
     }
-
     cerr << "Invalid path." << endl;
 }
 
@@ -182,13 +174,15 @@ void JsonObject::erase(const string &path, int depth)
         cerr << "Invalid path." << endl;
         return;
     }
-
-    for (JsonPair &pair : value)
+    else 
     {
-        if (pair.getKey() == tokens[depth])
+        for (JsonPair &pair : value)
         {
-            pair.getValue()->erase(path, depth + 1);
-            return;
+            if (pair.getKey() == tokens[depth])
+            {
+                pair.getValue()->erase(path, depth + 1);
+                return;
+            }
         }
     }
 
@@ -235,7 +229,6 @@ void JsonObject::move(const string &from, string &to, int depth)
     {
         if (pair.getKey() == tokens[depth]) 
         {
-            cout << tokens[depth] << endl;
             pair.getValue()->move(from, to, depth + 1);
         }
     }

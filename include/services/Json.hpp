@@ -13,7 +13,6 @@ public:
     virtual void print() const = 0;
     virtual string toString(int indentLevel = 0) const = 0;
     virtual Json *clone() const = 0;
-    virtual void printSearchResults() const {}
     virtual void printContainsResults() const {}
     virtual const bool search(const string &key) const;
     vector<string> contains(const string &value) const;

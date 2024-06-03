@@ -16,7 +16,6 @@ public:
     void setValue(const Json *value);
     void setKey(const string &key);
     ~JsonPair();
-
 private:
     Json *value;
     string key;
