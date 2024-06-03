@@ -194,7 +194,7 @@ void JsonObject::erase(const string &path, int depth)
 
     cerr << "Invalid path." << endl;
 }
-// not working
+
 void JsonObject::move(const string &from, string &to, int depth)
 {
     vector<string> tokens;
@@ -210,7 +210,8 @@ void JsonObject::move(const string &from, string &to, int depth)
     if (depth == tokens.size() - 1)
     {
         bool found = false;
-        for (size_t i = 0; i < value.size(); i++)
+        for (size_t i = 0; i < value.size(); i++) 
+        {
             if (value[i].getKey() == tokens[depth])
             {
                 found = true;
@@ -221,24 +222,29 @@ void JsonObject::move(const string &from, string &to, int depth)
                 string temp = value[i].getKey() + "\\" + value[i].getValue()->toString();
                 to += temp;
                 value.erase(value.begin() + i);
-                return;
+                break;
             }
+        }
         if (!found) 
         {
             cerr << "Invalid path." << endl;
             return;
         }
     }
-
     for (JsonPair &pair : value) 
     {
         if (pair.getKey() == tokens[depth]) 
         {
+            cout << tokens[depth] << endl;
             pair.getValue()->move(from, to, depth + 1);
         }
     }
+    if (depth == 0) {
+        vector<string> tokens;
+        tokens = UTILITIES::split(to, '\\');
+        create(tokens[0], tokens[1]);
+    }
 }
-
 
 Json *JsonObject::clone() const
 {
