@@ -9,8 +9,8 @@ using namespace std;
 
 namespace UTILITIES
 {
-    
-    inline vector<string> split(const string &value, char delimeter) 
+
+    inline vector<string> split(const string &value, char delimeter)
     {
         vector<string> tokens;
         size_t start = 0, end = 0;
@@ -20,6 +20,63 @@ namespace UTILITIES
             start = end + 1;
         }
         tokens.push_back(value.substr(start));
+        return tokens;
+    }
+
+    inline vector<string> tokenize(const string &input)
+    {
+        vector<string> tokens;
+        string token;
+        bool inQuote = false;
+        char quoteChar = '\0';
+
+        for (size_t i = 0; i < input.size(); ++i)
+        {
+            char c = input[i];
+
+            if (inQuote)
+            {
+                token += c; // Add the quote character
+                if (c == quoteChar)
+                {
+                    inQuote = false;
+                    tokens.push_back(token);
+                    token.clear();
+                }
+            }
+            else
+            {
+                if (c == '"' || c == '\'')
+                {
+                    if (!token.empty())
+                    {
+                        tokens.push_back(token);
+                        token.clear();
+                    }
+                    inQuote = true;
+                    quoteChar = c;
+                    token += c; // Add the opening quote character
+                }
+                else if (isspace(c))
+                {
+                    if (!token.empty())
+                    {
+                        tokens.push_back(token);
+                        token.clear();
+                    }
+                }
+                else
+                {
+                    token += c;
+                }
+            }
+        }
+
+        if (!token.empty())
+        {
+            tokens.push_back(token);
+        }
+
         return tokens;
     }
 
@@ -121,7 +178,7 @@ namespace UTILITIES
 
     inline void handleMissingDelimiters(const vector<char> &stack)
     {
-        for (size_t i = 0; i < stack.size(); ++i)
+        for (size_t i = 0; i < stack.size(); i++)
         {
             cout << "Incorrect format!" << endl;
             cout << "Missing delimiter(s):" << stack[i] << endl;

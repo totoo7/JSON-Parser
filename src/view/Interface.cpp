@@ -86,7 +86,7 @@ void Interface::printMenu() const
 }
 
 void Interface::processUserInput(const string& userInput) {
-    vector<string> userCommands = UTILITIES::split(userInput, ' ');
+    vector <string> userCommands = UTILITIES::tokenize(userInput);
     Validator::toLowerCase(userCommands[0]);
     string command = userCommands[0];
     if (!Validator::isValidCommand(command))
