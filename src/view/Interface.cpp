@@ -80,7 +80,7 @@ void Interface::printMenu() const
         cout << ">Enter 'search' then 'key' to check if an object with this key exists. Result is printed in the terminal." << endl;
         cout << ">Enter 'set' then 'path' and 'value' to set new value of existing key." << endl;
         cout << ">Enter 'erase' then 'path' to erase the given key." << endl;
-        cout << ">Enter 'move' then 'path from' then 'path to' to move key. To move to current depth second parameter s" << endl;
+        cout << ">Enter 'move' then 'path from' then 'path to' to move key." << endl;
         cout << ">Enter 'create' then 'path' then 'new value' to create new value." << endl;
     }
 }
