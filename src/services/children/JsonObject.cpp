@@ -55,17 +55,8 @@ bool JsonObject::containsRecursive(const string &value, const string &currentKey
 }
 
 void JsonObject::create(const string &path, const string &newValue, int depth)
-{
-    vector<string> tokens;
-    try
-    {
-        tokens = UTILITIES::split(path, '/');
-    }
-    catch (...)
-    {
-        cerr << "Invalid path." << endl;
-    }
-
+{   
+    vector<string> tokens = UTILITIES::split(path, '/');
     if (depth == tokens.size() - 1)
     {
         for (JsonPair &pair : value)
@@ -101,17 +92,7 @@ void JsonObject::create(const string &path, const string &newValue, int depth)
 
 void JsonObject::set(const string &path, const string &newValue, int depth)
 {
-    vector<string> tokens;
-    try
-    {
-        tokens = UTILITIES::split(path, '/');
-    }
-    catch (...)
-    {
-        cerr << "Invalid path." << endl;
-        return;
-    }
-
+    vector<string> tokens = UTILITIES::split(path, '/');
     if (depth == tokens.size() - 1)
     {
         for (JsonPair &pair : value)
@@ -150,17 +131,7 @@ void JsonObject::set(const string &path, const string &newValue, int depth)
 
 void JsonObject::erase(const string &path, int depth)
 {
-    vector<string> tokens;
-    try 
-    {
-        tokens = UTILITIES::split(path, '/');
-    } 
-    catch (...)
-    {
-        cerr << "Invalid path." << endl;
-        return;
-    }
-    
+    vector<string> tokens = UTILITIES::split(path, '/');
     if (depth == tokens.size() - 1)
     {
         for (size_t i = 0; i < value.size(); i++)
@@ -191,16 +162,7 @@ void JsonObject::erase(const string &path, int depth)
 
 void JsonObject::move(const string &from, string &to, int depth)
 {
-    vector<string> tokens;
-    try
-    {
-        tokens = UTILITIES::split(from, '/');
-    }
-    catch (...)
-    {
-        cerr << "Invalid path." << endl;
-    }
-
+    vector<string> tokens = UTILITIES::split(from, '/');
     if (depth == tokens.size() - 1)
     {
         bool found = false;

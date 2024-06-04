@@ -11,7 +11,7 @@
     "integer" : 17,
     "color" : "White",
     "object1" : {
-      "another array" : [1, 4.200000, "string"]
+      "anotherArray" : [1, 4.200000, "string"]
     }
   }
 }

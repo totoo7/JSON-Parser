@@ -2,7 +2,7 @@
 #define INTERFACE_H
 
 #include "JsonFactory.hpp"
-#include "Validator.hpp"
+#include "CommandManager.hpp"
 class Interface
 {
 public:
@@ -20,6 +20,7 @@ private:
     string filename;
     bool isLoadedFile;
     Json *current;
+    CommandManager manager;
 };
 
 #endif

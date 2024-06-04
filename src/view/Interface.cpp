@@ -1,6 +1,6 @@
 #include "Interface.hpp"
 #include "Utilities.hpp"
-Interface::Interface() : current(nullptr), isRunning(true), filename("Null"), isLoadedFile(false) {}
+Interface::Interface() : current(nullptr), isRunning(true), filename("Null"), isLoadedFile(false), manager() {}
 
 bool Interface::openFile(const string &filename)
 {
@@ -80,20 +80,38 @@ void Interface::printMenu() const
         cout << ">Enter 'search' then 'key' to check if an object with this key exists. Result is printed in the terminal." << endl;
         cout << ">Enter 'set' then 'path' and 'value' to set new value of existing key." << endl;
         cout << ">Enter 'erase' then 'path' to erase the given key." << endl;
-        cout << ">Enter 'move' then 'path from' then 'path to' to move key" << endl;
+        cout << ">Enter 'move' then 'path from' then 'path to' to move key. To move to current depth second parameter s" << endl;
         cout << ">Enter 'create' then 'path' then 'new value' to create new value." << endl;
     }
 }
 
 void Interface::processUserInput(const string& userInput) {
     vector <string> userCommands = UTILITIES::tokenize(userInput);
-    Validator::toLowerCase(userCommands[0]);
-    string command = userCommands[0];
-    if (!Validator::isValidCommand(command))
-    {
+    if (userCommands.empty()) return;
+
+    manager.toLowerCase(userCommands[0]);
+    string commandName = userCommands[0];
+
+    if (!manager.isValidCommand(commandName)) {
         cerr << "Invalid command" << endl;
         return;
     }
+
+    const Command* commandTemp = manager.getCommand(commandName);
+    if (userCommands.size() - 1 < commandTemp->getParamCount() || userCommands.size() - 1 > commandTemp->getParamCount()) 
+    {
+        if (commandTemp->getName() == "move") 
+        {
+            string temp = "";
+            current->move(userCommands[1], temp);
+        } 
+        else 
+        {
+            cerr << "Invalid number of parameters for command " << commandTemp->getName() << ". Expected: " << commandTemp->getParamCount() << "." <<  endl;
+        }
+        return;
+    }
+    string command = commandTemp->getName();
     if (command == "open")
     {
         openFile(userCommands[1]);
@@ -123,52 +141,19 @@ void Interface::processUserInput(const string& userInput) {
     } 
     else if (command == "set") 
     {
-        if (userCommands[1] == "" && userCommands[2] == "")
-        {
-            cerr << "Invalid path or value." << endl;
-        } 
         current->set(userCommands[1], userCommands[2]);
     }
     else if (command == "erase")
     {
-        if (userCommands[1] == "")
-        {
-            cerr << "Invalid path or value." << endl;
-        } 
-        else 
-        {
-            current->erase(userCommands[1]);
-        }
+        current->erase(userCommands[1]);
     }
     else if (command == "move") 
     {
-        if (userCommands[1] == "")
-        {
-            cerr << "Invalid path from" << endl;
-        }
-        else 
-        {
-            if (userCommands[2] != "") 
-            {
-                string temp = "";
-                current->move(userCommands[1], temp);
-            }
-            else 
-            {
-                current->move(userCommands[1], userCommands[2]);
-            }
-        }
+        current->move(userCommands[1], userCommands[2]); 
     }
     else if (command == "create")
     {
-        if (userCommands[1] == "" && userCommands[2] == "")
-        {
-            cerr << "Invalid path from or new value." << endl;
-        } 
-        else 
-        {
-            current->create(userCommands[1], userCommands[2]);
-        }
+        current->create(userCommands[1], userCommands[2]);
     }
 }
 
