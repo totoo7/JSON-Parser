@@ -1,5 +1,6 @@
 #include "JsonArray.hpp"
 #include "JsonFactory.hpp"
+#include "Utilities.hpp"
 
 JsonArray::JsonArray() {}
 JsonArray::JsonArray(const vector<Json*> &value)
@@ -64,12 +65,37 @@ bool JsonArray::containsRecursive(const string &value, const string &currentKey,
 
 void JsonArray::create(const string &path, const string &newValue, int depth)
 {
-    //TODO
+    vector<string> tokens = UTILITIES::split(path, '/');
+    if (depth == tokens.size() - 1)
+    {
+        Json *temp =  JsonFactory::get().parseValue(newValue);
+        if (temp)
+        {
+            value.push_back(temp->clone());
+        }
+        else
+        {
+            cerr << "Invalid JSON syntax.";
+        }
+        delete temp;
+        return;
+    }
+    else 
+    {
+        for (Json *json : value)
+        {
+            json->create(path, newValue, depth + 1);            
+        }
+    }
 }
 
 void JsonArray::erase(const string &path, int depth)
 {
-    //TODO
+    vector<string> tokens = UTILITIES::split(path, '/');
+    for (Json *json : value)
+    {
+        json->erase(path, depth++);
+    }
 }
 
 Json *JsonArray::clone() const
