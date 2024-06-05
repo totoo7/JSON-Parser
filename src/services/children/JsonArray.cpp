@@ -41,11 +41,10 @@ string JsonArray::toString(int indentLevel) const
     temp += "[";
     for (size_t i = 0; i < value.size(); i++)
     {
-        temp += value[i]->toString();  
+        temp += value[i]->toString(indentLevel + 2);  
         if (i != value.size() - 1) 
             temp += ", ";
     }
-    
     temp += "]";
     return temp;
 }
