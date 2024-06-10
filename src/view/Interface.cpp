@@ -83,6 +83,7 @@ void Interface::printMenu() const
         cout << ">Enter 'erase' then 'path' to erase the given key." << endl;
         cout << ">Enter 'move' then 'path from' then 'path to' to move key." << endl;
         cout << ">Enter 'create' then 'path' then 'new value' to create new value." << endl;
+        cout << ">Enter 'help' for more info on how to use the commands. " << endl;
     }
 }
 
@@ -101,15 +102,7 @@ void Interface::processUserInput(const string& userInput) {
     const Command* commandTemp = manager.getCommand(commandName);
     if (userCommands.size() - 1 < commandTemp->getParamCount() || userCommands.size() - 1 > commandTemp->getParamCount()) 
     {
-        if (commandTemp->getName() == "move") 
-        {
-            string temp = "";
-            current->move(userCommands[1], temp);
-        } 
-        else 
-        {
-            cerr << "Invalid number of parameters for command " << commandTemp->getName() << ". Expected: " << commandTemp->getParamCount() << "." <<  endl;
-        }
+        cerr << "Invalid number of parameters for command " << commandTemp->getName() << ". Expected: " << commandTemp->getParamCount() << "." <<  endl; 
         return;
     }
     string command = commandTemp->getName();
@@ -159,6 +152,15 @@ void Interface::processUserInput(const string& userInput) {
     else if (command == "contains")
     {
         current->contains(userCommands[1]);
+    }
+    else if (command == "help") 
+    {
+        cout << "1) When giving a path use \"/\" as a delimeter to specify where the key is." << endl;
+        cout << "Example: " << endl;
+        cout << "set foo/bar \"value\", where bar is a key in foo." << endl;
+        cout << "2) When trying to move an object in the root of the JSON file use \"./\"." << endl;
+        cout << "Example: " << endl;
+        cout << "move foo/bar ./, where bar is a key in foo and it will be moved to the top-level elements" << endl;
     }
 }
 

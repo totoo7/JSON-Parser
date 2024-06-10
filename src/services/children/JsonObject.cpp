@@ -157,6 +157,7 @@ void JsonObject::erase(const string &path, int depth)
 void JsonObject::move(const string &from, string &to, int depth)
 {
     vector<string> tokens = UTILITIES::split(from, '/');
+    if (to == "./") to = "";
     if (depth == tokens.size() - 1)
     {
         bool found = false;
