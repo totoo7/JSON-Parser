@@ -12,6 +12,7 @@ CommandManager::CommandManager()
     commands.push_back({"erase", 1});
     commands.push_back({"move", 2});
     commands.push_back({"create", 2});  
+    commands.push_back({"contains", 1});
 }
 
 bool CommandManager::isValidCommand(const string &name) const 

@@ -21,12 +21,23 @@ void JsonFloat::print() const
     cout << toString();
 }
 
-bool JsonFloat::containsRecursive(const string &value, const string &currentKey, vector<string> &keys) const
+const bool JsonFloat::contains(const string &value) const 
 {
-    //TODO
-    return true;
+    float temp = 0.0f;
+    try 
+    {
+        temp = stof(value);
+    } 
+    catch (const invalid_argument &e)
+    {
+        return false;
+    }
+    if (temp == this->value) 
+    {
+        return true;
+    }
+    return false;
 }
-
 string JsonFloat::toString(int indentLevel) const
 {
     return to_string(value).c_str();

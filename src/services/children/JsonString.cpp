@@ -19,12 +19,6 @@ Json *JsonString::clone() const
     return new JsonString(value);
 }
 
-bool JsonString::containsRecursive(const string &value, const string &currentKey, vector<string> &keys) const
-{
-    return true;
-    // TODO
-}
-
 string JsonString::toString(int indentLevel) const
 {
     string temp;
@@ -32,6 +26,11 @@ string JsonString::toString(int indentLevel) const
     temp += value;
     temp += "\"";
     return temp;
+}
+
+const bool JsonString::contains(const string &value) const  
+{
+    return this->value.find(value) != string::npos;
 }
 
 void JsonString::print() const

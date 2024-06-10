@@ -20,11 +20,16 @@ void JsonBool::print() const
 {
     cout << toString();
 }
-
-bool JsonBool::containsRecursive(const string &value, const string &currentKey, vector<string> &keys) const
+const bool JsonBool::contains(const string &value) const 
 {
-    //TODO
-    return true;
+    if (value == "true" && this->value == true) 
+    {
+        return true;
+    } else if (value == "false" && this->value == false) 
+    {
+        return true;
+    }
+    return false;
 }
 
 string JsonBool::toString(int indentLevel) const

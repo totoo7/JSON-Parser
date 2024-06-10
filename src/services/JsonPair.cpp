@@ -21,7 +21,9 @@ JsonPair &JsonPair::operator=(const JsonPair &other)
 
 void JsonPair::print() const
 {
-    cout << "<" << key << ", " << value->toString() << ">" << endl;
+    cout << '"' << key  << '"' << ": ";
+    cout << value->toString();
+    cout << endl;
 }
 
 Json *JsonPair::getValue() const

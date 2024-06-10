@@ -48,12 +48,6 @@ const bool JsonObject::search(const string &key) const
     return true;
 }
 
-bool JsonObject::containsRecursive(const string &value, const string &currentKey, vector<string> &keys) const
-{
-    // TODO
-    return true;
-}
-
 void JsonObject::create(const string &path, const string &newValue, int depth)
 {   
     vector<string> tokens = UTILITIES::split(path, '/');
@@ -208,6 +202,25 @@ Json *JsonObject::clone() const
 void JsonObject::print() const
 {
     cout << toString();
+}
+
+const bool JsonObject::contains(const string &value) const
+{   
+    vector<JsonPair> contains_values;
+    for (size_t i = 0; i < this->value.size(); i++) 
+    {
+        if (this->value[i].getValue()->contains(value))
+        {
+            contains_values.push_back(this->value[i]);
+        }
+    }
+    if (contains_values.size() == 0) return false;
+
+    for (size_t i = 0; i < contains_values.size(); i++) 
+    {
+        contains_values[i].print();
+    }
+    return true;
 }
 
 string JsonObject::toString(int indentLevel) const

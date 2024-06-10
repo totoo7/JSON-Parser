@@ -21,10 +21,22 @@ void JsonInt::print() const
     cout << toString();
 }
 
-bool JsonInt::containsRecursive(const string &value, const string &currentKey, vector<string> &keys) const
+const bool JsonInt::contains(const string &value) const 
 {
-    //TODO
-    return true;
+    int temp = 0;
+    try 
+    {
+        temp = stoi(value);
+    } 
+    catch (const invalid_argument &e)
+    {
+        return false;
+    }
+    if (temp == this->value) 
+    {
+        return true;
+    }
+    return false;
 }
 
 string JsonInt::toString(int indentLevel) const

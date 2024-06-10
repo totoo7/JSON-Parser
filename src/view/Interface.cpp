@@ -78,6 +78,7 @@ void Interface::printMenu() const
         cout << ">Enter 'save' to save the loaded file." << endl;
         cout << ">Enter 'saveas' then 'path' and 'filename' to save the loaded file to a new location." << endl;
         cout << ">Enter 'search' then 'key' to check if an object with this key exists. Result is printed in the terminal." << endl;
+        cout << ">Enter 'contains' then 'value' to check if a key with this value exists. Result is printed in the terminal." << endl;
         cout << ">Enter 'set' then 'path' and 'value' to set new value of existing key." << endl;
         cout << ">Enter 'erase' then 'path' to erase the given key." << endl;
         cout << ">Enter 'move' then 'path from' then 'path to' to move key." << endl;
@@ -154,6 +155,10 @@ void Interface::processUserInput(const string& userInput) {
     else if (command == "create")
     {
         current->create(userCommands[1], userCommands[2]);
+    }
+    else if (command == "contains")
+    {
+        current->contains(userCommands[1]);
     }
 }
 

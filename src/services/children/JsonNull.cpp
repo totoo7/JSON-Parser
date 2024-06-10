@@ -14,13 +14,11 @@ void JsonNull::print() const
 {
     cout << toString();
 }
-
-bool JsonNull::containsRecursive(const string &value, const string &currentKey, vector<string> &keys) const
+const bool JsonNull::contains(const string &value) const 
 {
-    //TODO
-    return true;
+    if (value == "null") return true;
+    return false;
 }
-
 string JsonNull::toString(int indentLevel) const
 {
     return "null";

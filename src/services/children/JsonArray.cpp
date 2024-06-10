@@ -56,10 +56,16 @@ const bool JsonArray::search(const string &key) const
     return true;
 }
 
-bool JsonArray::containsRecursive(const string &value, const string &currentKey, vector<string> &keys) const
+const bool JsonArray::contains(const string &value) const 
 {
-    //TODO
-    return true;
+    for (size_t i = 0; i < this->value.size(); i++) 
+    {
+        if (this->value[i]->contains(value)) 
+        {
+            return true;
+        }
+    }
+    return false;
 }
 
 void JsonArray::create(const string &path, const string &newValue, int depth)

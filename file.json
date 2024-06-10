@@ -4,7 +4,7 @@
   "null": null,
   "boolT": true,
   "boolF": false,
-  "string": "some text",
+  "string": "someText",
   "array": ["arrayElement", "arrayElement2"],
   "object": {
     "fruit": "Banana",

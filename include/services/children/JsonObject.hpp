@@ -17,10 +17,9 @@ public:
     virtual void move(const string &from, string &to, int depth = 0) override;
     Json *clone() const override;
     void print() const override;
+    const bool contains(const string &value) const override;
     string toString(int indentLevel = 0) const override;
     ~JsonObject();
-protected:
-    bool containsRecursive(const string &value, const string &currentKey, vector<string> &keys) const override;
 private:
     vector<JsonPair> value;
 };

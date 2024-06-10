@@ -13,14 +13,12 @@ public:
     virtual void print() const = 0;
     virtual string toString(int indentLevel = 0) const = 0;
     virtual Json *clone() const = 0;
-    virtual void printContainsResults() const {}
     virtual const bool search(const string &key) const;
-    vector<string> contains(const string &value) const;
+    virtual const bool contains(const string &value) const = 0;
     virtual void create(const string &path, const string &newValue, int depth = 0) {}
     virtual void set(const string &path, const string &newValue, int depth = 0) {}
     virtual void erase(const string &path, int depth = 0) {}
     virtual void move(const string &from, string &to, int depth = 0) {}
-    virtual bool containsRecursive(const string &value, const string &currentKey, vector<string> &keys) const = 0;
     virtual ~Json() = default;
 };
 
