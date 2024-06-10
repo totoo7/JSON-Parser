@@ -6,18 +6,18 @@ JsonObject::JsonObject(const vector<JsonPair> &other)
 {
     for (size_t i = 0; i < other.size(); i++)
     {
-        value.push_back(other[i]);
+        pairs.push_back(other[i]);
     }
 }
 JsonObject::JsonObject(const JsonObject &other)
 {
-    for (size_t i = 0; i < other.value.size(); i++)
-        value.push_back(other.value[i]);
+    for (size_t i = 0; i < other.pairs.size(); i++)
+        pairs.push_back(other.pairs[i]);
 }
 JsonObject &JsonObject::operator=(const JsonObject &other)
 {
     if (this == &other)
-        value = other.value;
+        pairs = other.pairs;
     return *this;
 }
 
@@ -25,14 +25,14 @@ const bool JsonObject::search(const string &key) const
 {
     vector<JsonPair> search_values;
     bool found = false;
-    for (size_t i = 0; i < value.size(); i++)
+    for (size_t i = 0; i < pairs.size(); i++)
     {
-        if (value[i].getKey() == key)
+        if (pairs[i].getKey() == key)
         {
-            search_values.push_back(value[i]);
+            search_values.push_back(pairs[i]);
             found = true;
         } 
-        else if (value[i].getValue()->search(key))
+        else if (pairs[i].getValue()->search(key))
         {
             found = true;
         }
@@ -53,7 +53,7 @@ void JsonObject::create(const string &path, const string &newValue, int depth)
     vector<string> tokens = UTILITIES::split(path, '/');
     if (depth == tokens.size() - 1)
     {
-        for (JsonPair &pair : value)
+        for (JsonPair &pair : pairs)
         {
             if (pair.getKey() == tokens.back())
             {
@@ -64,7 +64,7 @@ void JsonObject::create(const string &path, const string &newValue, int depth)
         JsonPair temp { JsonFactory::get().parseValue(newValue), tokens.back() };
         if (temp.getValue())
         {
-            value.push_back(temp);
+            pairs.push_back(temp);
         }
         else
         {
@@ -74,7 +74,7 @@ void JsonObject::create(const string &path, const string &newValue, int depth)
     }
     else 
     {
-        for (JsonPair &pair : value)
+        for (JsonPair &pair : pairs)
         {
             if (pair.getKey() == tokens[depth])
             {
@@ -89,7 +89,7 @@ void JsonObject::set(const string &path, const string &newValue, int depth)
     vector<string> tokens = UTILITIES::split(path, '/');
     if (depth == tokens.size() - 1)
     {
-        for (JsonPair &pair : value)
+        for (JsonPair &pair : pairs)
         {
             if (pair.getKey() == tokens[depth])
             {
@@ -111,7 +111,7 @@ void JsonObject::set(const string &path, const string &newValue, int depth)
     }
     else 
     {
-        for (JsonPair &pair : value)
+        for (JsonPair &pair : pairs)
         {
             if (pair.getKey() == tokens[depth])
             {
@@ -128,11 +128,11 @@ void JsonObject::erase(const string &path, int depth)
     vector<string> tokens = UTILITIES::split(path, '/');
     if (depth == tokens.size() - 1)
     {
-        for (size_t i = 0; i < value.size(); i++)
+        for (size_t i = 0; i < pairs.size(); i++)
         {
-            if (value[i].getKey() == tokens[depth])
+            if (pairs[i].getKey() == tokens[depth])
             {
-                value.erase(value.begin() + i);
+                pairs.erase(pairs.begin() + i);
                 return;
             }
         }
@@ -141,7 +141,7 @@ void JsonObject::erase(const string &path, int depth)
     }
     else 
     {
-        for (JsonPair &pair : value)
+        for (JsonPair &pair : pairs)
         {
             if (pair.getKey() == tokens[depth])
             {
@@ -160,18 +160,18 @@ void JsonObject::move(const string &from, string &to, int depth)
     if (depth == tokens.size() - 1)
     {
         bool found = false;
-        for (size_t i = 0; i < value.size(); i++) 
+        for (size_t i = 0; i < pairs.size(); i++) 
         {
-            if (value[i].getKey() == tokens[depth])
+            if (pairs[i].getKey() == tokens[depth])
             {
                 found = true;
                 if (to != "" && to[to.size() - 1] != '/') 
                 {
                     to += "/";
                 }
-                string temp = value[i].getKey() + "\\" + value[i].getValue()->toString();
+                string temp = pairs[i].getKey() + "\\" + pairs[i].getValue()->toString();
                 to += temp;
-                value.erase(value.begin() + i);
+                pairs.erase(pairs.begin() + i);
                 break;
             }
         }
@@ -181,7 +181,7 @@ void JsonObject::move(const string &from, string &to, int depth)
             return;
         }
     }
-    for (JsonPair &pair : value) 
+    for (JsonPair &pair : pairs) 
     {
         if (pair.getKey() == tokens[depth]) 
         {
@@ -197,7 +197,7 @@ void JsonObject::move(const string &from, string &to, int depth)
 
 Json *JsonObject::clone() const
 {
-    return new JsonObject(value);
+    return new JsonObject(pairs);
 }
 void JsonObject::print() const
 {
@@ -207,11 +207,11 @@ void JsonObject::print() const
 const bool JsonObject::contains(const string &value) const
 {   
     vector<JsonPair> contains_values;
-    for (size_t i = 0; i < this->value.size(); i++) 
+    for (size_t i = 0; i < pairs.size(); i++) 
     {
-        if (this->value[i].getValue()->contains(value))
+        if (pairs[i].getValue()->contains(value))
         {
-            contains_values.push_back(this->value[i]);
+            contains_values.push_back(pairs[i]);
         }
     }
     if (contains_values.size() == 0) return false;
@@ -230,16 +230,16 @@ string JsonObject::toString(int indentLevel) const
 
     temp += "{\n";
 
-    for (size_t i = 0; i < value.size(); i++)
+    for (size_t i = 0; i < pairs.size(); i++)
     {
         temp += indent + "  ";
         temp += '"';
-        temp += value[i].getKey();
+        temp += pairs[i].getKey();
         temp += '"';
         temp += " : ";
 
-        temp += value[i].getValue()->toString(indentLevel + 2);
-        if (i != value.size() - 1)
+        temp += pairs[i].getValue()->toString(indentLevel + 2);
+        if (i != pairs.size() - 1)
             temp += ",";
         temp += "\n";
     }

@@ -9,7 +9,6 @@ set(sources
     main.cpp
     
     src/view/Interface.cpp
-    src/controllers/Controller.cpp
     src/controllers/Command.cpp
     src/controllers/CommandManager.cpp
     src/services/Json.cpp

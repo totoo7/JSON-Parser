@@ -21,7 +21,7 @@ public:
     string toString(int indentLevel = 0) const override;
     ~JsonObject();
 private:
-    vector<JsonPair> value;
+    vector<JsonPair> pairs;
 };
 
 #endif 

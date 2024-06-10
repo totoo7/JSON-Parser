@@ -19,7 +19,7 @@ public:
     virtual void erase(const string &path, int depth = 0) override;
     ~JsonArray();
 private:
-    vector<Json*> value;
+    vector<Json*> values;
 };
 
 #endif

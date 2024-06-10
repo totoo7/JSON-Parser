@@ -7,15 +7,15 @@ JsonArray::JsonArray(const vector<Json*> &value)
 {
     for (size_t i = 0; i < value.size(); i++) 
     {
-        this->value.push_back(value[i]->clone());
+        values.push_back(value[i]->clone());
     }
 }
 
 JsonArray::JsonArray(const JsonArray &other)
 {
-    for (size_t i = 0; i < other.value.size(); i++) 
+    for (size_t i = 0; i < other.values.size(); i++) 
     {
-        value.push_back(other.value[i]->clone());
+        values.push_back(other.values[i]->clone());
     }
 }
 
@@ -23,9 +23,9 @@ JsonArray &JsonArray::operator=(const JsonArray &other)
 {
     if (this == &other)
         return *this;
-    for (size_t i = 0; i < other.value.size(); ++i) 
+    for (size_t i = 0; i < other.values.size(); ++i) 
     {
-        value.push_back(other.value[i]->clone());
+        values.push_back(other.values[i]->clone());
     }
     return *this;
 }
@@ -39,10 +39,10 @@ string JsonArray::toString(int indentLevel) const
 {
     string temp;
     temp += "[";
-    for (size_t i = 0; i < value.size(); i++)
+    for (size_t i = 0; i < values.size(); i++)
     {
-        temp += value[i]->toString(indentLevel + 2);  
-        if (i != value.size() - 1) 
+        temp += values[i]->toString(indentLevel + 2);  
+        if (i != values.size() - 1) 
             temp += ", ";
     }
     temp += "]";
@@ -51,16 +51,16 @@ string JsonArray::toString(int indentLevel) const
 
 const bool JsonArray::search(const string &key) const
 {
-    for (size_t i = 0; i < value.size(); i++)
-        value[i]->search(key);
+    for (size_t i = 0; i < values.size(); i++)
+        values[i]->search(key);
     return true;
 }
 
 const bool JsonArray::contains(const string &value) const 
 {
-    for (size_t i = 0; i < this->value.size(); i++) 
+    for (size_t i = 0; i < values.size(); i++) 
     {
-        if (this->value[i]->contains(value)) 
+        if (values[i]->contains(value)) 
         {
             return true;
         }
@@ -76,7 +76,7 @@ void JsonArray::create(const string &path, const string &newValue, int depth)
         Json *temp =  JsonFactory::get().parseValue(newValue);
         if (temp)
         {
-            value.push_back(temp->clone());
+            values.push_back(temp->clone());
         }
         else
         {
@@ -87,7 +87,7 @@ void JsonArray::create(const string &path, const string &newValue, int depth)
     }
     else 
     {
-        for (Json *json : value)
+        for (Json *json : values)
         {
             json->create(path, newValue, depth + 1);            
         }
@@ -97,7 +97,7 @@ void JsonArray::create(const string &path, const string &newValue, int depth)
 void JsonArray::erase(const string &path, int depth)
 {
     vector<string> tokens = UTILITIES::split(path, '/');
-    for (Json *json : value)
+    for (Json *json : values)
     {
         json->erase(path, depth++);
     }
@@ -105,13 +105,13 @@ void JsonArray::erase(const string &path, int depth)
 
 Json *JsonArray::clone() const
 {
-    return new JsonArray(value);
+    return new JsonArray(values);
 }
 
 JsonArray::~JsonArray()
 {
-    for (size_t i = 0; i < value.size(); i++) 
+    for (size_t i = 0; i < values.size(); i++) 
     {
-        delete value[i];
+        delete values[i];
     }
 }
