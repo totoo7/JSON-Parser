@@ -1,13 +1,13 @@
 #include "Interface.hpp"
 #include "Utilities.hpp"
-Interface::Interface() : current(nullptr), isRunning(true), filename("Null"), isLoadedFile(false), manager() {}
+Interface::Interface() : json(nullptr), isRunning(true), filename("Null"), isLoadedFile(false), manager() {}
 
 bool Interface::openFile(const string &filename)
 {
-    if (current) delete current;
+    if (json) delete json;
     try
     {
-        current = JsonFactory::get().parseFile(filename);
+        json = JsonFactory::get().parseFile(filename);
     }
     catch (invalid_argument &e)
     {
@@ -15,7 +15,7 @@ bool Interface::openFile(const string &filename)
         return false;
     }
     this->filename = filename;
-    if (current) isLoadedFile = true;
+    if (json) isLoadedFile = true;
     return isLoadedFile;
 }
 
@@ -25,8 +25,8 @@ void Interface::save() const
     ofs.open(filename, ios::out | ios::trunc);
     if (!ofs.is_open())
         return;
-    if (current)
-        ofs << current->toString();
+    if (json)
+        ofs << json->toString();
     ofs.close();
 }
 
@@ -43,8 +43,8 @@ void Interface::saveAs(const string &path, string &newFilename)
     ofs.open(content, ios::out | ios::trunc);
     if (!ofs.is_open())
         return;
-    if (current)
-        ofs << current->toString();
+    if (json)
+        ofs << json->toString();
     ofs.close();
 }
 
@@ -122,7 +122,7 @@ void Interface::processUserInput(const string& userInput) {
     } 
     else if (command == "parse") 
     {
-        if (current) current->print();
+        if (json) json->print();
     }
     else if (command == "exit")
     {
@@ -131,27 +131,27 @@ void Interface::processUserInput(const string& userInput) {
     } 
     else if (command == "search") 
     {
-        current->search(userCommands[1]);
+        json->search(userCommands[1]);
     } 
     else if (command == "set") 
     {
-        current->set(userCommands[1], userCommands[2]);
+        json->set(userCommands[1], userCommands[2]);
     }
     else if (command == "erase")
     {
-        current->erase(userCommands[1]);
+        json->erase(userCommands[1]);
     }
     else if (command == "move") 
     {
-        current->move(userCommands[1], userCommands[2]); 
+        json->move(userCommands[1], userCommands[2]); 
     }
     else if (command == "create")
     {
-        current->create(userCommands[1], userCommands[2]);
+        json->create(userCommands[1], userCommands[2]);
     }
     else if (command == "contains")
     {
-        current->contains(userCommands[1]);
+        json->contains(userCommands[1]);
     }
     else if (command == "help") 
     {
@@ -165,5 +165,5 @@ void Interface::processUserInput(const string& userInput) {
 }
 
 Interface::~Interface() {
-    delete current;
+    delete json;
 }

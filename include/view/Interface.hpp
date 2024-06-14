@@ -19,7 +19,7 @@ private:
     bool isRunning;
     string filename;
     bool isLoadedFile;
-    Json *current;
+    Json *json;
     CommandManager manager;
 };
 
