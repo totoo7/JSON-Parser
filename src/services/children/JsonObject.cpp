@@ -103,6 +103,7 @@ void JsonObject::set(const string &path, const string &newValue, int depth)
                 {
                     cerr << "Invalid JSON syntax." << endl;
                 }
+                delete temp;
                 return;
             }
         }
