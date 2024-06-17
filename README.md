@@ -25,12 +25,12 @@ This project provides a JSON parser written in C++. It supports parsing, manipul
 
 This project uses CMake for building. To compile and install the JSON Parser, follow these steps:
 
-# Clone the repository
+### Clone the repository
 git clone https://github.com/totoo7/JSON-Parser.git
 cd JSON-Parser
 
-# Create a build directory
+### Create a build directory
 mkdir build
 
-# Build the project
+### Build the project
 cmake --build build
