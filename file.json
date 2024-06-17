@@ -13,15 +13,5 @@
     "object1": {
       "anotherArray": [1, 4.2, "string"]
     }
-  },
-  "foos": [
-    {
-      "prop1": "value1",
-      "prop2": "value2"
-    },
-    {
-      "prop1": "value3",
-      "prop2": "value4"
-    }
-  ]
+  }
 }
