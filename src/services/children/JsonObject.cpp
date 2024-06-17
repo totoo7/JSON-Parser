@@ -193,7 +193,7 @@ void JsonObject::move(const string &from, string &to, int depth)
     if (depth == 0) {
         vector<string> tokens;
         tokens = UTILITIES::split(to, '\\');
-        create(tokens[0], tokens[1]);
+        create(tokens[0], tokens[1], depth);
     }
 }
 
