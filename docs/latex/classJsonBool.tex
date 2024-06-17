@@ -1,0 +1,211 @@
+\hypertarget{classJsonBool}{}\doxysection{Json\+Bool Class Reference}
+\label{classJsonBool}\index{JsonBool@{JsonBool}}
+
+
+Class representing a boolean JSON value.  
+
+
+
+
+{\ttfamily \#include $<$Json\+Bool.\+hpp$>$}
+
+
+
+Inheritance diagram for Json\+Bool\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=139pt]{classJsonBool__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Json\+Bool\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=139pt]{classJsonBool__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classJsonBool_ae69cdae72288e5a4c8e69afe9ff8ddcb}{Json\+Bool}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor initializing the value to false. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classJsonBool_a451e3958c94621543bc3fec3d3e68d27}{Json\+Bool}} (const bool \mbox{\hyperlink{classJsonBool_a1ec5d0e421154e1d60a293d1db41df9f}{value}})
+\begin{DoxyCompactList}\small\item\em Constructor initializing the value with a specified boolean. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classJsonBool_ad18a65d1d3a0a1478367b3b23c0a7548}{Json\+Bool}} (const \mbox{\hyperlink{classJsonBool}{Json\+Bool}} \&other)
+\begin{DoxyCompactList}\small\item\em Copy constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classJsonBool}{Json\+Bool}} \& \mbox{\hyperlink{classJsonBool_a1a7524dba5ab4282bbabe52908384986}{operator=}} (const \mbox{\hyperlink{classJsonBool}{Json\+Bool}} \&other)
+\begin{DoxyCompactList}\small\item\em Defines operator=. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classJson}{Json}} $\ast$ \mbox{\hyperlink{classJsonBool_aeaf1d5b75f045a14330d411df5b8490d}{clone}} () const override
+\begin{DoxyCompactList}\small\item\em Clones method. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classJsonBool_ac386e81b0a6101978f0d38dda68b39b0}{print}} () const override
+\begin{DoxyCompactList}\small\item\em Logs the boolean value. \end{DoxyCompactList}\item 
+const bool \mbox{\hyperlink{classJsonBool_aba8f10b9014c914a64dcab054c728f46}{contains}} (const string \&\mbox{\hyperlink{classJsonBool_a1ec5d0e421154e1d60a293d1db41df9f}{value}}) const override
+\begin{DoxyCompactList}\small\item\em Checks if the boolean value equals the given string representation. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classJsonBool_a7f50329c5194408578a0fab9baa0ef5c}{to\+String}} (int indent\+Level=0) const override
+\begin{DoxyCompactList}\small\item\em Converts the boolean value to a string. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classJsonBool_a1ec5d0e421154e1d60a293d1db41df9f}{value}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class representing a boolean JSON value. 
+
+This class inherits from \mbox{\hyperlink{classJson}{Json}} and encapsulates a boolean value. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classJsonBool_ae69cdae72288e5a4c8e69afe9ff8ddcb}\label{classJsonBool_ae69cdae72288e5a4c8e69afe9ff8ddcb}} 
+\index{JsonBool@{JsonBool}!JsonBool@{JsonBool}}
+\index{JsonBool@{JsonBool}!JsonBool@{JsonBool}}
+\doxysubsubsection{\texorpdfstring{JsonBool()}{JsonBool()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Json\+Bool\+::\+Json\+Bool (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default constructor initializing the value to false. 
+
+\mbox{\Hypertarget{classJsonBool_a451e3958c94621543bc3fec3d3e68d27}\label{classJsonBool_a451e3958c94621543bc3fec3d3e68d27}} 
+\index{JsonBool@{JsonBool}!JsonBool@{JsonBool}}
+\index{JsonBool@{JsonBool}!JsonBool@{JsonBool}}
+\doxysubsubsection{\texorpdfstring{JsonBool()}{JsonBool()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Json\+Bool\+::\+Json\+Bool (\begin{DoxyParamCaption}\item[{const bool}]{value }\end{DoxyParamCaption})}
+
+
+
+Constructor initializing the value with a specified boolean. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classJsonBool_ad18a65d1d3a0a1478367b3b23c0a7548}\label{classJsonBool_ad18a65d1d3a0a1478367b3b23c0a7548}} 
+\index{JsonBool@{JsonBool}!JsonBool@{JsonBool}}
+\index{JsonBool@{JsonBool}!JsonBool@{JsonBool}}
+\doxysubsubsection{\texorpdfstring{JsonBool()}{JsonBool()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Json\+Bool\+::\+Json\+Bool (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classJsonBool}{Json\+Bool}} \&}]{other }\end{DoxyParamCaption})}
+
+
+
+Copy constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classJsonBool_aeaf1d5b75f045a14330d411df5b8490d}\label{classJsonBool_aeaf1d5b75f045a14330d411df5b8490d}} 
+\index{JsonBool@{JsonBool}!clone@{clone}}
+\index{clone@{clone}!JsonBool@{JsonBool}}
+\doxysubsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classJson}{Json}}$\ast$ Json\+Bool\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Clones method. 
+
+\begin{DoxyReturn}{Returns}
+Json$\ast$ 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classJson_a51eba1dafeba2900206985fe933809fa}{Json}}.
+
+\mbox{\Hypertarget{classJsonBool_aba8f10b9014c914a64dcab054c728f46}\label{classJsonBool_aba8f10b9014c914a64dcab054c728f46}} 
+\index{JsonBool@{JsonBool}!contains@{contains}}
+\index{contains@{contains}!JsonBool@{JsonBool}}
+\doxysubsubsection{\texorpdfstring{contains()}{contains()}}
+{\footnotesize\ttfamily const bool Json\+Bool\+::contains (\begin{DoxyParamCaption}\item[{const string \&}]{value }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Checks if the boolean value equals the given string representation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The string value to compare against (\char`\"{}true\char`\"{} or \char`\"{}false\char`\"{}). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the value matches, false otherwise. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classJson_a82121a35c6d5272b6d0f076549b9c227}{Json}}.
+
+\mbox{\Hypertarget{classJsonBool_a1a7524dba5ab4282bbabe52908384986}\label{classJsonBool_a1a7524dba5ab4282bbabe52908384986}} 
+\index{JsonBool@{JsonBool}!operator=@{operator=}}
+\index{operator=@{operator=}!JsonBool@{JsonBool}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classJsonBool}{Json\+Bool}}\& Json\+Bool\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classJsonBool}{Json\+Bool}} \&}]{other }\end{DoxyParamCaption})}
+
+
+
+Defines operator=. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classJsonBool}{Json\+Bool}}\& 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classJsonBool_ac386e81b0a6101978f0d38dda68b39b0}\label{classJsonBool_ac386e81b0a6101978f0d38dda68b39b0}} 
+\index{JsonBool@{JsonBool}!print@{print}}
+\index{print@{print}!JsonBool@{JsonBool}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily void Json\+Bool\+::print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Logs the boolean value. 
+
+
+
+Implements \mbox{\hyperlink{classJson_a5d13ebe6dfacd7320de1aa1aefb1a2b4}{Json}}.
+
+\mbox{\Hypertarget{classJsonBool_a7f50329c5194408578a0fab9baa0ef5c}\label{classJsonBool_a7f50329c5194408578a0fab9baa0ef5c}} 
+\index{JsonBool@{JsonBool}!toString@{toString}}
+\index{toString@{toString}!JsonBool@{JsonBool}}
+\doxysubsubsection{\texorpdfstring{toString()}{toString()}}
+{\footnotesize\ttfamily std\+::string Json\+Bool\+::to\+String (\begin{DoxyParamCaption}\item[{int}]{indent\+Level = {\ttfamily 0} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Converts the boolean value to a string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em indent\+Level} & The indentation level for pretty-\/printing (default\+: 0). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+String representation of the boolean value (\char`\"{}true\char`\"{} or \char`\"{}false\char`\"{}). 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classJson_a5e03cd6ea6ab5ddc6e3ea664f2d4b3e5}{Json}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classJsonBool_a1ec5d0e421154e1d60a293d1db41df9f}\label{classJsonBool_a1ec5d0e421154e1d60a293d1db41df9f}} 
+\index{JsonBool@{JsonBool}!value@{value}}
+\index{value@{value}!JsonBool@{JsonBool}}
+\doxysubsubsection{\texorpdfstring{value}{value}}
+{\footnotesize\ttfamily bool Json\+Bool\+::value\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/totoo/\+Documents/\+OOP\+\_\+2024/\+JSON-\/\+Parser/include/services/children/\mbox{\hyperlink{JsonBool_8hpp}{Json\+Bool.\+hpp}}\end{DoxyCompactItemize}

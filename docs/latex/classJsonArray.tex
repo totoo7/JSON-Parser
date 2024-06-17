@@ -1,0 +1,291 @@
+\hypertarget{classJsonArray}{}\doxysection{Json\+Array Class Reference}
+\label{classJsonArray}\index{JsonArray@{JsonArray}}
+
+
+Class representing a JSON array.  
+
+
+
+
+{\ttfamily \#include $<$Json\+Array.\+hpp$>$}
+
+
+
+Inheritance diagram for Json\+Array\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=143pt]{classJsonArray__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Json\+Array\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=143pt]{classJsonArray__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classJsonArray_a304f5ede160dbc87f9ec7d7983bd1cbf}{Json\+Array}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor creating an empty JSON array. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classJsonArray_a629d2ba630f51d9cb94fcc9b96ae74ab}{Json\+Array}} (const vector$<$ \mbox{\hyperlink{classJson}{Json}} $\ast$ $>$ \&value)
+\begin{DoxyCompactList}\small\item\em Constructor initializing the JSON array with a vector of JSON pointers. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classJsonArray_a752d493e149ed769e0a3a981dbcd076a}{Json\+Array}} (const \mbox{\hyperlink{classJsonArray}{Json\+Array}} \&other)
+\begin{DoxyCompactList}\small\item\em Copy constructor creating a deep copy of another {\ttfamily \mbox{\hyperlink{classJsonArray}{Json\+Array}}} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classJsonArray}{Json\+Array}} \& \mbox{\hyperlink{classJsonArray_a668ae003be2e667328fe5ec51602004c}{operator=}} (const \mbox{\hyperlink{classJsonArray}{Json\+Array}} \&other)
+\begin{DoxyCompactList}\small\item\em Defines operator=, makes a deep copy of another {\ttfamily \mbox{\hyperlink{classJsonArray}{Json\+Array}}} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classJson}{Json}} $\ast$ \mbox{\hyperlink{classJsonArray_a964decb14e55f906d38146038fce3ec9}{clone}} () const override
+\begin{DoxyCompactList}\small\item\em Clone method. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classJsonArray_a31a20ea664d9a2b9958b417523ad5213}{print}} () const override
+\begin{DoxyCompactList}\small\item\em Logs the JSON array. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classJsonArray_adaf401664744c4b92e4d2a2c452b3e2e}{to\+String}} (int indent\+Level=0) const override
+\begin{DoxyCompactList}\small\item\em Converts the JSON array to a string representation. \end{DoxyCompactList}\item 
+const bool \mbox{\hyperlink{classJsonArray_a23949c5ed3fb23237cc0f47a90b84baa}{search}} (const string \&key) const override
+\begin{DoxyCompactList}\small\item\em Searches for a key within the JSON array. \end{DoxyCompactList}\item 
+const bool \mbox{\hyperlink{classJsonArray_ac001343284602fa68667382855380c31}{contains}} (const string \&value) const override
+\begin{DoxyCompactList}\small\item\em Checks if the JSON array contains a specific value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classJsonArray_a1e1352324f5ba2c3086c0e2d89f903fa}{create}} (const string \&path, const string \&new\+Value, int depth=0) override
+\begin{DoxyCompactList}\small\item\em Creates a JSON element within the array based on the provided path and value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classJsonArray_abfb59d6f7f5d9ea7a0eec2b0b5287866}{erase}} (const std\+::string \&path, int depth=0) override
+\begin{DoxyCompactList}\small\item\em Erases a JSON object within the array based on the provided path. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classJsonArray_afec55b2701a94ade8009381a7f1919f0}{$\sim$\+Json\+Array}} ()
+\begin{DoxyCompactList}\small\item\em Destructor deallocating memory used by the JSON array. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ \mbox{\hyperlink{classJson}{Json}} $\ast$ $>$ \mbox{\hyperlink{classJsonArray_a2c3cc59f8a648d775f800e514c073380}{values}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class representing a JSON array. 
+
+This class inherits from \mbox{\hyperlink{classJson}{Json}} and manages an array of JSON objects. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classJsonArray_a304f5ede160dbc87f9ec7d7983bd1cbf}\label{classJsonArray_a304f5ede160dbc87f9ec7d7983bd1cbf}} 
+\index{JsonArray@{JsonArray}!JsonArray@{JsonArray}}
+\index{JsonArray@{JsonArray}!JsonArray@{JsonArray}}
+\doxysubsubsection{\texorpdfstring{JsonArray()}{JsonArray()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Json\+Array\+::\+Json\+Array (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default constructor creating an empty JSON array. 
+
+\mbox{\Hypertarget{classJsonArray_a629d2ba630f51d9cb94fcc9b96ae74ab}\label{classJsonArray_a629d2ba630f51d9cb94fcc9b96ae74ab}} 
+\index{JsonArray@{JsonArray}!JsonArray@{JsonArray}}
+\index{JsonArray@{JsonArray}!JsonArray@{JsonArray}}
+\doxysubsubsection{\texorpdfstring{JsonArray()}{JsonArray()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Json\+Array\+::\+Json\+Array (\begin{DoxyParamCaption}\item[{const vector$<$ \mbox{\hyperlink{classJson}{Json}} $\ast$ $>$ \&}]{value }\end{DoxyParamCaption})}
+
+
+
+Constructor initializing the JSON array with a vector of JSON pointers. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classJsonArray_a752d493e149ed769e0a3a981dbcd076a}\label{classJsonArray_a752d493e149ed769e0a3a981dbcd076a}} 
+\index{JsonArray@{JsonArray}!JsonArray@{JsonArray}}
+\index{JsonArray@{JsonArray}!JsonArray@{JsonArray}}
+\doxysubsubsection{\texorpdfstring{JsonArray()}{JsonArray()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Json\+Array\+::\+Json\+Array (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classJsonArray}{Json\+Array}} \&}]{other }\end{DoxyParamCaption})}
+
+
+
+Copy constructor creating a deep copy of another {\ttfamily \mbox{\hyperlink{classJsonArray}{Json\+Array}}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classJsonArray_afec55b2701a94ade8009381a7f1919f0}\label{classJsonArray_afec55b2701a94ade8009381a7f1919f0}} 
+\index{JsonArray@{JsonArray}!````~JsonArray@{$\sim$JsonArray}}
+\index{````~JsonArray@{$\sim$JsonArray}!JsonArray@{JsonArray}}
+\doxysubsubsection{\texorpdfstring{$\sim$JsonArray()}{~JsonArray()}}
+{\footnotesize\ttfamily Json\+Array\+::$\sim$\+Json\+Array (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor deallocating memory used by the JSON array. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classJsonArray_a964decb14e55f906d38146038fce3ec9}\label{classJsonArray_a964decb14e55f906d38146038fce3ec9}} 
+\index{JsonArray@{JsonArray}!clone@{clone}}
+\index{clone@{clone}!JsonArray@{JsonArray}}
+\doxysubsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classJson}{Json}}$\ast$ Json\+Array\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Clone method. 
+
+\begin{DoxyReturn}{Returns}
+Json$\ast$ 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classJson_a51eba1dafeba2900206985fe933809fa}{Json}}.
+
+\mbox{\Hypertarget{classJsonArray_ac001343284602fa68667382855380c31}\label{classJsonArray_ac001343284602fa68667382855380c31}} 
+\index{JsonArray@{JsonArray}!contains@{contains}}
+\index{contains@{contains}!JsonArray@{JsonArray}}
+\doxysubsubsection{\texorpdfstring{contains()}{contains()}}
+{\footnotesize\ttfamily const bool Json\+Array\+::contains (\begin{DoxyParamCaption}\item[{const string \&}]{value }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Checks if the JSON array contains a specific value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The value to check for. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the value is found in any JSON object within the array, false otherwise. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classJson_a82121a35c6d5272b6d0f076549b9c227}{Json}}.
+
+\mbox{\Hypertarget{classJsonArray_a1e1352324f5ba2c3086c0e2d89f903fa}\label{classJsonArray_a1e1352324f5ba2c3086c0e2d89f903fa}} 
+\index{JsonArray@{JsonArray}!create@{create}}
+\index{create@{create}!JsonArray@{JsonArray}}
+\doxysubsubsection{\texorpdfstring{create()}{create()}}
+{\footnotesize\ttfamily void Json\+Array\+::create (\begin{DoxyParamCaption}\item[{const string \&}]{path,  }\item[{const string \&}]{new\+Value,  }\item[{int}]{depth = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Creates a JSON element within the array based on the provided path and value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & The path within the JSON structure where the modification should occur. \\
+\hline
+{\em new\+Value} & The new JSON value to set at the specified path. \\
+\hline
+{\em depth} & The current depth level within the JSON structure (internal use). \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classJson_aba7844204165ba8a54a06ce602f6bc66}{Json}}.
+
+\mbox{\Hypertarget{classJsonArray_abfb59d6f7f5d9ea7a0eec2b0b5287866}\label{classJsonArray_abfb59d6f7f5d9ea7a0eec2b0b5287866}} 
+\index{JsonArray@{JsonArray}!erase@{erase}}
+\index{erase@{erase}!JsonArray@{JsonArray}}
+\doxysubsubsection{\texorpdfstring{erase()}{erase()}}
+{\footnotesize\ttfamily void Json\+Array\+::erase (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{path,  }\item[{int}]{depth = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+Erases a JSON object within the array based on the provided path. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & The path within the JSON structure where the deletion should occur. \\
+\hline
+{\em depth} & The current depth level within the JSON structure (internal use). \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classJsonArray_a668ae003be2e667328fe5ec51602004c}\label{classJsonArray_a668ae003be2e667328fe5ec51602004c}} 
+\index{JsonArray@{JsonArray}!operator=@{operator=}}
+\index{operator=@{operator=}!JsonArray@{JsonArray}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classJsonArray}{Json\+Array}}\& Json\+Array\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classJsonArray}{Json\+Array}} \&}]{other }\end{DoxyParamCaption})}
+
+
+
+Defines operator=, makes a deep copy of another {\ttfamily \mbox{\hyperlink{classJsonArray}{Json\+Array}}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classJsonArray}{Json\+Array}}\& 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classJsonArray_a31a20ea664d9a2b9958b417523ad5213}\label{classJsonArray_a31a20ea664d9a2b9958b417523ad5213}} 
+\index{JsonArray@{JsonArray}!print@{print}}
+\index{print@{print}!JsonArray@{JsonArray}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily void Json\+Array\+::print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Logs the JSON array. 
+
+
+
+Implements \mbox{\hyperlink{classJson_a5d13ebe6dfacd7320de1aa1aefb1a2b4}{Json}}.
+
+\mbox{\Hypertarget{classJsonArray_a23949c5ed3fb23237cc0f47a90b84baa}\label{classJsonArray_a23949c5ed3fb23237cc0f47a90b84baa}} 
+\index{JsonArray@{JsonArray}!search@{search}}
+\index{search@{search}!JsonArray@{JsonArray}}
+\doxysubsubsection{\texorpdfstring{search()}{search()}}
+{\footnotesize\ttfamily const bool Json\+Array\+::search (\begin{DoxyParamCaption}\item[{const string \&}]{key }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Searches for a key within the JSON array. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & The key to search for. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the key is found in any JSON object within the array, false otherwise. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classJson_a381fc9d7d10f3adefa5639695ee9d620}{Json}}.
+
+\mbox{\Hypertarget{classJsonArray_adaf401664744c4b92e4d2a2c452b3e2e}\label{classJsonArray_adaf401664744c4b92e4d2a2c452b3e2e}} 
+\index{JsonArray@{JsonArray}!toString@{toString}}
+\index{toString@{toString}!JsonArray@{JsonArray}}
+\doxysubsubsection{\texorpdfstring{toString()}{toString()}}
+{\footnotesize\ttfamily string Json\+Array\+::to\+String (\begin{DoxyParamCaption}\item[{int}]{indent\+Level = {\ttfamily 0} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Converts the JSON array to a string representation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em indent\+Level} & The indentation level for pretty-\/printing (default\+: 0). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+String representation of the JSON array. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classJson_a5e03cd6ea6ab5ddc6e3ea664f2d4b3e5}{Json}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classJsonArray_a2c3cc59f8a648d775f800e514c073380}\label{classJsonArray_a2c3cc59f8a648d775f800e514c073380}} 
+\index{JsonArray@{JsonArray}!values@{values}}
+\index{values@{values}!JsonArray@{JsonArray}}
+\doxysubsubsection{\texorpdfstring{values}{values}}
+{\footnotesize\ttfamily vector$<$\mbox{\hyperlink{classJson}{Json}} $\ast$$>$ Json\+Array\+::values\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/totoo/\+Documents/\+OOP\+\_\+2024/\+JSON-\/\+Parser/include/services/children/\mbox{\hyperlink{JsonArray_8hpp}{Json\+Array.\+hpp}}\end{DoxyCompactItemize}

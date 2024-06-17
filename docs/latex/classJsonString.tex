@@ -1,0 +1,211 @@
+\hypertarget{classJsonString}{}\doxysection{Json\+String Class Reference}
+\label{classJsonString}\index{JsonString@{JsonString}}
+
+
+Class representing a string JSON value.  
+
+
+
+
+{\ttfamily \#include $<$Json\+String.\+hpp$>$}
+
+
+
+Inheritance diagram for Json\+String\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=145pt]{classJsonString__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Json\+String\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=145pt]{classJsonString__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classJsonString_ac8abbf10bf08a2cb269d307ba96f5b9a}{Json\+String}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor initializing the value to an empty string. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classJsonString_aaa133a51f17a667bb7b3eba5e2d4ea74}{Json\+String}} (const string \mbox{\hyperlink{classJsonString_a53128d23186dbe04177a64c1f745f83c}{value}})
+\begin{DoxyCompactList}\small\item\em Constructor initializing the value with a specified string. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classJsonString_a12988b2872484f97140311e77a6687cb}{Json\+String}} (const \mbox{\hyperlink{classJsonString}{Json\+String}} \&other)
+\begin{DoxyCompactList}\small\item\em Copy constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classJsonString}{Json\+String}} \& \mbox{\hyperlink{classJsonString_a50c21126a05593fdde66cab0739d2eca}{operator=}} (const \mbox{\hyperlink{classJsonString}{Json\+String}} \&other)
+\begin{DoxyCompactList}\small\item\em Defines operator=. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classJson}{Json}} $\ast$ \mbox{\hyperlink{classJsonString_a833a1025e1023b9eeda3281bea15962f}{clone}} () const override
+\begin{DoxyCompactList}\small\item\em Clone method. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classJsonString_a62c4e5622bbb4e51026601c347e26385}{to\+String}} (int indent\+Level=0) const override
+\begin{DoxyCompactList}\small\item\em Converts the string value to a string representation. \end{DoxyCompactList}\item 
+const bool \mbox{\hyperlink{classJsonString_a62ba3c93111efe0dcc36b8063b0eeb22}{contains}} (const string \&\mbox{\hyperlink{classJsonString_a53128d23186dbe04177a64c1f745f83c}{value}}) const override
+\begin{DoxyCompactList}\small\item\em Checks if the string value contains the specified substring. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classJsonString_a38bd1beb644c93556d61369017579110}{print}} () const override
+\begin{DoxyCompactList}\small\item\em Logs the string value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classJsonString_a53128d23186dbe04177a64c1f745f83c}{value}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class representing a string JSON value. 
+
+This class inherits from \mbox{\hyperlink{classJson}{Json}} and encapsulates a string value. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classJsonString_ac8abbf10bf08a2cb269d307ba96f5b9a}\label{classJsonString_ac8abbf10bf08a2cb269d307ba96f5b9a}} 
+\index{JsonString@{JsonString}!JsonString@{JsonString}}
+\index{JsonString@{JsonString}!JsonString@{JsonString}}
+\doxysubsubsection{\texorpdfstring{JsonString()}{JsonString()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Json\+String\+::\+Json\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default constructor initializing the value to an empty string. 
+
+\mbox{\Hypertarget{classJsonString_aaa133a51f17a667bb7b3eba5e2d4ea74}\label{classJsonString_aaa133a51f17a667bb7b3eba5e2d4ea74}} 
+\index{JsonString@{JsonString}!JsonString@{JsonString}}
+\index{JsonString@{JsonString}!JsonString@{JsonString}}
+\doxysubsubsection{\texorpdfstring{JsonString()}{JsonString()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Json\+String\+::\+Json\+String (\begin{DoxyParamCaption}\item[{const string}]{value }\end{DoxyParamCaption})}
+
+
+
+Constructor initializing the value with a specified string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classJsonString_a12988b2872484f97140311e77a6687cb}\label{classJsonString_a12988b2872484f97140311e77a6687cb}} 
+\index{JsonString@{JsonString}!JsonString@{JsonString}}
+\index{JsonString@{JsonString}!JsonString@{JsonString}}
+\doxysubsubsection{\texorpdfstring{JsonString()}{JsonString()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Json\+String\+::\+Json\+String (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classJsonString}{Json\+String}} \&}]{other }\end{DoxyParamCaption})}
+
+
+
+Copy constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classJsonString_a833a1025e1023b9eeda3281bea15962f}\label{classJsonString_a833a1025e1023b9eeda3281bea15962f}} 
+\index{JsonString@{JsonString}!clone@{clone}}
+\index{clone@{clone}!JsonString@{JsonString}}
+\doxysubsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classJson}{Json}}$\ast$ Json\+String\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Clone method. 
+
+\begin{DoxyReturn}{Returns}
+Json\+String$\ast$ 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classJson_a51eba1dafeba2900206985fe933809fa}{Json}}.
+
+\mbox{\Hypertarget{classJsonString_a62ba3c93111efe0dcc36b8063b0eeb22}\label{classJsonString_a62ba3c93111efe0dcc36b8063b0eeb22}} 
+\index{JsonString@{JsonString}!contains@{contains}}
+\index{contains@{contains}!JsonString@{JsonString}}
+\doxysubsubsection{\texorpdfstring{contains()}{contains()}}
+{\footnotesize\ttfamily const bool Json\+String\+::contains (\begin{DoxyParamCaption}\item[{const string \&}]{value }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Checks if the string value contains the specified substring. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The substring to search for. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the substring is found within the string value, false otherwise. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classJson_a82121a35c6d5272b6d0f076549b9c227}{Json}}.
+
+\mbox{\Hypertarget{classJsonString_a50c21126a05593fdde66cab0739d2eca}\label{classJsonString_a50c21126a05593fdde66cab0739d2eca}} 
+\index{JsonString@{JsonString}!operator=@{operator=}}
+\index{operator=@{operator=}!JsonString@{JsonString}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classJsonString}{Json\+String}}\& Json\+String\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classJsonString}{Json\+String}} \&}]{other }\end{DoxyParamCaption})}
+
+
+
+Defines operator=. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classJsonString}{Json\+String}}\& 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classJsonString_a38bd1beb644c93556d61369017579110}\label{classJsonString_a38bd1beb644c93556d61369017579110}} 
+\index{JsonString@{JsonString}!print@{print}}
+\index{print@{print}!JsonString@{JsonString}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily void Json\+String\+::print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Logs the string value. 
+
+
+
+Implements \mbox{\hyperlink{classJson_a5d13ebe6dfacd7320de1aa1aefb1a2b4}{Json}}.
+
+\mbox{\Hypertarget{classJsonString_a62c4e5622bbb4e51026601c347e26385}\label{classJsonString_a62c4e5622bbb4e51026601c347e26385}} 
+\index{JsonString@{JsonString}!toString@{toString}}
+\index{toString@{toString}!JsonString@{JsonString}}
+\doxysubsubsection{\texorpdfstring{toString()}{toString()}}
+{\footnotesize\ttfamily string Json\+String\+::to\+String (\begin{DoxyParamCaption}\item[{int}]{indent\+Level = {\ttfamily 0} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Converts the string value to a string representation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em indent\+Level} & The indentation level for pretty-\/printing (default\+: 0). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+String representation of the string value enclosed in double quotes. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classJson_a5e03cd6ea6ab5ddc6e3ea664f2d4b3e5}{Json}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classJsonString_a53128d23186dbe04177a64c1f745f83c}\label{classJsonString_a53128d23186dbe04177a64c1f745f83c}} 
+\index{JsonString@{JsonString}!value@{value}}
+\index{value@{value}!JsonString@{JsonString}}
+\doxysubsubsection{\texorpdfstring{value}{value}}
+{\footnotesize\ttfamily string Json\+String\+::value\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/totoo/\+Documents/\+OOP\+\_\+2024/\+JSON-\/\+Parser/include/services/children/\mbox{\hyperlink{JsonString_8hpp}{Json\+String.\+hpp}}\end{DoxyCompactItemize}

@@ -18,7 +18,7 @@ CommandManager::CommandManager()
 
 bool CommandManager::isValidCommand(const string &name) const 
 {
-    for (const auto &command : commands) 
+    for (const Command &command : commands) 
     {
         if (command.getName() == name)
         {
@@ -34,14 +34,14 @@ void CommandManager::toLowerCase(string &name)
     {
         if (name[i] >= 'A' && name[i] <=  'Z')
         {
-            name += 32;
+            name[i] += 32;
         }
     }
 }
 
 const Command* CommandManager::getCommand(const string &name) const
 {
-    for (const auto &command : commands) 
+    for (const Command &command : commands) 
     {
         if (command.getName() == name) 
         {

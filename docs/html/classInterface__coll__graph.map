@@ -1,0 +1,5 @@
+<map id="Interface" name="Interface">
+<area shape="rect" id="node1" title="Basic terminal interface." alt="" coords="51,95,131,121"/>
+<area shape="rect" id="node2" href="$classJson.html" title="Base class for all JSON objects." alt="" coords="5,5,55,32"/>
+<area shape="rect" id="node3" href="$classCommandManager.html" title="Handles commands." alt="" coords="79,5,226,32"/>
+</map>

@@ -1,0 +1,163 @@
+\hypertarget{classJsonNull}{}\doxysection{Json\+Null Class Reference}
+\label{classJsonNull}\index{JsonNull@{JsonNull}}
+
+
+Class representing a JSON null value.  
+
+
+
+
+{\ttfamily \#include $<$Json\+Null.\+hpp$>$}
+
+
+
+Inheritance diagram for Json\+Null\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=136pt]{classJsonNull__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Json\+Null\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=136pt]{classJsonNull__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classJsonNull_af4b913ebf2c8063ee5161d15cde2cac7}{Json\+Null}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classJsonNull}{Json\+Null}} \& \mbox{\hyperlink{classJsonNull_a2c2728d57a4a446e57d728b5e272d3f3}{operator=}} (const \mbox{\hyperlink{classJsonNull}{Json\+Null}} \&other)
+\begin{DoxyCompactList}\small\item\em Defines operator=. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classJson}{Json}} $\ast$ \mbox{\hyperlink{classJsonNull_aad2acd244bcc9bdc88d08dafa8ac1833}{clone}} () const override
+\begin{DoxyCompactList}\small\item\em Clone method. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classJsonNull_a6a5c176738369f6c12ccea02da5fa24b}{print}} () const override
+\begin{DoxyCompactList}\small\item\em Logs the null value. \end{DoxyCompactList}\item 
+const bool \mbox{\hyperlink{classJsonNull_a1527cfa6fc8f99e16552e3a8cf0946cb}{contains}} (const string \&value) const override
+\begin{DoxyCompactList}\small\item\em Checks if the JSON null value contains the given string representation. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classJsonNull_a2ee997c9399c79db802b784c8b204746}{to\+String}} (int indent\+Level=0) const override
+\begin{DoxyCompactList}\small\item\em Converts the JSON null value to a string. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class representing a JSON null value. 
+
+This class inherits from \mbox{\hyperlink{classJson}{Json}} and represents a null value in JSON format. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classJsonNull_af4b913ebf2c8063ee5161d15cde2cac7}\label{classJsonNull_af4b913ebf2c8063ee5161d15cde2cac7}} 
+\index{JsonNull@{JsonNull}!JsonNull@{JsonNull}}
+\index{JsonNull@{JsonNull}!JsonNull@{JsonNull}}
+\doxysubsubsection{\texorpdfstring{JsonNull()}{JsonNull()}}
+{\footnotesize\ttfamily Json\+Null\+::\+Json\+Null (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default constructor. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classJsonNull_aad2acd244bcc9bdc88d08dafa8ac1833}\label{classJsonNull_aad2acd244bcc9bdc88d08dafa8ac1833}} 
+\index{JsonNull@{JsonNull}!clone@{clone}}
+\index{clone@{clone}!JsonNull@{JsonNull}}
+\doxysubsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classJson}{Json}}$\ast$ Json\+Null\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Clone method. 
+
+\begin{DoxyReturn}{Returns}
+Json\+Null$\ast$ 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classJson_a51eba1dafeba2900206985fe933809fa}{Json}}.
+
+\mbox{\Hypertarget{classJsonNull_a1527cfa6fc8f99e16552e3a8cf0946cb}\label{classJsonNull_a1527cfa6fc8f99e16552e3a8cf0946cb}} 
+\index{JsonNull@{JsonNull}!contains@{contains}}
+\index{contains@{contains}!JsonNull@{JsonNull}}
+\doxysubsubsection{\texorpdfstring{contains()}{contains()}}
+{\footnotesize\ttfamily const bool Json\+Null\+::contains (\begin{DoxyParamCaption}\item[{const string \&}]{value }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Checks if the JSON null value contains the given string representation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The string value to compare against (\char`\"{}null\char`\"{}). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the value matches \char`\"{}null\char`\"{}, false otherwise. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classJson_a82121a35c6d5272b6d0f076549b9c227}{Json}}.
+
+\mbox{\Hypertarget{classJsonNull_a2c2728d57a4a446e57d728b5e272d3f3}\label{classJsonNull_a2c2728d57a4a446e57d728b5e272d3f3}} 
+\index{JsonNull@{JsonNull}!operator=@{operator=}}
+\index{operator=@{operator=}!JsonNull@{JsonNull}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classJsonNull}{Json\+Null}}\& Json\+Null\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classJsonNull}{Json\+Null}} \&}]{other }\end{DoxyParamCaption})}
+
+
+
+Defines operator=. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classJsonNull}{Json\+Null}}\& 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classJsonNull_a6a5c176738369f6c12ccea02da5fa24b}\label{classJsonNull_a6a5c176738369f6c12ccea02da5fa24b}} 
+\index{JsonNull@{JsonNull}!print@{print}}
+\index{print@{print}!JsonNull@{JsonNull}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily void Json\+Null\+::print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Logs the null value. 
+
+
+
+Implements \mbox{\hyperlink{classJson_a5d13ebe6dfacd7320de1aa1aefb1a2b4}{Json}}.
+
+\mbox{\Hypertarget{classJsonNull_a2ee997c9399c79db802b784c8b204746}\label{classJsonNull_a2ee997c9399c79db802b784c8b204746}} 
+\index{JsonNull@{JsonNull}!toString@{toString}}
+\index{toString@{toString}!JsonNull@{JsonNull}}
+\doxysubsubsection{\texorpdfstring{toString()}{toString()}}
+{\footnotesize\ttfamily string Json\+Null\+::to\+String (\begin{DoxyParamCaption}\item[{int}]{indent\+Level = {\ttfamily 0} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Converts the JSON null value to a string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em indent\+Level} & The indentation level for pretty-\/printing (default\+: 0). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+String representation of the JSON null value (\char`\"{}null\char`\"{}). 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classJson_a5e03cd6ea6ab5ddc6e3ea664f2d4b3e5}{Json}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/totoo/\+Documents/\+OOP\+\_\+2024/\+JSON-\/\+Parser/include/services/children/\mbox{\hyperlink{JsonNull_8hpp}{Json\+Null.\+hpp}}\end{DoxyCompactItemize}

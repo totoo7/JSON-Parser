@@ -1,0 +1,154 @@
+\hypertarget{classBoolCreator}{}\doxysection{Bool\+Creator Class Reference}
+\label{classBoolCreator}\index{BoolCreator@{BoolCreator}}
+
+
+{\ttfamily \#include $<$Bool\+Creator.\+hpp$>$}
+
+
+
+Inheritance diagram for Bool\+Creator\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=154pt]{classBoolCreator__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Bool\+Creator\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=154pt]{classBoolCreator__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBoolCreator_ab45e4da281cd7b32a4f7cd718ed8ead0}{Bool\+Creator}} ()
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classBoolCreator}{Bool\+Creator}} object. Initializes the \mbox{\hyperlink{classJsonCreator}{Json\+Creator}}\textquotesingle{}s value as \char`\"{}bool\char`\"{} with it\textquotesingle{}s constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classJson}{Json}} $\ast$ \mbox{\hyperlink{classBoolCreator_ac1cfd2ec1d5d0a409151666949cceedb}{create\+Json}} (const string \&\mbox{\hyperlink{classJsonCreator_a253a8df6e5b5cc2e43ce72c27c017b2b}{value}}) const override
+\begin{DoxyCompactList}\small\item\em Creates a \mbox{\hyperlink{classJsonBool}{Json\+Bool}}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classBoolCreator_a9af5c1011d7535eb15df29d464d9f293}{get\+Value}} (const string \&object) const override
+\begin{DoxyCompactList}\small\item\em Get the value object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classBoolCreator_a7177428b5fc34c29d5ce25cfa3a84140}{$\sim$\+Bool\+Creator}} ()=default
+\begin{DoxyCompactList}\small\item\em Destroy the Bool Creator object. Default destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classBoolCreator_ad3bc5a46f7c85d82614820c23b31baf5}{is\+Bool}} (const string \&\mbox{\hyperlink{classJsonCreator_a253a8df6e5b5cc2e43ce72c27c017b2b}{value}}) const
+\begin{DoxyCompactList}\small\item\em Checks if passed value is a boolean. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classBoolCreator_a6e5d0b7cc99340d106c87bde70030ac5}{string\+To\+Bool}} (const string \&val) const
+\begin{DoxyCompactList}\small\item\em Makes a bool from a string value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classBoolCreator_ab45e4da281cd7b32a4f7cd718ed8ead0}\label{classBoolCreator_ab45e4da281cd7b32a4f7cd718ed8ead0}} 
+\index{BoolCreator@{BoolCreator}!BoolCreator@{BoolCreator}}
+\index{BoolCreator@{BoolCreator}!BoolCreator@{BoolCreator}}
+\doxysubsubsection{\texorpdfstring{BoolCreator()}{BoolCreator()}}
+{\footnotesize\ttfamily Bool\+Creator\+::\+Bool\+Creator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{classBoolCreator}{Bool\+Creator}} object. Initializes the \mbox{\hyperlink{classJsonCreator}{Json\+Creator}}\textquotesingle{}s value as \char`\"{}bool\char`\"{} with it\textquotesingle{}s constructor. 
+
+\mbox{\Hypertarget{classBoolCreator_a7177428b5fc34c29d5ce25cfa3a84140}\label{classBoolCreator_a7177428b5fc34c29d5ce25cfa3a84140}} 
+\index{BoolCreator@{BoolCreator}!````~BoolCreator@{$\sim$BoolCreator}}
+\index{````~BoolCreator@{$\sim$BoolCreator}!BoolCreator@{BoolCreator}}
+\doxysubsubsection{\texorpdfstring{$\sim$BoolCreator()}{~BoolCreator()}}
+{\footnotesize\ttfamily Bool\+Creator\+::$\sim$\+Bool\+Creator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Destroy the Bool Creator object. Default destructor. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classBoolCreator_ac1cfd2ec1d5d0a409151666949cceedb}\label{classBoolCreator_ac1cfd2ec1d5d0a409151666949cceedb}} 
+\index{BoolCreator@{BoolCreator}!createJson@{createJson}}
+\index{createJson@{createJson}!BoolCreator@{BoolCreator}}
+\doxysubsubsection{\texorpdfstring{createJson()}{createJson()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classJson}{Json}}$\ast$ Bool\+Creator\+::create\+Json (\begin{DoxyParamCaption}\item[{const string \&}]{value }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Creates a \mbox{\hyperlink{classJsonBool}{Json\+Bool}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Json$\ast$ 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classJsonCreator_a2b4630e018665302be7608c4b1f4c85f}{Json\+Creator}}.
+
+\mbox{\Hypertarget{classBoolCreator_a9af5c1011d7535eb15df29d464d9f293}\label{classBoolCreator_a9af5c1011d7535eb15df29d464d9f293}} 
+\index{BoolCreator@{BoolCreator}!getValue@{getValue}}
+\index{getValue@{getValue}!BoolCreator@{BoolCreator}}
+\doxysubsubsection{\texorpdfstring{getValue()}{getValue()}}
+{\footnotesize\ttfamily bool Bool\+Creator\+::get\+Value (\begin{DoxyParamCaption}\item[{const string \&}]{object }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get the value object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em object} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the passed value is either \char`\"{}true\char`\"{} or \char`\"{}false\char`\"{}, false otherwise. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classJsonCreator_ad43a13717767fd518ad863acc7844906}{Json\+Creator}}.
+
+\mbox{\Hypertarget{classBoolCreator_ad3bc5a46f7c85d82614820c23b31baf5}\label{classBoolCreator_ad3bc5a46f7c85d82614820c23b31baf5}} 
+\index{BoolCreator@{BoolCreator}!isBool@{isBool}}
+\index{isBool@{isBool}!BoolCreator@{BoolCreator}}
+\doxysubsubsection{\texorpdfstring{isBool()}{isBool()}}
+{\footnotesize\ttfamily bool Bool\+Creator\+::is\+Bool (\begin{DoxyParamCaption}\item[{const string \&}]{value }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Checks if passed value is a boolean. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the passed value can be parsed to bool, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classBoolCreator_a6e5d0b7cc99340d106c87bde70030ac5}\label{classBoolCreator_a6e5d0b7cc99340d106c87bde70030ac5}} 
+\index{BoolCreator@{BoolCreator}!stringToBool@{stringToBool}}
+\index{stringToBool@{stringToBool}!BoolCreator@{BoolCreator}}
+\doxysubsubsection{\texorpdfstring{stringToBool()}{stringToBool()}}
+{\footnotesize\ttfamily bool Bool\+Creator\+::string\+To\+Bool (\begin{DoxyParamCaption}\item[{const string \&}]{val }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Makes a bool from a string value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em val} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if passed val is true, false otherwise. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/totoo/\+Documents/\+OOP\+\_\+2024/\+JSON-\/\+Parser/include/services/creators/\mbox{\hyperlink{BoolCreator_8hpp}{Bool\+Creator.\+hpp}}\end{DoxyCompactItemize}

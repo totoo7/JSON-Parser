@@ -1,0 +1,343 @@
+\hypertarget{classJsonObject}{}\doxysection{Json\+Object Class Reference}
+\label{classJsonObject}\index{JsonObject@{JsonObject}}
+
+
+Represents a JSON object consisting of key-\/value pairs. This class inherits from \mbox{\hyperlink{classJson}{Json}}.  
+
+
+
+
+{\ttfamily \#include $<$Json\+Object.\+hpp$>$}
+
+
+
+Inheritance diagram for Json\+Object\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=148pt]{classJsonObject__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Json\+Object\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=148pt]{classJsonObject__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classJsonObject_aa41d053fc27e4fcf4f1c6f55ef28f4a9}{Json\+Object}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for \mbox{\hyperlink{classJsonObject}{Json\+Object}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classJsonObject_a0bfc93ee795ae65bc33196f18aeed04a}{Json\+Object}} (const vector$<$ \mbox{\hyperlink{classJsonPair}{Json\+Pair}} $>$ \&other)
+\begin{DoxyCompactList}\small\item\em Constructor that initializes \mbox{\hyperlink{classJsonObject}{Json\+Object}} with given pairs. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classJsonObject_a4273b552fb746887e25a94974cf396f8}{Json\+Object}} (const \mbox{\hyperlink{classJsonObject}{Json\+Object}} \&other)
+\begin{DoxyCompactList}\small\item\em Copy constructor for \mbox{\hyperlink{classJsonObject}{Json\+Object}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classJsonObject}{Json\+Object}} \& \mbox{\hyperlink{classJsonObject_a5c68646a58e1269bda70ec6a8207a422}{operator=}} (const \mbox{\hyperlink{classJsonObject}{Json\+Object}} \&other)
+\begin{DoxyCompactList}\small\item\em Defines operator=. \end{DoxyCompactList}\item 
+const bool \mbox{\hyperlink{classJsonObject_aeb0de113f07d57905da8e106c0eec621}{search}} (const string \&key) const
+\begin{DoxyCompactList}\small\item\em Searches for the presence of a key in the \mbox{\hyperlink{classJsonObject}{Json\+Object}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classJsonObject_a6f063d3f58845eef5bf670ba4f88c272}{create}} (const string \&path, const string \&new\+Value, int depth)
+\begin{DoxyCompactList}\small\item\em Creates a new element in the \mbox{\hyperlink{classJsonObject}{Json\+Object}} at the specified path with the given value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classJsonObject_ae56653b572ec14b418be45e6bcefd724}{set}} (const string \&path, const string \&new\+Value, int depth)
+\begin{DoxyCompactList}\small\item\em Sets the value of an existing element in the \mbox{\hyperlink{classJsonObject}{Json\+Object}} at the specified path. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classJsonObject_a4d1f3c5e9c6989d0c72744122b5c299c}{erase}} (const string \&path, int depth)
+\begin{DoxyCompactList}\small\item\em Erases an element from the \mbox{\hyperlink{classJsonObject}{Json\+Object}} at the specified path. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classJsonObject_a29deaa8578faea8d2829f95d784a7ab8}{move}} (const string \&from, string \&to, int depth)
+\begin{DoxyCompactList}\small\item\em Moves an element from one path to another within the \mbox{\hyperlink{classJsonObject}{Json\+Object}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classJson}{Json}} $\ast$ \mbox{\hyperlink{classJsonObject_af5693dfb466c9b47ecacac6d5d2fb738}{clone}} () const
+\begin{DoxyCompactList}\small\item\em Clone method. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classJsonObject_a6be8e63aef151bc23bd498f4f289fcfd}{print}} () const
+\begin{DoxyCompactList}\small\item\em Logs the object. \end{DoxyCompactList}\item 
+const bool \mbox{\hyperlink{classJsonObject_a9ba566001c08b389f027a941422e8cc4}{contains}} (const string \&value) const
+\begin{DoxyCompactList}\small\item\em Checks if the \mbox{\hyperlink{classJsonObject}{Json\+Object}} contains a specific value. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classJsonObject_aeba67ecdc81bd6c496753e38681d3654}{to\+String}} (int indent\+Level=0) const
+\begin{DoxyCompactList}\small\item\em Converts the \mbox{\hyperlink{classJsonObject}{Json\+Object}} to a JSON string representation. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classJsonObject_ae602ffbeeebd004a111a877a059dc02e}{$\sim$\+Json\+Object}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for \mbox{\hyperlink{classJsonObject}{Json\+Object}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ \mbox{\hyperlink{classJsonPair}{Json\+Pair}} $>$ \mbox{\hyperlink{classJsonObject_af5f67621bc5cf2db10bc382e4dfad64b}{pairs}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a JSON object consisting of key-\/value pairs. This class inherits from \mbox{\hyperlink{classJson}{Json}}. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classJsonObject_aa41d053fc27e4fcf4f1c6f55ef28f4a9}\label{classJsonObject_aa41d053fc27e4fcf4f1c6f55ef28f4a9}} 
+\index{JsonObject@{JsonObject}!JsonObject@{JsonObject}}
+\index{JsonObject@{JsonObject}!JsonObject@{JsonObject}}
+\doxysubsubsection{\texorpdfstring{JsonObject()}{JsonObject()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Json\+Object\+::\+Json\+Object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default constructor for \mbox{\hyperlink{classJsonObject}{Json\+Object}}. 
+
+\mbox{\Hypertarget{classJsonObject_a0bfc93ee795ae65bc33196f18aeed04a}\label{classJsonObject_a0bfc93ee795ae65bc33196f18aeed04a}} 
+\index{JsonObject@{JsonObject}!JsonObject@{JsonObject}}
+\index{JsonObject@{JsonObject}!JsonObject@{JsonObject}}
+\doxysubsubsection{\texorpdfstring{JsonObject()}{JsonObject()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Json\+Object\+::\+Json\+Object (\begin{DoxyParamCaption}\item[{const vector$<$ \mbox{\hyperlink{classJsonPair}{Json\+Pair}} $>$ \&}]{other }\end{DoxyParamCaption})}
+
+
+
+Constructor that initializes \mbox{\hyperlink{classJsonObject}{Json\+Object}} with given pairs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classJsonObject_a4273b552fb746887e25a94974cf396f8}\label{classJsonObject_a4273b552fb746887e25a94974cf396f8}} 
+\index{JsonObject@{JsonObject}!JsonObject@{JsonObject}}
+\index{JsonObject@{JsonObject}!JsonObject@{JsonObject}}
+\doxysubsubsection{\texorpdfstring{JsonObject()}{JsonObject()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Json\+Object\+::\+Json\+Object (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classJsonObject}{Json\+Object}} \&}]{other }\end{DoxyParamCaption})}
+
+
+
+Copy constructor for \mbox{\hyperlink{classJsonObject}{Json\+Object}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classJsonObject_ae602ffbeeebd004a111a877a059dc02e}\label{classJsonObject_ae602ffbeeebd004a111a877a059dc02e}} 
+\index{JsonObject@{JsonObject}!````~JsonObject@{$\sim$JsonObject}}
+\index{````~JsonObject@{$\sim$JsonObject}!JsonObject@{JsonObject}}
+\doxysubsubsection{\texorpdfstring{$\sim$JsonObject()}{~JsonObject()}}
+{\footnotesize\ttfamily Json\+Object\+::$\sim$\+Json\+Object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor for \mbox{\hyperlink{classJsonObject}{Json\+Object}}. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classJsonObject_af5693dfb466c9b47ecacac6d5d2fb738}\label{classJsonObject_af5693dfb466c9b47ecacac6d5d2fb738}} 
+\index{JsonObject@{JsonObject}!clone@{clone}}
+\index{clone@{clone}!JsonObject@{JsonObject}}
+\doxysubsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classJson}{Json}}$\ast$ Json\+Object\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Clone method. 
+
+\begin{DoxyReturn}{Returns}
+Json\+Object$\ast$ 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classJson_a51eba1dafeba2900206985fe933809fa}{Json}}.
+
+\mbox{\Hypertarget{classJsonObject_a9ba566001c08b389f027a941422e8cc4}\label{classJsonObject_a9ba566001c08b389f027a941422e8cc4}} 
+\index{JsonObject@{JsonObject}!contains@{contains}}
+\index{contains@{contains}!JsonObject@{JsonObject}}
+\doxysubsubsection{\texorpdfstring{contains()}{contains()}}
+{\footnotesize\ttfamily const bool Json\+Object\+::contains (\begin{DoxyParamCaption}\item[{const string \&}]{value }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Checks if the \mbox{\hyperlink{classJsonObject}{Json\+Object}} contains a specific value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The value to check for within the \mbox{\hyperlink{classJsonObject}{Json\+Object}}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the value is found in any nested JSON object or array, false otherwise. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classJson_a82121a35c6d5272b6d0f076549b9c227}{Json}}.
+
+\mbox{\Hypertarget{classJsonObject_a6f063d3f58845eef5bf670ba4f88c272}\label{classJsonObject_a6f063d3f58845eef5bf670ba4f88c272}} 
+\index{JsonObject@{JsonObject}!create@{create}}
+\index{create@{create}!JsonObject@{JsonObject}}
+\doxysubsubsection{\texorpdfstring{create()}{create()}}
+{\footnotesize\ttfamily void Json\+Object\+::create (\begin{DoxyParamCaption}\item[{const string \&}]{path,  }\item[{const string \&}]{new\+Value,  }\item[{int}]{depth }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Creates a new element in the \mbox{\hyperlink{classJsonObject}{Json\+Object}} at the specified path with the given value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & The path where the new element should be created. The last argument is the new key. \\
+\hline
+{\em new\+Value} & The JSON string representing the new value. \\
+\hline
+{\em depth} & The current depth in the path traversal. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classJson_aba7844204165ba8a54a06ce602f6bc66}{Json}}.
+
+\mbox{\Hypertarget{classJsonObject_a4d1f3c5e9c6989d0c72744122b5c299c}\label{classJsonObject_a4d1f3c5e9c6989d0c72744122b5c299c}} 
+\index{JsonObject@{JsonObject}!erase@{erase}}
+\index{erase@{erase}!JsonObject@{JsonObject}}
+\doxysubsubsection{\texorpdfstring{erase()}{erase()}}
+{\footnotesize\ttfamily void Json\+Object\+::erase (\begin{DoxyParamCaption}\item[{const string \&}]{path,  }\item[{int}]{depth }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Erases an element from the \mbox{\hyperlink{classJsonObject}{Json\+Object}} at the specified path. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & The path where the element should be erased. The last argument is the key that will be deleted. \\
+\hline
+{\em depth} & The current depth in the path traversal. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classJson_a60da62399f3c8b76897335d9577e061e}{Json}}.
+
+\mbox{\Hypertarget{classJsonObject_a29deaa8578faea8d2829f95d784a7ab8}\label{classJsonObject_a29deaa8578faea8d2829f95d784a7ab8}} 
+\index{JsonObject@{JsonObject}!move@{move}}
+\index{move@{move}!JsonObject@{JsonObject}}
+\doxysubsubsection{\texorpdfstring{move()}{move()}}
+{\footnotesize\ttfamily void Json\+Object\+::move (\begin{DoxyParamCaption}\item[{const string \&}]{from,  }\item[{string \&}]{to,  }\item[{int}]{depth }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Moves an element from one path to another within the \mbox{\hyperlink{classJsonObject}{Json\+Object}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em from} & The original path of the element to move. The last argument is the key that will be moved. \\
+\hline
+{\em to} & The destination path where the element should be moved. \\
+\hline
+{\em depth} & The current depth in the path traversal. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classJson_af8b632ad12158da84889c7ef6e8b7feb}{Json}}.
+
+\mbox{\Hypertarget{classJsonObject_a5c68646a58e1269bda70ec6a8207a422}\label{classJsonObject_a5c68646a58e1269bda70ec6a8207a422}} 
+\index{JsonObject@{JsonObject}!operator=@{operator=}}
+\index{operator=@{operator=}!JsonObject@{JsonObject}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classJsonObject}{Json\+Object}}\& Json\+Object\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classJsonObject}{Json\+Object}} \&}]{other }\end{DoxyParamCaption})}
+
+
+
+Defines operator=. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classJsonObject}{Json\+Object}}\& 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classJsonObject_a6be8e63aef151bc23bd498f4f289fcfd}\label{classJsonObject_a6be8e63aef151bc23bd498f4f289fcfd}} 
+\index{JsonObject@{JsonObject}!print@{print}}
+\index{print@{print}!JsonObject@{JsonObject}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily void Json\+Object\+::print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Logs the object. 
+
+
+
+Implements \mbox{\hyperlink{classJson_a5d13ebe6dfacd7320de1aa1aefb1a2b4}{Json}}.
+
+\mbox{\Hypertarget{classJsonObject_aeb0de113f07d57905da8e106c0eec621}\label{classJsonObject_aeb0de113f07d57905da8e106c0eec621}} 
+\index{JsonObject@{JsonObject}!search@{search}}
+\index{search@{search}!JsonObject@{JsonObject}}
+\doxysubsubsection{\texorpdfstring{search()}{search()}}
+{\footnotesize\ttfamily const bool Json\+Object\+::search (\begin{DoxyParamCaption}\item[{const string \&}]{key }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Searches for the presence of a key in the \mbox{\hyperlink{classJsonObject}{Json\+Object}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the key is found, false otherwise. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classJson_a381fc9d7d10f3adefa5639695ee9d620}{Json}}.
+
+\mbox{\Hypertarget{classJsonObject_ae56653b572ec14b418be45e6bcefd724}\label{classJsonObject_ae56653b572ec14b418be45e6bcefd724}} 
+\index{JsonObject@{JsonObject}!set@{set}}
+\index{set@{set}!JsonObject@{JsonObject}}
+\doxysubsubsection{\texorpdfstring{set()}{set()}}
+{\footnotesize\ttfamily void Json\+Object\+::set (\begin{DoxyParamCaption}\item[{const string \&}]{path,  }\item[{const string \&}]{new\+Value,  }\item[{int}]{depth }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Sets the value of an existing element in the \mbox{\hyperlink{classJsonObject}{Json\+Object}} at the specified path. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & The path where the element exists. \\
+\hline
+{\em new\+Value} & The JSON string representing the new value. \\
+\hline
+{\em depth} & The current depth in the path traversal. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classJson_aca3ba3e789d3e7c1d87258fed998fcb7}{Json}}.
+
+\mbox{\Hypertarget{classJsonObject_aeba67ecdc81bd6c496753e38681d3654}\label{classJsonObject_aeba67ecdc81bd6c496753e38681d3654}} 
+\index{JsonObject@{JsonObject}!toString@{toString}}
+\index{toString@{toString}!JsonObject@{JsonObject}}
+\doxysubsubsection{\texorpdfstring{toString()}{toString()}}
+{\footnotesize\ttfamily string Json\+Object\+::to\+String (\begin{DoxyParamCaption}\item[{int}]{indent\+Level = {\ttfamily 0} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Converts the \mbox{\hyperlink{classJsonObject}{Json\+Object}} to a JSON string representation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em indent\+Level} & The indentation level for pretty-\/printing (default\+: 0). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A string representing the JSON object. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classJson_a5e03cd6ea6ab5ddc6e3ea664f2d4b3e5}{Json}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classJsonObject_af5f67621bc5cf2db10bc382e4dfad64b}\label{classJsonObject_af5f67621bc5cf2db10bc382e4dfad64b}} 
+\index{JsonObject@{JsonObject}!pairs@{pairs}}
+\index{pairs@{pairs}!JsonObject@{JsonObject}}
+\doxysubsubsection{\texorpdfstring{pairs}{pairs}}
+{\footnotesize\ttfamily vector$<$\mbox{\hyperlink{classJsonPair}{Json\+Pair}}$>$ Json\+Object\+::pairs\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/totoo/\+Documents/\+OOP\+\_\+2024/\+JSON-\/\+Parser/include/services/children/\mbox{\hyperlink{JsonObject_8hpp}{Json\+Object.\+hpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,232 @@
+\hypertarget{classJsonPair}{}\doxysection{Json\+Pair Class Reference}
+\label{classJsonPair}\index{JsonPair@{JsonPair}}
+
+
+Object that holds JSON key-\/value pair.  
+
+
+
+
+{\ttfamily \#include $<$Json\+Pair.\+hpp$>$}
+
+
+
+Collaboration diagram for Json\+Pair\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=139pt]{classJsonPair__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classJsonPair_a1644e29e2abaf40f487af54a1d1ee6e3}{Json\+Pair}} ()
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classJson}{Json}} Pair object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classJsonPair_a198098564cb63e7231dbabd59341313f}{Json\+Pair}} (const \mbox{\hyperlink{classJson}{Json}} $\ast$\mbox{\hyperlink{classJsonPair_afa0579e18a6969cf95ab46323d6d02e0}{value}})
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classJson}{Json}} Pair object with no key. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classJsonPair_a7c0c72d701b8397d6b9b2cf52601c753}{Json\+Pair}} (const \mbox{\hyperlink{classJson}{Json}} $\ast$\mbox{\hyperlink{classJsonPair_afa0579e18a6969cf95ab46323d6d02e0}{value}}, const string \&\mbox{\hyperlink{classJsonPair_aa667da7424a589d85b12f5542486fcde}{key}})
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classJson}{Json}} Pair object with passed JSON value and key. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classJsonPair_aeb671ef6cf5c0d33289867672311fe84}{Json\+Pair}} (const \mbox{\hyperlink{classJsonPair}{Json\+Pair}} \&other)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classJson}{Json}} Pair object. Copy constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classJsonPair}{Json\+Pair}} \& \mbox{\hyperlink{classJsonPair_ad5dbc77dff242802e78252f7aa0d05a3}{operator=}} (const \mbox{\hyperlink{classJsonPair}{Json\+Pair}} \&other)
+\begin{DoxyCompactList}\small\item\em Defines operator=. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classJsonPair_a8bd63c55a72d14f99c795c18d1695b1b}{print}} () const
+\begin{DoxyCompactList}\small\item\em Prints the \mbox{\hyperlink{classJsonPair}{Json\+Pair}} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classJson}{Json}} $\ast$ \mbox{\hyperlink{classJsonPair_a10c0fc79f80e110e7a4f750c3d3dec06}{get\+Value}} () const
+\begin{DoxyCompactList}\small\item\em Getter for value. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classJsonPair_ab244224ddd302283f51f6a5e13c910b8}{get\+Key}} () const
+\begin{DoxyCompactList}\small\item\em Getter for key. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classJsonPair_a43ade788cde5c6bf3a150de0c98f05f5}{set\+Value}} (const \mbox{\hyperlink{classJson}{Json}} $\ast$\mbox{\hyperlink{classJsonPair_afa0579e18a6969cf95ab46323d6d02e0}{value}})
+\begin{DoxyCompactList}\small\item\em Setter for value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classJsonPair_a923aa89542986da9e75401196f17edd0}{set\+Key}} (const string \&\mbox{\hyperlink{classJsonPair_aa667da7424a589d85b12f5542486fcde}{key}})
+\begin{DoxyCompactList}\small\item\em Setter for key. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classJsonPair_af531e89cf359e8b9167f6dd06e0ae423}{$\sim$\+Json\+Pair}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the \mbox{\hyperlink{classJson}{Json}} Pair object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classJson}{Json}} $\ast$ \mbox{\hyperlink{classJsonPair_afa0579e18a6969cf95ab46323d6d02e0}{value}}
+\item 
+string \mbox{\hyperlink{classJsonPair_aa667da7424a589d85b12f5542486fcde}{key}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Object that holds JSON key-\/value pair. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classJsonPair_a1644e29e2abaf40f487af54a1d1ee6e3}\label{classJsonPair_a1644e29e2abaf40f487af54a1d1ee6e3}} 
+\index{JsonPair@{JsonPair}!JsonPair@{JsonPair}}
+\index{JsonPair@{JsonPair}!JsonPair@{JsonPair}}
+\doxysubsubsection{\texorpdfstring{JsonPair()}{JsonPair()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily Json\+Pair\+::\+Json\+Pair (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{classJson}{Json}} Pair object. 
+
+\mbox{\Hypertarget{classJsonPair_a198098564cb63e7231dbabd59341313f}\label{classJsonPair_a198098564cb63e7231dbabd59341313f}} 
+\index{JsonPair@{JsonPair}!JsonPair@{JsonPair}}
+\index{JsonPair@{JsonPair}!JsonPair@{JsonPair}}
+\doxysubsubsection{\texorpdfstring{JsonPair()}{JsonPair()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily Json\+Pair\+::\+Json\+Pair (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classJson}{Json}} $\ast$}]{value }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{classJson}{Json}} Pair object with no key. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classJsonPair_a7c0c72d701b8397d6b9b2cf52601c753}\label{classJsonPair_a7c0c72d701b8397d6b9b2cf52601c753}} 
+\index{JsonPair@{JsonPair}!JsonPair@{JsonPair}}
+\index{JsonPair@{JsonPair}!JsonPair@{JsonPair}}
+\doxysubsubsection{\texorpdfstring{JsonPair()}{JsonPair()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily Json\+Pair\+::\+Json\+Pair (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classJson}{Json}} $\ast$}]{value,  }\item[{const string \&}]{key }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{classJson}{Json}} Pair object with passed JSON value and key. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & \\
+\hline
+{\em key} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classJsonPair_aeb671ef6cf5c0d33289867672311fe84}\label{classJsonPair_aeb671ef6cf5c0d33289867672311fe84}} 
+\index{JsonPair@{JsonPair}!JsonPair@{JsonPair}}
+\index{JsonPair@{JsonPair}!JsonPair@{JsonPair}}
+\doxysubsubsection{\texorpdfstring{JsonPair()}{JsonPair()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily Json\+Pair\+::\+Json\+Pair (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classJsonPair}{Json\+Pair}} \&}]{other }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{classJson}{Json}} Pair object. Copy constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classJsonPair_af531e89cf359e8b9167f6dd06e0ae423}\label{classJsonPair_af531e89cf359e8b9167f6dd06e0ae423}} 
+\index{JsonPair@{JsonPair}!````~JsonPair@{$\sim$JsonPair}}
+\index{````~JsonPair@{$\sim$JsonPair}!JsonPair@{JsonPair}}
+\doxysubsubsection{\texorpdfstring{$\sim$JsonPair()}{~JsonPair()}}
+{\footnotesize\ttfamily Json\+Pair\+::$\sim$\+Json\+Pair (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destroy the \mbox{\hyperlink{classJson}{Json}} Pair object. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classJsonPair_ab244224ddd302283f51f6a5e13c910b8}\label{classJsonPair_ab244224ddd302283f51f6a5e13c910b8}} 
+\index{JsonPair@{JsonPair}!getKey@{getKey}}
+\index{getKey@{getKey}!JsonPair@{JsonPair}}
+\doxysubsubsection{\texorpdfstring{getKey()}{getKey()}}
+{\footnotesize\ttfamily string Json\+Pair\+::get\+Key (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Getter for key. 
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classJsonPair_a10c0fc79f80e110e7a4f750c3d3dec06}\label{classJsonPair_a10c0fc79f80e110e7a4f750c3d3dec06}} 
+\index{JsonPair@{JsonPair}!getValue@{getValue}}
+\index{getValue@{getValue}!JsonPair@{JsonPair}}
+\doxysubsubsection{\texorpdfstring{getValue()}{getValue()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classJson}{Json}}$\ast$ Json\+Pair\+::get\+Value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Getter for value. 
+
+\begin{DoxyReturn}{Returns}
+Json$\ast$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classJsonPair_ad5dbc77dff242802e78252f7aa0d05a3}\label{classJsonPair_ad5dbc77dff242802e78252f7aa0d05a3}} 
+\index{JsonPair@{JsonPair}!operator=@{operator=}}
+\index{operator=@{operator=}!JsonPair@{JsonPair}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classJsonPair}{Json\+Pair}}\& Json\+Pair\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classJsonPair}{Json\+Pair}} \&}]{other }\end{DoxyParamCaption})}
+
+
+
+Defines operator=. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classJsonPair}{Json\+Pair}}\& 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classJsonPair_a8bd63c55a72d14f99c795c18d1695b1b}\label{classJsonPair_a8bd63c55a72d14f99c795c18d1695b1b}} 
+\index{JsonPair@{JsonPair}!print@{print}}
+\index{print@{print}!JsonPair@{JsonPair}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily void Json\+Pair\+::print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Prints the \mbox{\hyperlink{classJsonPair}{Json\+Pair}} object. 
+
+\mbox{\Hypertarget{classJsonPair_a923aa89542986da9e75401196f17edd0}\label{classJsonPair_a923aa89542986da9e75401196f17edd0}} 
+\index{JsonPair@{JsonPair}!setKey@{setKey}}
+\index{setKey@{setKey}!JsonPair@{JsonPair}}
+\doxysubsubsection{\texorpdfstring{setKey()}{setKey()}}
+{\footnotesize\ttfamily void Json\+Pair\+::set\+Key (\begin{DoxyParamCaption}\item[{const string \&}]{key }\end{DoxyParamCaption})}
+
+
+
+Setter for key. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classJsonPair_a43ade788cde5c6bf3a150de0c98f05f5}\label{classJsonPair_a43ade788cde5c6bf3a150de0c98f05f5}} 
+\index{JsonPair@{JsonPair}!setValue@{setValue}}
+\index{setValue@{setValue}!JsonPair@{JsonPair}}
+\doxysubsubsection{\texorpdfstring{setValue()}{setValue()}}
+{\footnotesize\ttfamily void Json\+Pair\+::set\+Value (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classJson}{Json}} $\ast$}]{value }\end{DoxyParamCaption})}
+
+
+
+Setter for value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classJsonPair_aa667da7424a589d85b12f5542486fcde}\label{classJsonPair_aa667da7424a589d85b12f5542486fcde}} 
+\index{JsonPair@{JsonPair}!key@{key}}
+\index{key@{key}!JsonPair@{JsonPair}}
+\doxysubsubsection{\texorpdfstring{key}{key}}
+{\footnotesize\ttfamily string Json\+Pair\+::key\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classJsonPair_afa0579e18a6969cf95ab46323d6d02e0}\label{classJsonPair_afa0579e18a6969cf95ab46323d6d02e0}} 
+\index{JsonPair@{JsonPair}!value@{value}}
+\index{value@{value}!JsonPair@{JsonPair}}
+\doxysubsubsection{\texorpdfstring{value}{value}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classJson}{Json}}$\ast$ Json\+Pair\+::value\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/totoo/\+Documents/\+OOP\+\_\+2024/\+JSON-\/\+Parser/include/services/\mbox{\hyperlink{JsonPair_8hpp}{Json\+Pair.\+hpp}}\end{DoxyCompactItemize}

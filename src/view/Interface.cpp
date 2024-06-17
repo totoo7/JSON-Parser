@@ -93,7 +93,7 @@ void Interface::processUserInput(const string& userInput) {
 
     manager.toLowerCase(userCommands[0]);
     string commandName = userCommands[0];
-
+    
     if (!manager.isValidCommand(commandName)) {
         cerr << "Invalid command" << endl;
         return;

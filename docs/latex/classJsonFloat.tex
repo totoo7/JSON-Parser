@@ -1,0 +1,223 @@
+\hypertarget{classJsonFloat}{}\doxysection{Json\+Float Class Reference}
+\label{classJsonFloat}\index{JsonFloat@{JsonFloat}}
+
+
+Class representing a floating point JSON value.  
+
+
+
+
+{\ttfamily \#include $<$Json\+Float.\+hpp$>$}
+
+
+
+Inheritance diagram for Json\+Float\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=142pt]{classJsonFloat__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Json\+Float\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=142pt]{classJsonFloat__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classJsonFloat_a2574fba699dff1584b0affded3acca03}{Json\+Float}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor initializing the value to 0. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classJsonFloat_a35e6fdec0aa544442a09594480a572a8}{Json\+Float}} (const float \mbox{\hyperlink{classJsonFloat_a5ef2e3373cdde1fc165d1bc62054f22a}{value}})
+\begin{DoxyCompactList}\small\item\em Constructor initializing the value with a specified float. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classJsonFloat_a97b931af7572ffbb5fe67e78c55ac6a7}{Json\+Float}} (const \mbox{\hyperlink{classJsonFloat}{Json\+Float}} \&other)
+\begin{DoxyCompactList}\small\item\em Copy constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classJsonFloat}{Json\+Float}} \& \mbox{\hyperlink{classJsonFloat_afd1e5480bb8a6045656cab8669f5a993}{operator=}} (const \mbox{\hyperlink{classJsonFloat}{Json\+Float}} \&other)
+\begin{DoxyCompactList}\small\item\em Defines operator=. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classJson}{Json}} $\ast$ \mbox{\hyperlink{classJsonFloat_ad41363f6e00e960958b7b98a46747be2}{clone}} () const override
+\begin{DoxyCompactList}\small\item\em Clone method. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classJsonFloat_a3483a14703ef6c750f4a9dd355bb9c90}{print}} () const override
+\begin{DoxyCompactList}\small\item\em Logs the floating point value. \end{DoxyCompactList}\item 
+const bool \mbox{\hyperlink{classJsonFloat_a1c63e0326b6f9edabf87be207973e5b0}{contains}} (const string \&\mbox{\hyperlink{classJsonFloat_a5ef2e3373cdde1fc165d1bc62054f22a}{value}}) const override
+\begin{DoxyCompactList}\small\item\em Checks if the floating point value equals the given string representation. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classJsonFloat_a10c3d1edd8509dd7adeef33b2f9c3f59}{to\+String}} (int indent\+Level=0) const override
+\begin{DoxyCompactList}\small\item\em Converts the floating point value to a string. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classJsonFloat_a5b20a49156649381555f6971dbb61cc1}{$\sim$\+Json\+Float}} ()=default
+\begin{DoxyCompactList}\small\item\em Destroy the \mbox{\hyperlink{classJson}{Json}} Float object. Default destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{classJsonFloat_a5ef2e3373cdde1fc165d1bc62054f22a}{value}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class representing a floating point JSON value. 
+
+This class inherits from \mbox{\hyperlink{classJson}{Json}} and encapsulates a floating point value. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classJsonFloat_a2574fba699dff1584b0affded3acca03}\label{classJsonFloat_a2574fba699dff1584b0affded3acca03}} 
+\index{JsonFloat@{JsonFloat}!JsonFloat@{JsonFloat}}
+\index{JsonFloat@{JsonFloat}!JsonFloat@{JsonFloat}}
+\doxysubsubsection{\texorpdfstring{JsonFloat()}{JsonFloat()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Json\+Float\+::\+Json\+Float (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default constructor initializing the value to 0. 
+
+\mbox{\Hypertarget{classJsonFloat_a35e6fdec0aa544442a09594480a572a8}\label{classJsonFloat_a35e6fdec0aa544442a09594480a572a8}} 
+\index{JsonFloat@{JsonFloat}!JsonFloat@{JsonFloat}}
+\index{JsonFloat@{JsonFloat}!JsonFloat@{JsonFloat}}
+\doxysubsubsection{\texorpdfstring{JsonFloat()}{JsonFloat()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Json\+Float\+::\+Json\+Float (\begin{DoxyParamCaption}\item[{const float}]{value }\end{DoxyParamCaption})}
+
+
+
+Constructor initializing the value with a specified float. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classJsonFloat_a97b931af7572ffbb5fe67e78c55ac6a7}\label{classJsonFloat_a97b931af7572ffbb5fe67e78c55ac6a7}} 
+\index{JsonFloat@{JsonFloat}!JsonFloat@{JsonFloat}}
+\index{JsonFloat@{JsonFloat}!JsonFloat@{JsonFloat}}
+\doxysubsubsection{\texorpdfstring{JsonFloat()}{JsonFloat()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Json\+Float\+::\+Json\+Float (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classJsonFloat}{Json\+Float}} \&}]{other }\end{DoxyParamCaption})}
+
+
+
+Copy constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classJsonFloat_a5b20a49156649381555f6971dbb61cc1}\label{classJsonFloat_a5b20a49156649381555f6971dbb61cc1}} 
+\index{JsonFloat@{JsonFloat}!````~JsonFloat@{$\sim$JsonFloat}}
+\index{````~JsonFloat@{$\sim$JsonFloat}!JsonFloat@{JsonFloat}}
+\doxysubsubsection{\texorpdfstring{$\sim$JsonFloat()}{~JsonFloat()}}
+{\footnotesize\ttfamily Json\+Float\+::$\sim$\+Json\+Float (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Destroy the \mbox{\hyperlink{classJson}{Json}} Float object. Default destructor. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classJsonFloat_ad41363f6e00e960958b7b98a46747be2}\label{classJsonFloat_ad41363f6e00e960958b7b98a46747be2}} 
+\index{JsonFloat@{JsonFloat}!clone@{clone}}
+\index{clone@{clone}!JsonFloat@{JsonFloat}}
+\doxysubsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classJson}{Json}}$\ast$ Json\+Float\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Clone method. 
+
+\begin{DoxyReturn}{Returns}
+Json$\ast$ 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classJson_a51eba1dafeba2900206985fe933809fa}{Json}}.
+
+\mbox{\Hypertarget{classJsonFloat_a1c63e0326b6f9edabf87be207973e5b0}\label{classJsonFloat_a1c63e0326b6f9edabf87be207973e5b0}} 
+\index{JsonFloat@{JsonFloat}!contains@{contains}}
+\index{contains@{contains}!JsonFloat@{JsonFloat}}
+\doxysubsubsection{\texorpdfstring{contains()}{contains()}}
+{\footnotesize\ttfamily const bool Json\+Float\+::contains (\begin{DoxyParamCaption}\item[{const string \&}]{value }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Checks if the floating point value equals the given string representation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The string value to compare against. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the value matches, false otherwise. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classJson_a82121a35c6d5272b6d0f076549b9c227}{Json}}.
+
+\mbox{\Hypertarget{classJsonFloat_afd1e5480bb8a6045656cab8669f5a993}\label{classJsonFloat_afd1e5480bb8a6045656cab8669f5a993}} 
+\index{JsonFloat@{JsonFloat}!operator=@{operator=}}
+\index{operator=@{operator=}!JsonFloat@{JsonFloat}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classJsonFloat}{Json\+Float}}\& Json\+Float\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classJsonFloat}{Json\+Float}} \&}]{other }\end{DoxyParamCaption})}
+
+
+
+Defines operator=. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classJsonFloat}{Json\+Float}}\& 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classJsonFloat_a3483a14703ef6c750f4a9dd355bb9c90}\label{classJsonFloat_a3483a14703ef6c750f4a9dd355bb9c90}} 
+\index{JsonFloat@{JsonFloat}!print@{print}}
+\index{print@{print}!JsonFloat@{JsonFloat}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily void Json\+Float\+::print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Logs the floating point value. 
+
+
+
+Implements \mbox{\hyperlink{classJson_a5d13ebe6dfacd7320de1aa1aefb1a2b4}{Json}}.
+
+\mbox{\Hypertarget{classJsonFloat_a10c3d1edd8509dd7adeef33b2f9c3f59}\label{classJsonFloat_a10c3d1edd8509dd7adeef33b2f9c3f59}} 
+\index{JsonFloat@{JsonFloat}!toString@{toString}}
+\index{toString@{toString}!JsonFloat@{JsonFloat}}
+\doxysubsubsection{\texorpdfstring{toString()}{toString()}}
+{\footnotesize\ttfamily string Json\+Float\+::to\+String (\begin{DoxyParamCaption}\item[{int}]{indent\+Level = {\ttfamily 0} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Converts the floating point value to a string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em indent\+Level} & The indentation level for pretty-\/printing (default\+: 0). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+String representation of the floating point value. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classJson_a5e03cd6ea6ab5ddc6e3ea664f2d4b3e5}{Json}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classJsonFloat_a5ef2e3373cdde1fc165d1bc62054f22a}\label{classJsonFloat_a5ef2e3373cdde1fc165d1bc62054f22a}} 
+\index{JsonFloat@{JsonFloat}!value@{value}}
+\index{value@{value}!JsonFloat@{JsonFloat}}
+\doxysubsubsection{\texorpdfstring{value}{value}}
+{\footnotesize\ttfamily float Json\+Float\+::value\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/totoo/\+Documents/\+OOP\+\_\+2024/\+JSON-\/\+Parser/include/services/children/\mbox{\hyperlink{JsonFloat_8hpp}{Json\+Float.\+hpp}}\end{DoxyCompactItemize}

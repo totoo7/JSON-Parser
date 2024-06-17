@@ -1,0 +1,111 @@
+\hypertarget{classCommandManager}{}\doxysection{Command\+Manager Class Reference}
+\label{classCommandManager}\index{CommandManager@{CommandManager}}
+
+
+Handles commands.  
+
+
+
+
+{\ttfamily \#include $<$Command\+Manager.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classCommandManager_a8a13226bf933396a3f35dfb5bee3e813}{Command\+Manager}} ()
+\begin{DoxyCompactList}\small\item\em Constructs a \mbox{\hyperlink{classCommandManager}{Command\+Manager}} object and initializes the list of commands. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classCommandManager_a50083e9e1876e984267cc360202f2dc9}{is\+Valid\+Command}} (const string \&name) const
+\begin{DoxyCompactList}\small\item\em Checks if a given command name is valid. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classCommand}{Command}} $\ast$ \mbox{\hyperlink{classCommandManager_a9652b6969b9b2d60e0a4a72d96373f8e}{get\+Command}} (const string \&name) const
+\begin{DoxyCompactList}\small\item\em Retrieves a command by name. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCommandManager_a9286f95810b5c14435258ec2aae67c7d}{to\+Lower\+Case}} (string \&name)
+\begin{DoxyCompactList}\small\item\em Converts a command name to lowercase. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ \mbox{\hyperlink{classCommand}{Command}} $>$ \mbox{\hyperlink{classCommandManager_a1aca0bae70556ff8fe293e6611ffff6c}{commands}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Handles commands. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classCommandManager_a8a13226bf933396a3f35dfb5bee3e813}\label{classCommandManager_a8a13226bf933396a3f35dfb5bee3e813}} 
+\index{CommandManager@{CommandManager}!CommandManager@{CommandManager}}
+\index{CommandManager@{CommandManager}!CommandManager@{CommandManager}}
+\doxysubsubsection{\texorpdfstring{CommandManager()}{CommandManager()}}
+{\footnotesize\ttfamily Command\+Manager\+::\+Command\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructs a \mbox{\hyperlink{classCommandManager}{Command\+Manager}} object and initializes the list of commands. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classCommandManager_a9652b6969b9b2d60e0a4a72d96373f8e}\label{classCommandManager_a9652b6969b9b2d60e0a4a72d96373f8e}} 
+\index{CommandManager@{CommandManager}!getCommand@{getCommand}}
+\index{getCommand@{getCommand}!CommandManager@{CommandManager}}
+\doxysubsubsection{\texorpdfstring{getCommand()}{getCommand()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classCommand}{Command}}$\ast$ Command\+Manager\+::get\+Command (\begin{DoxyParamCaption}\item[{const string \&}]{name }\end{DoxyParamCaption}) const}
+
+
+
+Retrieves a command by name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the command to retrieve. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the \mbox{\hyperlink{classCommand}{Command}} object if found, nullptr otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCommandManager_a50083e9e1876e984267cc360202f2dc9}\label{classCommandManager_a50083e9e1876e984267cc360202f2dc9}} 
+\index{CommandManager@{CommandManager}!isValidCommand@{isValidCommand}}
+\index{isValidCommand@{isValidCommand}!CommandManager@{CommandManager}}
+\doxysubsubsection{\texorpdfstring{isValidCommand()}{isValidCommand()}}
+{\footnotesize\ttfamily bool Command\+Manager\+::is\+Valid\+Command (\begin{DoxyParamCaption}\item[{const string \&}]{name }\end{DoxyParamCaption}) const}
+
+
+
+Checks if a given command name is valid. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the command to check. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the command name is valid, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCommandManager_a9286f95810b5c14435258ec2aae67c7d}\label{classCommandManager_a9286f95810b5c14435258ec2aae67c7d}} 
+\index{CommandManager@{CommandManager}!toLowerCase@{toLowerCase}}
+\index{toLowerCase@{toLowerCase}!CommandManager@{CommandManager}}
+\doxysubsubsection{\texorpdfstring{toLowerCase()}{toLowerCase()}}
+{\footnotesize\ttfamily void Command\+Manager\+::to\+Lower\+Case (\begin{DoxyParamCaption}\item[{string \&}]{name }\end{DoxyParamCaption})}
+
+
+
+Converts a command name to lowercase. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the command to convert. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classCommandManager_a1aca0bae70556ff8fe293e6611ffff6c}\label{classCommandManager_a1aca0bae70556ff8fe293e6611ffff6c}} 
+\index{CommandManager@{CommandManager}!commands@{commands}}
+\index{commands@{commands}!CommandManager@{CommandManager}}
+\doxysubsubsection{\texorpdfstring{commands}{commands}}
+{\footnotesize\ttfamily vector$<$\mbox{\hyperlink{classCommand}{Command}}$>$ Command\+Manager\+::commands\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/totoo/\+Documents/\+OOP\+\_\+2024/\+JSON-\/\+Parser/include/controllers/\mbox{\hyperlink{CommandManager_8hpp}{Command\+Manager.\+hpp}}\end{DoxyCompactItemize}

@@ -8,7 +8,7 @@
 using namespace std;
 
 /**
- * @brief Namespace for functions various functions used in the project.
+ * @brief Namespace for various functions used in the project.
  */
 
 namespace UTILITIES

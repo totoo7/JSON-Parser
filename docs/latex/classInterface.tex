@@ -1,0 +1,207 @@
+\hypertarget{classInterface}{}\doxysection{Interface Class Reference}
+\label{classInterface}\index{Interface@{Interface}}
+
+
+Basic terminal interface.  
+
+
+
+
+{\ttfamily \#include $<$Interface.\+hpp$>$}
+
+
+
+Collaboration diagram for Interface\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=246pt]{classInterface__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classInterface_a4406d74c75bdfe150bf72be1f1cda8b1}{Interface}} ()
+\begin{DoxyCompactList}\small\item\em Constructs a new \mbox{\hyperlink{classInterface}{Interface}} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classInterface_a090a950300a463d91f8f361d3b333906}{run}} ()
+\begin{DoxyCompactList}\small\item\em Runs the interface loop to process user commands. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classInterface_a882e418c559395e5aa39dcaca65d3d3b}{update}} ()
+\begin{DoxyCompactList}\small\item\em Updates the interface by processing user input. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classInterface_ae151d51cbe742d14880ca8f29fa6a95a}{process\+User\+Input}} (const string \&user\+Input)
+\begin{DoxyCompactList}\small\item\em Processes the user input. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classInterface_a787ea62a39d76be8a35b4b64d5581592}{open\+File}} (const string \&\mbox{\hyperlink{classInterface_af55e9bb5a47274580c338860b2e71b0a}{filename}})
+\begin{DoxyCompactList}\small\item\em Opens a JSON file and parses its content. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classInterface_addb08152cfb0271e6afba4180497a791}{save\+As}} (const string \&path, string \&new\+Filename)
+\begin{DoxyCompactList}\small\item\em Saves the current JSON content to a specified path. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classInterface_aa27e9df0290561f292c04535f5795aea}{save}} () const
+\begin{DoxyCompactList}\small\item\em Saves the current JSON content to the opened file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classInterface_a73b06f0c3237ff4f60619888554a99e9}{print\+Menu}} () const
+\begin{DoxyCompactList}\small\item\em Prints the command menu. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classInterface_a19179888f29f18f1be54a3dfe98f68c0}{$\sim$\+Interface}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classInterface_ab7d10dabb6307f50b39ca256f4527817}{is\+Running}}
+\item 
+string \mbox{\hyperlink{classInterface_af55e9bb5a47274580c338860b2e71b0a}{filename}}
+\item 
+bool \mbox{\hyperlink{classInterface_acf10d0edf6b62e578e4b0d046bdc04ce}{is\+Loaded\+File}}
+\item 
+\mbox{\hyperlink{classJson}{Json}} $\ast$ \mbox{\hyperlink{classInterface_a05ef659f5cb4d37a1ffe13b7eeb137c5}{json}}
+\item 
+\mbox{\hyperlink{classCommandManager}{Command\+Manager}} \mbox{\hyperlink{classInterface_a25459b505846a576f73a1feb796b05b7}{manager}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Basic terminal interface. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classInterface_a4406d74c75bdfe150bf72be1f1cda8b1}\label{classInterface_a4406d74c75bdfe150bf72be1f1cda8b1}} 
+\index{Interface@{Interface}!Interface@{Interface}}
+\index{Interface@{Interface}!Interface@{Interface}}
+\doxysubsubsection{\texorpdfstring{Interface()}{Interface()}}
+{\footnotesize\ttfamily Interface\+::\+Interface (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructs a new \mbox{\hyperlink{classInterface}{Interface}} object. 
+
+\mbox{\Hypertarget{classInterface_a19179888f29f18f1be54a3dfe98f68c0}\label{classInterface_a19179888f29f18f1be54a3dfe98f68c0}} 
+\index{Interface@{Interface}!````~Interface@{$\sim$Interface}}
+\index{````~Interface@{$\sim$Interface}!Interface@{Interface}}
+\doxysubsubsection{\texorpdfstring{$\sim$Interface()}{~Interface()}}
+{\footnotesize\ttfamily Interface\+::$\sim$\+Interface (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classInterface_a787ea62a39d76be8a35b4b64d5581592}\label{classInterface_a787ea62a39d76be8a35b4b64d5581592}} 
+\index{Interface@{Interface}!openFile@{openFile}}
+\index{openFile@{openFile}!Interface@{Interface}}
+\doxysubsubsection{\texorpdfstring{openFile()}{openFile()}}
+{\footnotesize\ttfamily bool Interface\+::open\+File (\begin{DoxyParamCaption}\item[{const string \&}]{filename }\end{DoxyParamCaption})}
+
+
+
+Opens a JSON file and parses its content. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & The name of the file to open. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the file is successfully opened and parsed, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classInterface_a73b06f0c3237ff4f60619888554a99e9}\label{classInterface_a73b06f0c3237ff4f60619888554a99e9}} 
+\index{Interface@{Interface}!printMenu@{printMenu}}
+\index{printMenu@{printMenu}!Interface@{Interface}}
+\doxysubsubsection{\texorpdfstring{printMenu()}{printMenu()}}
+{\footnotesize\ttfamily void Interface\+::print\+Menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Prints the command menu. 
+
+\mbox{\Hypertarget{classInterface_ae151d51cbe742d14880ca8f29fa6a95a}\label{classInterface_ae151d51cbe742d14880ca8f29fa6a95a}} 
+\index{Interface@{Interface}!processUserInput@{processUserInput}}
+\index{processUserInput@{processUserInput}!Interface@{Interface}}
+\doxysubsubsection{\texorpdfstring{processUserInput()}{processUserInput()}}
+{\footnotesize\ttfamily void Interface\+::process\+User\+Input (\begin{DoxyParamCaption}\item[{const string \&}]{user\+Input }\end{DoxyParamCaption})}
+
+
+
+Processes the user input. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em user\+Input} & The user input. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classInterface_a090a950300a463d91f8f361d3b333906}\label{classInterface_a090a950300a463d91f8f361d3b333906}} 
+\index{Interface@{Interface}!run@{run}}
+\index{run@{run}!Interface@{Interface}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void Interface\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Runs the interface loop to process user commands. 
+
+\mbox{\Hypertarget{classInterface_aa27e9df0290561f292c04535f5795aea}\label{classInterface_aa27e9df0290561f292c04535f5795aea}} 
+\index{Interface@{Interface}!save@{save}}
+\index{save@{save}!Interface@{Interface}}
+\doxysubsubsection{\texorpdfstring{save()}{save()}}
+{\footnotesize\ttfamily void Interface\+::save (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Saves the current JSON content to the opened file. 
+
+\mbox{\Hypertarget{classInterface_addb08152cfb0271e6afba4180497a791}\label{classInterface_addb08152cfb0271e6afba4180497a791}} 
+\index{Interface@{Interface}!saveAs@{saveAs}}
+\index{saveAs@{saveAs}!Interface@{Interface}}
+\doxysubsubsection{\texorpdfstring{saveAs()}{saveAs()}}
+{\footnotesize\ttfamily void Interface\+::save\+As (\begin{DoxyParamCaption}\item[{const string \&}]{path,  }\item[{string \&}]{new\+Filename }\end{DoxyParamCaption})}
+
+
+
+Saves the current JSON content to a specified path. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & The path to save the file. \\
+\hline
+{\em new\+Filename} & The name of the new file. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classInterface_a882e418c559395e5aa39dcaca65d3d3b}\label{classInterface_a882e418c559395e5aa39dcaca65d3d3b}} 
+\index{Interface@{Interface}!update@{update}}
+\index{update@{update}!Interface@{Interface}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Interface\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Updates the interface by processing user input. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classInterface_af55e9bb5a47274580c338860b2e71b0a}\label{classInterface_af55e9bb5a47274580c338860b2e71b0a}} 
+\index{Interface@{Interface}!filename@{filename}}
+\index{filename@{filename}!Interface@{Interface}}
+\doxysubsubsection{\texorpdfstring{filename}{filename}}
+{\footnotesize\ttfamily string Interface\+::filename\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classInterface_acf10d0edf6b62e578e4b0d046bdc04ce}\label{classInterface_acf10d0edf6b62e578e4b0d046bdc04ce}} 
+\index{Interface@{Interface}!isLoadedFile@{isLoadedFile}}
+\index{isLoadedFile@{isLoadedFile}!Interface@{Interface}}
+\doxysubsubsection{\texorpdfstring{isLoadedFile}{isLoadedFile}}
+{\footnotesize\ttfamily bool Interface\+::is\+Loaded\+File\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classInterface_ab7d10dabb6307f50b39ca256f4527817}\label{classInterface_ab7d10dabb6307f50b39ca256f4527817}} 
+\index{Interface@{Interface}!isRunning@{isRunning}}
+\index{isRunning@{isRunning}!Interface@{Interface}}
+\doxysubsubsection{\texorpdfstring{isRunning}{isRunning}}
+{\footnotesize\ttfamily bool Interface\+::is\+Running\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classInterface_a05ef659f5cb4d37a1ffe13b7eeb137c5}\label{classInterface_a05ef659f5cb4d37a1ffe13b7eeb137c5}} 
+\index{Interface@{Interface}!json@{json}}
+\index{json@{json}!Interface@{Interface}}
+\doxysubsubsection{\texorpdfstring{json}{json}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classJson}{Json}}$\ast$ Interface\+::json\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classInterface_a25459b505846a576f73a1feb796b05b7}\label{classInterface_a25459b505846a576f73a1feb796b05b7}} 
+\index{Interface@{Interface}!manager@{manager}}
+\index{manager@{manager}!Interface@{Interface}}
+\doxysubsubsection{\texorpdfstring{manager}{manager}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classCommandManager}{Command\+Manager}} Interface\+::manager\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/totoo/\+Documents/\+OOP\+\_\+2024/\+JSON-\/\+Parser/include/view/\mbox{\hyperlink{Interface_8hpp}{Interface.\+hpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,136 @@
+\hypertarget{classArrayCreator}{}\doxysection{Array\+Creator Class Reference}
+\label{classArrayCreator}\index{ArrayCreator@{ArrayCreator}}
+
+
+{\ttfamily \#include $<$Array\+Creator.\+hpp$>$}
+
+
+
+Inheritance diagram for Array\+Creator\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=159pt]{classArrayCreator__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Array\+Creator\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=159pt]{classArrayCreator__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classArrayCreator_a01b2f99776d3c2716494037a35b9cf1b}{Array\+Creator}} ()
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classArrayCreator}{Array\+Creator}} object. Initializes the \mbox{\hyperlink{classJsonCreator}{Json\+Creator}}\textquotesingle{}s value as \char`\"{}array\char`\"{} with it\textquotesingle{}s constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classJson}{Json}} $\ast$ \mbox{\hyperlink{classArrayCreator_a97998678a1a30e36fb7ac8a5364de07a}{create\+Json}} (const string \&\mbox{\hyperlink{classJsonCreator_a253a8df6e5b5cc2e43ce72c27c017b2b}{value}}) const override
+\begin{DoxyCompactList}\small\item\em Creates a \mbox{\hyperlink{classJsonArray}{Json\+Array}}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classArrayCreator_af729cc992fc9c78a0774b10cafa3ead4}{get\+Value}} (const string \&object) const override
+\begin{DoxyCompactList}\small\item\em Get the value object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classArrayCreator_a845a3d1d466939db07a88711efb24322}{$\sim$\+Array\+Creator}} ()=default
+\begin{DoxyCompactList}\small\item\em Destroy the Array Creator object. Default desctructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classJson}{Json}} $\ast$ \mbox{\hyperlink{classArrayCreator_a493a53989e8f9ac99f0fc651ddb3fd71}{parse\+Array}} (const string \&\mbox{\hyperlink{classJsonCreator_a253a8df6e5b5cc2e43ce72c27c017b2b}{value}}) const
+\begin{DoxyCompactList}\small\item\em Parses a JSON array string and constructs a \mbox{\hyperlink{classJsonArray}{Json\+Array}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classArrayCreator_a01b2f99776d3c2716494037a35b9cf1b}\label{classArrayCreator_a01b2f99776d3c2716494037a35b9cf1b}} 
+\index{ArrayCreator@{ArrayCreator}!ArrayCreator@{ArrayCreator}}
+\index{ArrayCreator@{ArrayCreator}!ArrayCreator@{ArrayCreator}}
+\doxysubsubsection{\texorpdfstring{ArrayCreator()}{ArrayCreator()}}
+{\footnotesize\ttfamily Array\+Creator\+::\+Array\+Creator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{classArrayCreator}{Array\+Creator}} object. Initializes the \mbox{\hyperlink{classJsonCreator}{Json\+Creator}}\textquotesingle{}s value as \char`\"{}array\char`\"{} with it\textquotesingle{}s constructor. 
+
+\mbox{\Hypertarget{classArrayCreator_a845a3d1d466939db07a88711efb24322}\label{classArrayCreator_a845a3d1d466939db07a88711efb24322}} 
+\index{ArrayCreator@{ArrayCreator}!````~ArrayCreator@{$\sim$ArrayCreator}}
+\index{````~ArrayCreator@{$\sim$ArrayCreator}!ArrayCreator@{ArrayCreator}}
+\doxysubsubsection{\texorpdfstring{$\sim$ArrayCreator()}{~ArrayCreator()}}
+{\footnotesize\ttfamily Array\+Creator\+::$\sim$\+Array\+Creator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Destroy the Array Creator object. Default desctructor. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classArrayCreator_a97998678a1a30e36fb7ac8a5364de07a}\label{classArrayCreator_a97998678a1a30e36fb7ac8a5364de07a}} 
+\index{ArrayCreator@{ArrayCreator}!createJson@{createJson}}
+\index{createJson@{createJson}!ArrayCreator@{ArrayCreator}}
+\doxysubsubsection{\texorpdfstring{createJson()}{createJson()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classJson}{Json}}$\ast$ Array\+Creator\+::create\+Json (\begin{DoxyParamCaption}\item[{const string \&}]{value }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Creates a \mbox{\hyperlink{classJsonArray}{Json\+Array}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Json$\ast$ 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classJsonCreator_a2b4630e018665302be7608c4b1f4c85f}{Json\+Creator}}.
+
+\mbox{\Hypertarget{classArrayCreator_af729cc992fc9c78a0774b10cafa3ead4}\label{classArrayCreator_af729cc992fc9c78a0774b10cafa3ead4}} 
+\index{ArrayCreator@{ArrayCreator}!getValue@{getValue}}
+\index{getValue@{getValue}!ArrayCreator@{ArrayCreator}}
+\doxysubsubsection{\texorpdfstring{getValue()}{getValue()}}
+{\footnotesize\ttfamily bool Array\+Creator\+::get\+Value (\begin{DoxyParamCaption}\item[{const string \&}]{object }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get the value object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em object} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if passed value starts with \textquotesingle{}\mbox{[}\textquotesingle{}, false otherwise. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classJsonCreator_ad43a13717767fd518ad863acc7844906}{Json\+Creator}}.
+
+\mbox{\Hypertarget{classArrayCreator_a493a53989e8f9ac99f0fc651ddb3fd71}\label{classArrayCreator_a493a53989e8f9ac99f0fc651ddb3fd71}} 
+\index{ArrayCreator@{ArrayCreator}!parseArray@{parseArray}}
+\index{parseArray@{parseArray}!ArrayCreator@{ArrayCreator}}
+\doxysubsubsection{\texorpdfstring{parseArray()}{parseArray()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classJson}{Json}}$\ast$ Array\+Creator\+::parse\+Array (\begin{DoxyParamCaption}\item[{const string \&}]{value }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Parses a JSON array string and constructs a \mbox{\hyperlink{classJsonArray}{Json\+Array}}. 
+
+This method processes the input string to extract values and constructs a \mbox{\hyperlink{classJsonArray}{Json\+Array}} from them. It uses \mbox{\hyperlink{namespaceUTILITIES_af1224e12ff9f834b75c0c0ccff4ec3af}{UTILITIES\+::parse\+Value}} to extract values from the input string. Each extracted value is parsed into a \mbox{\hyperlink{classJson}{Json}} object using the \mbox{\hyperlink{classJsonFactory}{Json\+Factory}}. The parsed \mbox{\hyperlink{classJson}{Json}} objects are cloned and stored in a vector of Json$\ast$, which is then used to create a new \mbox{\hyperlink{classJsonArray}{Json\+Array}}. The temporary {\ttfamily \mbox{\hyperlink{classJson}{Json}}} objects are deleted after cloning to manage memory.
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The input string containing the JSON array to be parsed. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the newly constructed \mbox{\hyperlink{classJsonArray}{Json\+Array}}. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/totoo/\+Documents/\+OOP\+\_\+2024/\+JSON-\/\+Parser/include/services/creators/\mbox{\hyperlink{ArrayCreator_8hpp}{Array\+Creator.\+hpp}}\end{DoxyCompactItemize}
