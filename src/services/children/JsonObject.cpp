@@ -31,14 +31,15 @@ const bool JsonObject::search(const string &key) const
         {
             search_values.push_back(pairs[i]);
             found = true;
-        } 
+        }
         else if (pairs[i].getValue()->search(key))
         {
             found = true;
         }
     }
 
-    if (!found) return false;
+    if (!found)
+        return false;
     for (size_t i = 0; i < search_values.size(); i++)
     {
         search_values[i].print();
@@ -47,7 +48,7 @@ const bool JsonObject::search(const string &key) const
 }
 
 void JsonObject::create(const string &path, const string &newValue, int depth)
-{   
+{
     vector<string> tokens = UTILITIES::split(path, '/');
     if (depth == tokens.size() - 1)
     {
@@ -61,22 +62,12 @@ void JsonObject::create(const string &path, const string &newValue, int depth)
         }
         Json *val = JsonFactory::get().parseValue(newValue);
         if (!val)
-        {
-            cerr << "Can't create such value." << endl;
             return;
-        }
-        JsonPair temp { val, tokens.back() };
-        if (temp.getValue())
-        {
-            pairs.push_back(temp);
-        }
-        else
-        {
-            cerr << "Invalid JSON syntax.";
-        }
+        JsonPair temp{val, tokens.back()};
+        pairs.push_back(temp);
         return;
     }
-    else 
+    else
     {
         for (JsonPair &pair : pairs)
         {
@@ -97,16 +88,11 @@ void JsonObject::set(const string &path, const string &newValue, int depth)
         {
             if (pair.getKey() == tokens[depth])
             {
-                delete pair.getValue();
                 Json *temp = JsonFactory::get().parseValue(newValue);
-                if (temp)
-                {
-                    pair.setValue(temp);
-                }
-                else
-                {
-                    cerr << "Invalid JSON syntax." << endl;
-                }
+                if (!temp)
+                    return;
+                delete pair.getValue();
+                pair.setValue(temp);
                 delete temp;
                 return;
             }
@@ -114,7 +100,7 @@ void JsonObject::set(const string &path, const string &newValue, int depth)
         cerr << "Invalid path." << endl;
         return;
     }
-    else 
+    else
     {
         for (JsonPair &pair : pairs)
         {
@@ -125,7 +111,6 @@ void JsonObject::set(const string &path, const string &newValue, int depth)
             }
         }
     }
-    cerr << "Invalid path." << endl;
 }
 
 void JsonObject::erase(const string &path, int depth)
@@ -144,7 +129,7 @@ void JsonObject::erase(const string &path, int depth)
         cerr << "Invalid path." << endl;
         return;
     }
-    else 
+    else
     {
         for (JsonPair &pair : pairs)
         {
@@ -155,23 +140,22 @@ void JsonObject::erase(const string &path, int depth)
             }
         }
     }
-
-    cerr << "Invalid path." << endl;
 }
 
 void JsonObject::move(const string &from, string &to, int depth)
 {
     vector<string> tokens = UTILITIES::split(from, '/');
-    if (to == "./") to = "";
+    if (to == "./")
+        to = "";
     if (depth == tokens.size() - 1)
     {
         bool found = false;
-        for (size_t i = 0; i < pairs.size(); i++) 
+        for (size_t i = 0; i < pairs.size(); i++)
         {
             if (pairs[i].getKey() == tokens[depth])
             {
                 found = true;
-                if (to != "" && to[to.size() - 1] != '/') 
+                if (to != "" && to[to.size() - 1] != '/')
                 {
                     to += "/";
                 }
@@ -181,20 +165,21 @@ void JsonObject::move(const string &from, string &to, int depth)
                 break;
             }
         }
-        if (!found) 
+        if (!found)
         {
             cerr << "Invalid path." << endl;
             return;
         }
     }
-    for (JsonPair &pair : pairs) 
+    for (JsonPair &pair : pairs)
     {
-        if (pair.getKey() == tokens[depth]) 
+        if (pair.getKey() == tokens[depth])
         {
             pair.getValue()->move(from, to, depth + 1);
         }
     }
-    if (depth == 0) {
+    if (depth == 0)
+    {
         vector<string> tokens;
         tokens = UTILITIES::split(to, '\\');
         create(tokens[0], tokens[1], depth);
@@ -211,25 +196,26 @@ void JsonObject::print() const
 }
 
 const bool JsonObject::contains(const string &value) const
-{   
+{
     vector<JsonPair> contains_values;
-    for (size_t i = 0; i < pairs.size(); i++) 
+    for (size_t i = 0; i < pairs.size(); i++)
     {
         if (pairs[i].getValue()->contains(value))
         {
             /*
-                This check ensures that JsonObject elements 
-                are not pushed to the contains_values. If the 
-                check is removed objects will be added and 
-                there will be a lot of duplicates. 
+                This check ensures that JsonObject elements
+                are not pushed to the contains_values. If the
+                check is removed objects will be added and
+                there will be a lot of duplicates.
             */
-            if (!dynamic_cast<JsonObject*>(pairs[i].getValue()))
+            if (!dynamic_cast<JsonObject *>(pairs[i].getValue()))
                 contains_values.push_back(pairs[i]);
         }
     }
-    if (contains_values.size() == 0) return false;
+    if (contains_values.size() == 0)
+        return false;
 
-    for (size_t i = 0; i < contains_values.size(); i++) 
+    for (size_t i = 0; i < contains_values.size(); i++)
     {
         contains_values[i].print();
     }
