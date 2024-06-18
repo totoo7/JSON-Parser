@@ -39,11 +39,9 @@ const bool JsonObject::search(const string &key) const
     }
 
     if (!found) return false;
-    
     for (size_t i = 0; i < search_values.size(); i++)
     {
-        search_values[i].getValue()->print();
-        cout << endl;
+        search_values[i].print();
     }
     return true;
 }
@@ -213,7 +211,14 @@ const bool JsonObject::contains(const string &value) const
     {
         if (pairs[i].getValue()->contains(value))
         {
-            contains_values.push_back(pairs[i]);
+            /*
+                This check ensures that JsonObject elements 
+                are not pushed to the contains_values. If the 
+                check is removed objects will be added and 
+                there will be a lot of duplicates. 
+            */
+            if (!dynamic_cast<JsonObject*>(pairs[i].getValue()))
+                contains_values.push_back(pairs[i]);
         }
     }
     if (contains_values.size() == 0) return false;
