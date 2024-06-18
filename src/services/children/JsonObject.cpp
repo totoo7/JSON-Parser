@@ -59,7 +59,13 @@ void JsonObject::create(const string &path, const string &newValue, int depth)
                 return;
             }
         }
-        JsonPair temp { JsonFactory::get().parseValue(newValue), tokens.back() };
+        Json *val = JsonFactory::get().parseValue(newValue);
+        if (!val)
+        {
+            cerr << "Can't create such value." << endl;
+            return;
+        }
+        JsonPair temp { val, tokens.back() };
         if (temp.getValue())
         {
             pairs.push_back(temp);

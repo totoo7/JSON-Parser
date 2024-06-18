@@ -32,17 +32,17 @@ virtual string \mbox{\hyperlink{classJson_a5e03cd6ea6ab5ddc6e3ea664f2d4b3e5}{to\
 virtual \mbox{\hyperlink{classJson}{Json}} $\ast$ \mbox{\hyperlink{classJson_a51eba1dafeba2900206985fe933809fa}{clone}} () const =0
 \begin{DoxyCompactList}\small\item\em Pure virtual clone method. This method must be implemented by all derived classes for it\textquotesingle{}s own JSON type. \end{DoxyCompactList}\item 
 virtual const bool \mbox{\hyperlink{classJson_a381fc9d7d10f3adefa5639695ee9d620}{search}} (const string \&key) const
-\begin{DoxyCompactList}\small\item\em Pure virtual method that searches for a given key within the JSON structure. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Searches for a given key within the JSON structure. \end{DoxyCompactList}\item 
 virtual const bool \mbox{\hyperlink{classJson_a82121a35c6d5272b6d0f076549b9c227}{contains}} (const string \&value) const =0
 \begin{DoxyCompactList}\small\item\em Pure virtual method that checks if a given value is contained within the JSON structure. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{classJson_aba7844204165ba8a54a06ce602f6bc66}{create}} (const string \&path, const string \&new\+Value, int depth=0)
-\begin{DoxyCompactList}\small\item\em Pure virtual method that attempts to create a new JSON element located at the specified path. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Attempts to create a new JSON element located at the specified path. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{classJson_aca3ba3e789d3e7c1d87258fed998fcb7}{set}} (const string \&path, const string \&new\+Value, int depth=0)
-\begin{DoxyCompactList}\small\item\em Pure virtual method that replaces an existing JSON element\textquotesingle{}s value with the new\+Value parameter. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Replaces an existing JSON element\textquotesingle{}s value with the new\+Value parameter. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{classJson_a60da62399f3c8b76897335d9577e061e}{erase}} (const string \&path, int depth=0)
-\begin{DoxyCompactList}\small\item\em Pure virtual method that deletes an existing JSON element located at the specified path. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Deletes an existing JSON element located at the specified path. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{classJson_af8b632ad12158da84889c7ef6e8b7feb}{move}} (const string \&from, string \&to, int depth=0)
-\begin{DoxyCompactList}\small\item\em Pure virtual method that moves an existing JSON element from the first path to the second one. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Moves an existing JSON element from the first path to the second one. \end{DoxyCompactList}\item 
 virtual \mbox{\hyperlink{classJson_a7b5b68b1be2dfcf86e9524f693469382}{$\sim$\+Json}} ()=default
 \begin{DoxyCompactList}\small\item\em Destroy the \mbox{\hyperlink{classJson}{Json}} object. Default desctructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
@@ -140,9 +140,9 @@ Implemented in \mbox{\hyperlink{classJsonString_a62ba3c93111efe0dcc36b8063b0eeb2
 
 
 
-Pure virtual method that attempts to create a new JSON element located at the specified path. 
+Attempts to create a new JSON element located at the specified path. 
 
-This method must be implemented by all derived classes that has this functionality. If the path is invalid the JSON state is not changed.
+If the path is invalid the JSON state is not changed.
 
 
 \begin{DoxyParams}{Parameters}
@@ -165,9 +165,9 @@ Reimplemented in \mbox{\hyperlink{classJsonArray_a1e1352324f5ba2c3086c0e2d89f903
 
 
 
-Pure virtual method that deletes an existing JSON element located at the specified path. 
+Deletes an existing JSON element located at the specified path. 
 
-This method must be implemented by all derived classes that has this functionality. If the path is invalid the JSON state is not changed.
+If the path is invalid the JSON state is not changed.
 
 
 \begin{DoxyParams}{Parameters}
@@ -188,9 +188,9 @@ Reimplemented in \mbox{\hyperlink{classJsonObject_a4d1f3c5e9c6989d0c72744122b5c2
 
 
 
-Pure virtual method that moves an existing JSON element from the first path to the second one. 
+Moves an existing JSON element from the first path to the second one. 
 
-This method must be implemented by all derived classes that has this functionality. If the path is invalid the JSON state is not changed.
+If the path is invalid the JSON state is not changed.
 
 The JSON element at the first path is deleted.
 
@@ -229,9 +229,7 @@ Implemented in \mbox{\hyperlink{classJsonString_a38bd1beb644c93556d6136901757911
 
 
 
-Pure virtual method that searches for a given key within the JSON structure. 
-
-This method must be implemented by all derived classes that has this functionality
+Searches for a given key within the JSON structure. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -255,9 +253,9 @@ Reimplemented in \mbox{\hyperlink{classJsonArray_a23949c5ed3fb23237cc0f47a90b84b
 
 
 
-Pure virtual method that replaces an existing JSON element\textquotesingle{}s value with the new\+Value parameter. 
+Replaces an existing JSON element\textquotesingle{}s value with the new\+Value parameter. 
 
-This method must be implemented by all derived classes that has this functionality. If the path is invalid the JSON state is not changed.
+If the path is invalid the JSON state is not changed.
 
 
 \begin{DoxyParams}{Parameters}

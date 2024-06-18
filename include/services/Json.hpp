@@ -42,9 +42,7 @@ public:
      */
     virtual Json *clone() const = 0;
     /**
-     * @brief Pure virtual method that searches for a given key within the JSON structure.
-     *
-     * This method must be implemented by all derived classes that has this functionality
+     * @brief Searches for a given key within the JSON structure.
      *
      * @param key The key to search for in the JSON structure.
      * @return true If the key is found in the JSON structure.
@@ -62,9 +60,8 @@ public:
      */
     virtual const bool contains(const string &value) const = 0;
     /**
-     * @brief Pure virtual method that attempts to create a new JSON element located at the specified path. 
+     * @brief Attempts to create a new JSON element located at the specified path. 
      * 
-     * This method must be implemented by all derived classes that has this functionality.
      * If the path is invalid the JSON state is not changed.
      * 
      * @param path Recursive path, separated by '/'. The last argument is the new key. 
@@ -73,9 +70,8 @@ public:
      */
     virtual void create(const string &path, const string &newValue, int depth = 0) {}
     /**
-     * @brief Pure virtual method that replaces an existing JSON element's value with the newValue parameter.
+     * @brief Replaces an existing JSON element's value with the newValue parameter.
      * 
-     * This method must be implemented by all derived classes that has this functionality.
      * If the path is invalid the JSON state is not changed.
      * 
      * @param path Recusive path, separated by '/'. The last argument is the existing JSON element.
@@ -84,9 +80,8 @@ public:
      */
     virtual void set(const string &path, const string &newValue, int depth = 0) {}
     /**
-     * @brief Pure virtual method that deletes an existing JSON element located at the specified path.
+     * @brief Deletes an existing JSON element located at the specified path.
      * 
-     * This method must be implemented by all derived classes that has this functionality.
      * If the path is invalid the JSON state is not changed.
      * 
      * @param path Recursive path, separated by '/'. The last argument is the existing JSON element's key that will be deleted.
@@ -94,9 +89,8 @@ public:
      */
     virtual void erase(const string &path, int depth = 0) {}
     /**
-     * @brief Pure virtual method that moves an existing JSON element from the first path to the second one.
+     * @brief Moves an existing JSON element from the first path to the second one.
      * 
-     * This method must be implemented by all derived classes that has this functionality.
      * If the path is invalid the JSON state is not changed.
      * 
      * The JSON element at the first path is deleted.

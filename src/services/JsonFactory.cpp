@@ -16,15 +16,17 @@ Json *JsonFactory::parseValue(string content) const
     string value = content;
     const JsonCreator *crt = getCreator(value);
     if (!crt)
-        throw runtime_error("Can't parse JSON.");
-        
+    {
+        cerr << "Can't parse JSON data." << endl;
+        return nullptr;
+    }
     return crt->createJson(value);
 }
 
 Json *JsonFactory::parseValue(ifstream &ifs) const
 {
     if (!ifs.is_open())
-        throw runtime_error("There was an error with the file.");
+        return nullptr;
 
     string content;
     char character;
