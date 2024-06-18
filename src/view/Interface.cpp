@@ -164,7 +164,10 @@ void Interface::processUserInput(const string& userInput) {
         cout << "set foo/bar \"value\", where bar is a key in foo." << endl;
         cout << "2) When trying to move an object in the root of the JSON file use \"./\"." << endl;
         cout << "Example: " << endl;
-        cout << "move foo/bar ./, where bar is a key in foo and it will be moved to the top-level elements" << endl;
+        cout << "move foo/bar ./, where bar is a key in foo and it will be moved to the top-level elements." << endl;
+        cout << "3) When trying to create or move an element in array use array\"/\"" << endl;
+        cout << "Example: " << endl;
+        cout << "create foo/ \"bar\", where foo is an array and bar is an element that will be added." << endl;
     }
 }
 

@@ -71,17 +71,13 @@ const bool JsonArray::contains(const string &value) const
 void JsonArray::create(const string &path, const string &newValue, int depth)
 {
     vector<string> tokens = UTILITIES::split(path, '/');
+
     if (depth == tokens.size() - 1)
     {
         Json *temp =  JsonFactory::get().parseValue(newValue);
-        if (temp)
-        {
-            values.push_back(temp->clone());
-        }
-        else
-        {
-            cerr << "Invalid JSON syntax.";
-        }
+        if (!temp) 
+            return;
+        values.push_back(temp->clone());
         delete temp;
         return;
     }

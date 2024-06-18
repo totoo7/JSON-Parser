@@ -64,6 +64,7 @@ void JsonObject::create(const string &path, const string &newValue, int depth)
         if (!val)
             return;
         JsonPair temp{val, tokens.back()};
+        delete val;
         pairs.push_back(temp);
         return;
     }
@@ -156,11 +157,9 @@ void JsonObject::move(const string &from, string &to, int depth)
             {
                 found = true;
                 if (to != "" && to[to.size() - 1] != '/')
-                {
                     to += "/";
-                }
                 string temp = pairs[i].getKey() + "\\" + pairs[i].getValue()->toString();
-                to += temp;
+                to += temp;                
                 pairs.erase(pairs.begin() + i);
                 break;
             }
