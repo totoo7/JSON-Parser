@@ -16,27 +16,20 @@ Json *JsonFactory::parseValue(string content) const
     string value = content;
     const JsonCreator *crt = getCreator(value);
     if (!crt)
-    {
-        cerr << "Couldn't parse Json." << endl;
-        return nullptr;
-    }
+        throw runtime_error("Can't parse JSON.");
+        
     return crt->createJson(value);
 }
 
 Json *JsonFactory::parseValue(ifstream &ifs) const
 {
     if (!ifs.is_open())
-    {
-        cout << "Failed to open file\n";
-        return nullptr;
-    }
+        throw runtime_error("There was an error with the file.");
 
     string content;
     char character;
     while (ifs.get(character))
-    {
         content.push_back(character);
-    }
 
     ifs.close();
     return parseValue(content);
@@ -47,8 +40,8 @@ Json *JsonFactory::parseFile(string fileName) const
     ifstream ifs;
     ifs.open(fileName, ios::in);
     if (!ifs.is_open())
-        return nullptr;
-
+        throw invalid_argument("Can't find such file.");
+    
     return parseValue(ifs);
 }
 

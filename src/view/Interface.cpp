@@ -4,16 +4,25 @@ Interface::Interface() : json(nullptr), isRunning(true), filename("Null"), isLoa
 
 bool Interface::openFile(const string &filename)
 {
-    if (json) delete json;
+    Json *temp = nullptr;
     try
     {
-        json = JsonFactory::get().parseFile(filename);
+        temp = JsonFactory::get().parseFile(filename);
     }
     catch (invalid_argument &e)
     {
         cout << e.what();
+        cout << endl;
         return false;
     }
+    catch (runtime_error &e) 
+    {
+        cout << e.what();
+        cout << endl;
+        return false;
+    }
+    if (json) delete json;
+    json = temp;
     this->filename = filename;
     if (json) isLoadedFile = true;
     return isLoadedFile;
