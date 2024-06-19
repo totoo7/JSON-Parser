@@ -58,7 +58,7 @@ namespace UTILITIES
 
             if (inQuote)
             {
-                token += c; // Add the quote character
+                token += c;
                 if (c == quoteChar)
                 {
                     inQuote = false;
@@ -77,7 +77,7 @@ namespace UTILITIES
                     }
                     inQuote = true;
                     quoteChar = c;
-                    token += c; // Add the opening quote character
+                    token += c;
                 }
                 else if (isspace(c))
                 {
@@ -224,11 +224,14 @@ namespace UTILITIES
     {
         char delimiter = ']';
 
-        if (stack.back() == '[')
+        if (!stack.empty() && stack.back() == '[')
         {
             stack.pop_back();
-            if (stack.back() != '[')
-                inList = false;
+            inList = !stack.empty() && stack.back() == '[';
+        }
+        else
+        {
+            stack.push_back('[');
         }
 
         newValue += delimiter;
@@ -264,11 +267,14 @@ namespace UTILITIES
     {
         char delimiter = '}';
 
-        if (stack.back() == '{')
+        if (!stack.empty() && stack.back() == '{')
         {
             stack.pop_back();
-            if (stack.back() != '{')
-                inObject = false;
+            inObject = !stack.empty() && stack.back() == '{';
+        }
+        else
+        {
+            stack.push_back('{');
         }
 
         newValue += delimiter;
@@ -276,34 +282,38 @@ namespace UTILITIES
 
     /**
      * @brief Handles the case of missing delimiters in the stack.
-     * 
+     *
      * This function prints an error message for each missing delimiter in the stack.
-     * 
+     *
      * @param stack A stack used to keep track of delimiters.
      */
     inline void handleMissingDelimiters(const vector<char> &stack)
     {
         for (size_t i = 0; i < stack.size(); i++)
-        {   
+        {
             cout << "Missing delimiter(s): ";
-            if (stack[i] == '[') 
+            if (stack[i] == '[')
             {
                 cout << ']' << endl;
-            } else if (stack[i] == '{')
+            }
+            else if (stack[i] == '{')
             {
                 cout << '}' << endl;
             }
-
+            else
+            {
+                cout << stack[i] << endl;
+            }
         }
         throw invalid_argument("Incorrect JSON file format!");
     }
 
     /**
      * @brief Parses a value from a string, considering various delimiters.
-     * 
+     *
      * This function parses a value from the input string, updating the index to the next position
      * after the parsed value. It handles nested structures and quotes, and checks for delimiter mismatches.
-     * 
+     *
      * @param value The input string to be parsed.
      * @param index The current index in the input string, updated to the next position after the parsed value.
      * @return The parsed value as a string.
