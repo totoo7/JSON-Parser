@@ -68,6 +68,9 @@ public:
     const bool contains(const string &value) const override;
     /**
      * @brief Creates a JSON element within the array based on the provided path and value.
+     * 
+     * Add / after the array to create an element. Example:
+     * create foo/ "bar" which would create an element "bar" in the array foo.
      *
      * @param path The path within the JSON structure where the modification should occur.
      * @param newValue The new JSON value to set at the specified path.

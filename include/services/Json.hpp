@@ -92,6 +92,7 @@ public:
      * @brief Moves an existing JSON element from the first path to the second one.
      * 
      * If the path is invalid the JSON state is not changed.
+     * If given invalid 'to' path the element from 'path' will be deleted.
      * 
      * The JSON element at the first path is deleted.
      * 

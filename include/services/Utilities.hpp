@@ -126,14 +126,13 @@ namespace UTILITIES
      * This function manages the state changes when a quote character is encountered during parsing.
      * It updates the stack and the parsing flags, and adds the quote character to the new value string.
      *
-     * @param current The current character being processed.
      * @param stack A stack used to keep track of delimiters.
      * @param inString A flag indicating if the parser is currently within a string.
      * @param inObject A flag indicating if the parser is currently within an object.
      * @param inList A flag indicating if the parser is currently within a list.
      * @param newValue The string being constructed during parsing.
      */
-    inline void handleQuote(char current, vector<char> &stack, bool &inString, bool &inObject, bool &inList, string &newValue)
+    inline void handleQuote(vector<char> &stack, bool &inString, bool &inObject, bool &inList, string &newValue)
     {
         if (inObject || inList)
         {
@@ -170,12 +169,11 @@ namespace UTILITIES
      *
      * This function updates the index if the space character is at the end of the input string.
      *
-     * @param current The current character being processed.
      * @param value The input string being parsed.
      * @param i The current index in the input string.
      * @param index The index to be updated if the space character is at the end.
      */
-    inline void handleSpace(char current, const string &value, size_t i, size_t &index)
+    inline void handleSpace(const string &value, size_t i, size_t &index)
     {
         if (i == value.length() - 1)
             index = i + 1;
@@ -187,11 +185,10 @@ namespace UTILITIES
      *
      * This function updates the index to the position after the comma character.
      *
-     * @param current The current character being processed.
      * @param i The current index in the input string.
      * @param index The index to be updated to the position after the comma.
      */
-    inline void handleComma(char current, size_t i, size_t &index)
+    inline void handleComma(size_t i, size_t &index)
     {
         index = i++;
         return;
@@ -202,12 +199,11 @@ namespace UTILITIES
      *
      * This function updates the stack and parsing flags when an open bracket is encountered.
      *
-     * @param current The current character being processed.
      * @param stack A stack used to keep track of delimiters.
      * @param newValue The string being constructed during parsing.
      * @param inList A flag indicating if the parser is currently within a list.
      */
-    inline void handleOpenBracket(char current, vector<char> &stack, string &newValue, bool &inList)
+    inline void handleOpenBracket(vector<char> &stack, string &newValue, bool &inList)
     {
         char delimiter = '[';
         stack.push_back(delimiter);
@@ -220,12 +216,11 @@ namespace UTILITIES
      *
      * This function updates the stack and parsing flags when a close bracket is encountered.
      *
-     * @param current The current character being processed.
      * @param stack A stack used to keep track of delimiters.
      * @param newValue The string being constructed during parsing.
      * @param inList A flag indicating if the parser is currently within a list.
      */
-    inline void handleCloseBracket(char current, vector<char> &stack, string &newValue, bool &inList)
+    inline void handleCloseBracket(vector<char> &stack, string &newValue, bool &inList)
     {
         char delimiter = ']';
 
@@ -244,12 +239,11 @@ namespace UTILITIES
      *
      * This function updates the stack and parsing flags when an open brace is encountered.
      *
-     * @param current The current character being processed.
      * @param stack A stack used to keep track of delimiters.
      * @param newValue The string being constructed during parsing.
      * @param inObject A flag indicating if the parser is currently within an object.
      */
-    inline void handleOpenBrace(char current, vector<char> &stack, string &newValue, bool &inObject)
+    inline void handleOpenBrace(vector<char> &stack, string &newValue, bool &inObject)
     {
         char delimiter = '{';
         newValue += delimiter;
@@ -262,12 +256,11 @@ namespace UTILITIES
      *
      * This function updates the stack and parsing flags when a close brace is encountered.
      *
-     * @param current The current character being processed.
      * @param stack A stack used to keep track of delimiters.
      * @param newValue The string being constructed during parsing.
      * @param inObject A flag indicating if the parser is currently within an object.
      */
-    inline void handleCloseBrace(char current, vector<char> &stack, string &newValue, bool &inObject)
+    inline void handleCloseBrace(vector<char> &stack, string &newValue, bool &inObject)
     {
         char delimiter = '}';
 
@@ -291,8 +284,16 @@ namespace UTILITIES
     inline void handleMissingDelimiters(const vector<char> &stack)
     {
         for (size_t i = 0; i < stack.size(); i++)
-        {
-            cout << "Missing delimiter(s):" << stack[i] << endl;
+        {   
+            cout << "Missing delimiter(s): ";
+            if (stack[i] == '[') 
+            {
+                cout << ']' << endl;
+            } else if (stack[i] == '{')
+            {
+                cout << '}' << endl;
+            }
+
         }
         throw invalid_argument("Incorrect JSON file format!");
     }
@@ -329,32 +330,32 @@ namespace UTILITIES
 
             if (current == '\"')
             {
-                handleQuote(current, stack, inString, inObject, inList, newValue);
+                handleQuote(stack, inString, inObject, inList, newValue);
             }
             else if (current == ' ' && !inString && !inObject)
             {
-                handleSpace(current, value, i, index);
+                handleSpace(value, i, index);
             }
             else if (current == ',' && stack.empty())
             {
-                handleComma(current, i, index);
+                handleComma(i, index);
                 break;
             }
             else if (current == '[')
             {
-                handleOpenBracket(current, stack, newValue, inList);
+                handleOpenBracket(stack, newValue, inList);
             }
             else if (current == ']')
             {
-                handleCloseBracket(current, stack, newValue, inList);
+                handleCloseBracket(stack, newValue, inList);
             }
             else if (current == '{')
             {
-                handleOpenBrace(current, stack, newValue, inObject);
+                handleOpenBrace(stack, newValue, inObject);
             }
             else if (current == '}')
             {
-                handleCloseBrace(current, stack, newValue, inObject);
+                handleCloseBrace(stack, newValue, inObject);
             }
             else
             {

@@ -24,19 +24,19 @@ vector$<$ string $>$ \mbox{\hyperlink{namespaceUTILITIES_a0dc6c33ede494d7c07f063
 \begin{DoxyCompactList}\small\item\em Tokenizes a string into a vector of substrings, considering quoted substrings. \end{DoxyCompactList}\item 
 string \mbox{\hyperlink{namespaceUTILITIES_a4932089a4b7cf54719e7c78c67d312bf}{UTILITIES\+::remove\+Delimeters}} (const string \&value, char opening\+Delimeter, char closing\+Delimeter)
 \begin{DoxyCompactList}\small\item\em Removes the specified opening and closing delimiters from a string. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{namespaceUTILITIES_aeb26276cd29c930cc9b3493aa2cb14e6}{UTILITIES\+::handle\+Quote}} (char current, vector$<$ char $>$ \&stack, bool \&in\+String, bool \&in\+Object, bool \&in\+List, string \&new\+Value)
+void \mbox{\hyperlink{namespaceUTILITIES_a54770e244fad7fe27cb9d4fca4c78bee}{UTILITIES\+::handle\+Quote}} (vector$<$ char $>$ \&stack, bool \&in\+String, bool \&in\+Object, bool \&in\+List, string \&new\+Value)
 \begin{DoxyCompactList}\small\item\em Handles a quote character in a parsing context. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{namespaceUTILITIES_a7a1a6efe00b8b924d651cfd941071667}{UTILITIES\+::handle\+Space}} (char current, const string \&value, size\+\_\+t i, size\+\_\+t \&index)
+void \mbox{\hyperlink{namespaceUTILITIES_a3e4350a00db41c50c30a63954546d3a1}{UTILITIES\+::handle\+Space}} (const string \&value, size\+\_\+t i, size\+\_\+t \&index)
 \begin{DoxyCompactList}\small\item\em Handles a space character in a parsing context. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{namespaceUTILITIES_aee46414b2dc4c80dca15dd813ff369e9}{UTILITIES\+::handle\+Comma}} (char current, size\+\_\+t i, size\+\_\+t \&index)
+void \mbox{\hyperlink{namespaceUTILITIES_aa221d64e5044425c6d4016fd59f1416e}{UTILITIES\+::handle\+Comma}} (size\+\_\+t i, size\+\_\+t \&index)
 \begin{DoxyCompactList}\small\item\em Handles a comma character in a parsing context. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{namespaceUTILITIES_a238c11d4e17900b3e80b9a08b1b143e1}{UTILITIES\+::handle\+Open\+Bracket}} (char current, vector$<$ char $>$ \&stack, string \&new\+Value, bool \&in\+List)
+void \mbox{\hyperlink{namespaceUTILITIES_ac0d3b90bb4faebf595984232ac152e5e}{UTILITIES\+::handle\+Open\+Bracket}} (vector$<$ char $>$ \&stack, string \&new\+Value, bool \&in\+List)
 \begin{DoxyCompactList}\small\item\em Handles an open bracket character in a parsing context. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{namespaceUTILITIES_afcde9475c8e2cd2a966b04afca54d25b}{UTILITIES\+::handle\+Close\+Bracket}} (char current, vector$<$ char $>$ \&stack, string \&new\+Value, bool \&in\+List)
+void \mbox{\hyperlink{namespaceUTILITIES_a215cc062f093a37be862afb476939160}{UTILITIES\+::handle\+Close\+Bracket}} (vector$<$ char $>$ \&stack, string \&new\+Value, bool \&in\+List)
 \begin{DoxyCompactList}\small\item\em Handles a close bracket character in a parsing context. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{namespaceUTILITIES_a6ce31ab3e569af3b534ac2fe737065a4}{UTILITIES\+::handle\+Open\+Brace}} (char current, vector$<$ char $>$ \&stack, string \&new\+Value, bool \&in\+Object)
+void \mbox{\hyperlink{namespaceUTILITIES_ac5d4633618d61d686a1a38db7b097771}{UTILITIES\+::handle\+Open\+Brace}} (vector$<$ char $>$ \&stack, string \&new\+Value, bool \&in\+Object)
 \begin{DoxyCompactList}\small\item\em Handles an open brace character in a parsing context. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{namespaceUTILITIES_ad7d8bb4d2b28b2a20b6ab6fee7d340e4}{UTILITIES\+::handle\+Close\+Brace}} (char current, vector$<$ char $>$ \&stack, string \&new\+Value, bool \&in\+Object)
+void \mbox{\hyperlink{namespaceUTILITIES_af870ff5b0140aff2eb797f13e1b5aeb9}{UTILITIES\+::handle\+Close\+Brace}} (vector$<$ char $>$ \&stack, string \&new\+Value, bool \&in\+Object)
 \begin{DoxyCompactList}\small\item\em Handles a close brace character in a parsing context. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{namespaceUTILITIES_a234bf11d7c6343ff58117bb493d4bb29}{UTILITIES\+::handle\+Missing\+Delimiters}} (const vector$<$ char $>$ \&stack)
 \begin{DoxyCompactList}\small\item\em Handles the case of missing delimiters in the stack. \end{DoxyCompactList}\item 
