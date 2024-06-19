@@ -292,9 +292,9 @@ namespace UTILITIES
     {
         for (size_t i = 0; i < stack.size(); i++)
         {
-            cout << "Incorrect format!" << endl;
             cout << "Missing delimiter(s):" << stack[i] << endl;
         }
+        throw invalid_argument("Incorrect JSON file format!");
     }
 
     /**

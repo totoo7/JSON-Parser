@@ -85,7 +85,7 @@ void Interface::printMenu() const
         cout << ">Enter 'contains' then 'value' to check if a key with this value exists. Result is printed in the terminal." << endl;
         cout << ">Enter 'set' then 'path' and 'value' to set new value of existing key." << endl;
         cout << ">Enter 'erase' then 'path' to erase the given key." << endl;
-        cout << ">Enter 'move' then 'path from' then 'path to' to move key." << endl;
+        cout << ">Enter 'move' then 'path from' then 'path to' to move key. Only elements that have key can be moved." << endl;
         cout << ">Enter 'create' then 'path' then 'new value' to create new value." << endl;
         cout << ">Enter 'help' for more info on how to use the commands. " << endl;
     }
@@ -165,7 +165,7 @@ void Interface::processUserInput(const string& userInput) {
         cout << "2) When trying to move an object in the root of the JSON file use \"./\"." << endl;
         cout << "Example: " << endl;
         cout << "move foo/bar ./, where bar is a key in foo and it will be moved to the top-level elements." << endl;
-        cout << "3) When trying to create or move an element in array use array\"/\"" << endl;
+        cout << "3) When trying to create or move an element in array use array/" << endl;
         cout << "Example: " << endl;
         cout << "create foo/ \"bar\", where foo is an array and bar is an element that will be added." << endl;
     }
