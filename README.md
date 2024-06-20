@@ -31,6 +31,10 @@ cd JSON-Parser
 
 ### Create a build directory
 mkdir build
+cd build
+
+### Run CMake to configure the project
+cmake -S .. -B .
 
 ### Build the project
-cmake --build build
+cmake --build .
