@@ -14,6 +14,7 @@ set(sources
     src/services/Json.cpp
     src/services/JsonPair.cpp
     src/services/JsonFactory.cpp
+    src/services/JsonValidator.cpp
     src/services/creators/JsonCreator.cpp
     src/services/creators/ObjectCreator.cpp
     src/services/creators/StringCreator.cpp

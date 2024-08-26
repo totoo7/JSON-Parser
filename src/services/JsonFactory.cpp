@@ -1,4 +1,5 @@
 #include "JsonFactory.hpp"
+#include "JsonValidator.hpp"
 
 JsonFactory &JsonFactory::get()
 {
@@ -11,16 +12,15 @@ void JsonFactory::registerValidJson(const JsonCreator *creator)
     creators.push_back(creator);
 }
 
-Json *JsonFactory::parseValue(string content) const
+Json *JsonFactory::parseValue(const string &content) const
 {
-    string value = content;
-    const JsonCreator *crt = getCreator(value);
+    const JsonCreator *crt = getCreator(content);
     if (!crt)
     {
         cerr << "Can't parse JSON data." << endl;
         return nullptr;
     }
-    return crt->createJson(value);
+    return crt->createJson(content);
 }
 
 Json *JsonFactory::parseValue(ifstream &ifs) const
@@ -34,7 +34,13 @@ Json *JsonFactory::parseValue(ifstream &ifs) const
         content.push_back(character);
 
     ifs.close();
-    return parseValue(content);
+    JsonValidator validator(content);
+    if (validator.validate()) {
+        return parseValue(content);
+    } else {
+        cout << validator.getErrorMessage();
+        return nullptr;
+    }
 }
 
 Json *JsonFactory::parseFile(string fileName) const
@@ -43,7 +49,7 @@ Json *JsonFactory::parseFile(string fileName) const
     ifs.open(fileName, ios::in);
     if (!ifs.is_open())
         throw invalid_argument("Can't find such file.");
-    
+
     return parseValue(ifs);
 }
 

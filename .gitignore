@@ -2,3 +2,4 @@
 build/
 *.exe
 JSON-Parser
+.DS_Store

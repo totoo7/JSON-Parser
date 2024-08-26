@@ -26,7 +26,7 @@ public:
      * @param value 
      * @return Json* 
      */
-    Json *parseValue(string value) const;
+    Json *parseValue(const string &value) const;
     /**
      * @brief Attempts to parse the content of the passed file and returns a new JSON element pointer.
      * 
