@@ -43,7 +43,19 @@ protected:
     string value;
 };
 
-namespace parser {
+/**
+ * @brief Parses a JSON value from a string.
+ *
+ * This function extracts a single JSON value from the given string, starting at the position indicated by the `index` parameter.
+ * It handles JSON objects, arrays, strings, numbers, booleans, and null values. The function updates the `index` to point to the
+ * next character after the parsed value.
+ *
+ * @param value The JSON string from which to parse the value.
+ * @param index A reference to the current position in the string. This is updated as the function parses the value.
+ * @return A string containing the parsed JSON value.
+ */
+namespace parser
+{
     string parseValue(const string &value, size_t &index);
 };
 
