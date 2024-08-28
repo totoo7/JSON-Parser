@@ -4,7 +4,10 @@
 #include <string>
 #include <vector>
 using namespace std;
-
+/**
+ * @brief Class responsible for checking if the Json file is in the correct format.
+ *
+ */
 class JsonValidator
 {
 public:

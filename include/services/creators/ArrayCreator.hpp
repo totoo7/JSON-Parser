@@ -4,7 +4,10 @@
 #include "JsonCreator.hpp"
 #include "JsonFactory.hpp"
 #include "JsonArray.hpp"
-
+/**
+ * @class ArrayCreator
+ * @brief A concrete implementation of JsonCreator that handles the creation of JSON arrays.
+ */
 class ArrayCreator : public JsonCreator
 {
 public:

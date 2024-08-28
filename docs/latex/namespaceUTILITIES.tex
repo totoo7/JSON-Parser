@@ -1,243 +1,30 @@
-\hypertarget{namespaceUTILITIES}{}\doxysection{UTILITIES Namespace Reference}
-\label{namespaceUTILITIES}\index{UTILITIES@{UTILITIES}}
+\doxysection{UTILITIES Namespace Reference}
+\hypertarget{namespaceUTILITIES}{}\label{namespaceUTILITIES}\index{UTILITIES@{UTILITIES}}
 
 
 Namespace for various functions used in the project.  
 
 
-\doxysubsection*{Functions}
+\doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-vector$<$ string $>$ \mbox{\hyperlink{namespaceUTILITIES_a09b4e7fd99b0f2a290fa0a3128227083}{split}} (const string \&value, char delimeter)
+vector$<$ string $>$ \mbox{\hyperlink{namespaceUTILITIES_a7c9d6aa028aa5519edafe13bc6a7cc17}{split}} (const string \&value, char delimeter)
 \begin{DoxyCompactList}\small\item\em Splits a string into tokens based on a specified delimiter. \end{DoxyCompactList}\item 
-vector$<$ string $>$ \mbox{\hyperlink{namespaceUTILITIES_a0dc6c33ede494d7c07f06369098f3b36}{tokenize}} (const string \&input)
+vector$<$ string $>$ \mbox{\hyperlink{namespaceUTILITIES_ac3a6b81c413390dcb5326548d0d54afe}{tokenize}} (const string \&input)
 \begin{DoxyCompactList}\small\item\em Tokenizes a string into a vector of substrings, considering quoted substrings. \end{DoxyCompactList}\item 
 string \mbox{\hyperlink{namespaceUTILITIES_a4932089a4b7cf54719e7c78c67d312bf}{remove\+Delimeters}} (const string \&value, char opening\+Delimeter, char closing\+Delimeter)
-\begin{DoxyCompactList}\small\item\em Removes the specified opening and closing delimiters from a string. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{namespaceUTILITIES_a54770e244fad7fe27cb9d4fca4c78bee}{handle\+Quote}} (vector$<$ char $>$ \&stack, bool \&in\+String, bool \&in\+Object, bool \&in\+List, string \&new\+Value)
-\begin{DoxyCompactList}\small\item\em Handles a quote character in a parsing context. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{namespaceUTILITIES_a3e4350a00db41c50c30a63954546d3a1}{handle\+Space}} (const string \&value, size\+\_\+t i, size\+\_\+t \&index)
-\begin{DoxyCompactList}\small\item\em Handles a space character in a parsing context. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{namespaceUTILITIES_aa221d64e5044425c6d4016fd59f1416e}{handle\+Comma}} (size\+\_\+t i, size\+\_\+t \&index)
-\begin{DoxyCompactList}\small\item\em Handles a comma character in a parsing context. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{namespaceUTILITIES_ac0d3b90bb4faebf595984232ac152e5e}{handle\+Open\+Bracket}} (vector$<$ char $>$ \&stack, string \&new\+Value, bool \&in\+List)
-\begin{DoxyCompactList}\small\item\em Handles an open bracket character in a parsing context. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{namespaceUTILITIES_a215cc062f093a37be862afb476939160}{handle\+Close\+Bracket}} (vector$<$ char $>$ \&stack, string \&new\+Value, bool \&in\+List)
-\begin{DoxyCompactList}\small\item\em Handles a close bracket character in a parsing context. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{namespaceUTILITIES_ac5d4633618d61d686a1a38db7b097771}{handle\+Open\+Brace}} (vector$<$ char $>$ \&stack, string \&new\+Value, bool \&in\+Object)
-\begin{DoxyCompactList}\small\item\em Handles an open brace character in a parsing context. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{namespaceUTILITIES_af870ff5b0140aff2eb797f13e1b5aeb9}{handle\+Close\+Brace}} (vector$<$ char $>$ \&stack, string \&new\+Value, bool \&in\+Object)
-\begin{DoxyCompactList}\small\item\em Handles a close brace character in a parsing context. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{namespaceUTILITIES_a234bf11d7c6343ff58117bb493d4bb29}{handle\+Missing\+Delimiters}} (const vector$<$ char $>$ \&stack)
-\begin{DoxyCompactList}\small\item\em Handles the case of missing delimiters in the stack. \end{DoxyCompactList}\item 
-string \mbox{\hyperlink{namespaceUTILITIES_af1224e12ff9f834b75c0c0ccff4ec3af}{parse\+Value}} (const string \&value, size\+\_\+t \&index)
-\begin{DoxyCompactList}\small\item\em Parses a value from a string, considering various delimiters. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Removes the specified opening and closing delimiters from a string. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 Namespace for various functions used in the project. 
 
 \doxysubsection{Function Documentation}
-\mbox{\Hypertarget{namespaceUTILITIES_af870ff5b0140aff2eb797f13e1b5aeb9}\label{namespaceUTILITIES_af870ff5b0140aff2eb797f13e1b5aeb9}} 
-\index{UTILITIES@{UTILITIES}!handleCloseBrace@{handleCloseBrace}}
-\index{handleCloseBrace@{handleCloseBrace}!UTILITIES@{UTILITIES}}
-\doxysubsubsection{\texorpdfstring{handleCloseBrace()}{handleCloseBrace()}}
-{\footnotesize\ttfamily void UTILITIES\+::handle\+Close\+Brace (\begin{DoxyParamCaption}\item[{vector$<$ char $>$ \&}]{stack,  }\item[{string \&}]{new\+Value,  }\item[{bool \&}]{in\+Object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
-Handles a close brace character in a parsing context. 
-
-This function updates the stack and parsing flags when a close brace is encountered.
-
-
-\begin{DoxyParams}{Parameters}
-{\em stack} & A stack used to keep track of delimiters. \\
-\hline
-{\em new\+Value} & The string being constructed during parsing. \\
-\hline
-{\em in\+Object} & A flag indicating if the parser is currently within an object. \\
-\hline
-\end{DoxyParams}
-\mbox{\Hypertarget{namespaceUTILITIES_a215cc062f093a37be862afb476939160}\label{namespaceUTILITIES_a215cc062f093a37be862afb476939160}} 
-\index{UTILITIES@{UTILITIES}!handleCloseBracket@{handleCloseBracket}}
-\index{handleCloseBracket@{handleCloseBracket}!UTILITIES@{UTILITIES}}
-\doxysubsubsection{\texorpdfstring{handleCloseBracket()}{handleCloseBracket()}}
-{\footnotesize\ttfamily void UTILITIES\+::handle\+Close\+Bracket (\begin{DoxyParamCaption}\item[{vector$<$ char $>$ \&}]{stack,  }\item[{string \&}]{new\+Value,  }\item[{bool \&}]{in\+List }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
-Handles a close bracket character in a parsing context. 
-
-This function updates the stack and parsing flags when a close bracket is encountered.
-
-
-\begin{DoxyParams}{Parameters}
-{\em stack} & A stack used to keep track of delimiters. \\
-\hline
-{\em new\+Value} & The string being constructed during parsing. \\
-\hline
-{\em in\+List} & A flag indicating if the parser is currently within a list. \\
-\hline
-\end{DoxyParams}
-\mbox{\Hypertarget{namespaceUTILITIES_aa221d64e5044425c6d4016fd59f1416e}\label{namespaceUTILITIES_aa221d64e5044425c6d4016fd59f1416e}} 
-\index{UTILITIES@{UTILITIES}!handleComma@{handleComma}}
-\index{handleComma@{handleComma}!UTILITIES@{UTILITIES}}
-\doxysubsubsection{\texorpdfstring{handleComma()}{handleComma()}}
-{\footnotesize\ttfamily void UTILITIES\+::handle\+Comma (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{i,  }\item[{size\+\_\+t \&}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
-Handles a comma character in a parsing context. 
-
-This function updates the index to the position after the comma character.
-
-
-\begin{DoxyParams}{Parameters}
-{\em i} & The current index in the input string. \\
-\hline
-{\em index} & The index to be updated to the position after the comma. \\
-\hline
-\end{DoxyParams}
-\mbox{\Hypertarget{namespaceUTILITIES_a234bf11d7c6343ff58117bb493d4bb29}\label{namespaceUTILITIES_a234bf11d7c6343ff58117bb493d4bb29}} 
-\index{UTILITIES@{UTILITIES}!handleMissingDelimiters@{handleMissingDelimiters}}
-\index{handleMissingDelimiters@{handleMissingDelimiters}!UTILITIES@{UTILITIES}}
-\doxysubsubsection{\texorpdfstring{handleMissingDelimiters()}{handleMissingDelimiters()}}
-{\footnotesize\ttfamily void UTILITIES\+::handle\+Missing\+Delimiters (\begin{DoxyParamCaption}\item[{const vector$<$ char $>$ \&}]{stack }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
-Handles the case of missing delimiters in the stack. 
-
-This function prints an error message for each missing delimiter in the stack.
-
-
-\begin{DoxyParams}{Parameters}
-{\em stack} & A stack used to keep track of delimiters. \\
-\hline
-\end{DoxyParams}
-\mbox{\Hypertarget{namespaceUTILITIES_ac5d4633618d61d686a1a38db7b097771}\label{namespaceUTILITIES_ac5d4633618d61d686a1a38db7b097771}} 
-\index{UTILITIES@{UTILITIES}!handleOpenBrace@{handleOpenBrace}}
-\index{handleOpenBrace@{handleOpenBrace}!UTILITIES@{UTILITIES}}
-\doxysubsubsection{\texorpdfstring{handleOpenBrace()}{handleOpenBrace()}}
-{\footnotesize\ttfamily void UTILITIES\+::handle\+Open\+Brace (\begin{DoxyParamCaption}\item[{vector$<$ char $>$ \&}]{stack,  }\item[{string \&}]{new\+Value,  }\item[{bool \&}]{in\+Object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
-Handles an open brace character in a parsing context. 
-
-This function updates the stack and parsing flags when an open brace is encountered.
-
-
-\begin{DoxyParams}{Parameters}
-{\em stack} & A stack used to keep track of delimiters. \\
-\hline
-{\em new\+Value} & The string being constructed during parsing. \\
-\hline
-{\em in\+Object} & A flag indicating if the parser is currently within an object. \\
-\hline
-\end{DoxyParams}
-\mbox{\Hypertarget{namespaceUTILITIES_ac0d3b90bb4faebf595984232ac152e5e}\label{namespaceUTILITIES_ac0d3b90bb4faebf595984232ac152e5e}} 
-\index{UTILITIES@{UTILITIES}!handleOpenBracket@{handleOpenBracket}}
-\index{handleOpenBracket@{handleOpenBracket}!UTILITIES@{UTILITIES}}
-\doxysubsubsection{\texorpdfstring{handleOpenBracket()}{handleOpenBracket()}}
-{\footnotesize\ttfamily void UTILITIES\+::handle\+Open\+Bracket (\begin{DoxyParamCaption}\item[{vector$<$ char $>$ \&}]{stack,  }\item[{string \&}]{new\+Value,  }\item[{bool \&}]{in\+List }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
-Handles an open bracket character in a parsing context. 
-
-This function updates the stack and parsing flags when an open bracket is encountered.
-
-
-\begin{DoxyParams}{Parameters}
-{\em stack} & A stack used to keep track of delimiters. \\
-\hline
-{\em new\+Value} & The string being constructed during parsing. \\
-\hline
-{\em in\+List} & A flag indicating if the parser is currently within a list. \\
-\hline
-\end{DoxyParams}
-\mbox{\Hypertarget{namespaceUTILITIES_a54770e244fad7fe27cb9d4fca4c78bee}\label{namespaceUTILITIES_a54770e244fad7fe27cb9d4fca4c78bee}} 
-\index{UTILITIES@{UTILITIES}!handleQuote@{handleQuote}}
-\index{handleQuote@{handleQuote}!UTILITIES@{UTILITIES}}
-\doxysubsubsection{\texorpdfstring{handleQuote()}{handleQuote()}}
-{\footnotesize\ttfamily void UTILITIES\+::handle\+Quote (\begin{DoxyParamCaption}\item[{vector$<$ char $>$ \&}]{stack,  }\item[{bool \&}]{in\+String,  }\item[{bool \&}]{in\+Object,  }\item[{bool \&}]{in\+List,  }\item[{string \&}]{new\+Value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
-Handles a quote character in a parsing context. 
-
-This function manages the state changes when a quote character is encountered during parsing. It updates the stack and the parsing flags, and adds the quote character to the new value string.
-
-
-\begin{DoxyParams}{Parameters}
-{\em stack} & A stack used to keep track of delimiters. \\
-\hline
-{\em in\+String} & A flag indicating if the parser is currently within a string. \\
-\hline
-{\em in\+Object} & A flag indicating if the parser is currently within an object. \\
-\hline
-{\em in\+List} & A flag indicating if the parser is currently within a list. \\
-\hline
-{\em new\+Value} & The string being constructed during parsing. \\
-\hline
-\end{DoxyParams}
-\mbox{\Hypertarget{namespaceUTILITIES_a3e4350a00db41c50c30a63954546d3a1}\label{namespaceUTILITIES_a3e4350a00db41c50c30a63954546d3a1}} 
-\index{UTILITIES@{UTILITIES}!handleSpace@{handleSpace}}
-\index{handleSpace@{handleSpace}!UTILITIES@{UTILITIES}}
-\doxysubsubsection{\texorpdfstring{handleSpace()}{handleSpace()}}
-{\footnotesize\ttfamily void UTILITIES\+::handle\+Space (\begin{DoxyParamCaption}\item[{const string \&}]{value,  }\item[{size\+\_\+t}]{i,  }\item[{size\+\_\+t \&}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
-Handles a space character in a parsing context. 
-
-This function updates the index if the space character is at the end of the input string.
-
-
-\begin{DoxyParams}{Parameters}
-{\em value} & The input string being parsed. \\
-\hline
-{\em i} & The current index in the input string. \\
-\hline
-{\em index} & The index to be updated if the space character is at the end. \\
-\hline
-\end{DoxyParams}
-\mbox{\Hypertarget{namespaceUTILITIES_af1224e12ff9f834b75c0c0ccff4ec3af}\label{namespaceUTILITIES_af1224e12ff9f834b75c0c0ccff4ec3af}} 
-\index{UTILITIES@{UTILITIES}!parseValue@{parseValue}}
-\index{parseValue@{parseValue}!UTILITIES@{UTILITIES}}
-\doxysubsubsection{\texorpdfstring{parseValue()}{parseValue()}}
-{\footnotesize\ttfamily string UTILITIES\+::parse\+Value (\begin{DoxyParamCaption}\item[{const string \&}]{value,  }\item[{size\+\_\+t \&}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
-Parses a value from a string, considering various delimiters. 
-
-This function parses a value from the input string, updating the index to the next position after the parsed value. It handles nested structures and quotes, and checks for delimiter mismatches.
-
-
-\begin{DoxyParams}{Parameters}
-{\em value} & The input string to be parsed. \\
-\hline
-{\em index} & The current index in the input string, updated to the next position after the parsed value. \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-The parsed value as a string. 
-\end{DoxyReturn}
-Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{namespaceUTILITIES_af1224e12ff9f834b75c0c0ccff4ec3af_cgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{namespaceUTILITIES_a4932089a4b7cf54719e7c78c67d312bf}\label{namespaceUTILITIES_a4932089a4b7cf54719e7c78c67d312bf}} 
-\index{UTILITIES@{UTILITIES}!removeDelimeters@{removeDelimeters}}
+\Hypertarget{namespaceUTILITIES_a4932089a4b7cf54719e7c78c67d312bf}\index{UTILITIES@{UTILITIES}!removeDelimeters@{removeDelimeters}}
 \index{removeDelimeters@{removeDelimeters}!UTILITIES@{UTILITIES}}
 \doxysubsubsection{\texorpdfstring{removeDelimeters()}{removeDelimeters()}}
-{\footnotesize\ttfamily string UTILITIES\+::remove\+Delimeters (\begin{DoxyParamCaption}\item[{const string \&}]{value,  }\item[{char}]{opening\+Delimeter,  }\item[{char}]{closing\+Delimeter }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily \label{namespaceUTILITIES_a4932089a4b7cf54719e7c78c67d312bf} 
+string UTILITIES\+::remove\+Delimeters (\begin{DoxyParamCaption}\item[{const string \&}]{value}{, }\item[{char}]{opening\+Delimeter}{, }\item[{char}]{closing\+Delimeter}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -257,11 +44,11 @@ This function removes the first occurrence of the opening delimiter and the last
 \begin{DoxyReturn}{Returns}
 A string with the delimiters removed. 
 \end{DoxyReturn}
-\mbox{\Hypertarget{namespaceUTILITIES_a09b4e7fd99b0f2a290fa0a3128227083}\label{namespaceUTILITIES_a09b4e7fd99b0f2a290fa0a3128227083}} 
-\index{UTILITIES@{UTILITIES}!split@{split}}
+\Hypertarget{namespaceUTILITIES_a7c9d6aa028aa5519edafe13bc6a7cc17}\index{UTILITIES@{UTILITIES}!split@{split}}
 \index{split@{split}!UTILITIES@{UTILITIES}}
 \doxysubsubsection{\texorpdfstring{split()}{split()}}
-{\footnotesize\ttfamily vector$<$string$>$ UTILITIES\+::split (\begin{DoxyParamCaption}\item[{const string \&}]{value,  }\item[{char}]{delimeter }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily \label{namespaceUTILITIES_a7c9d6aa028aa5519edafe13bc6a7cc17} 
+vector$<$ string $>$ UTILITIES\+::split (\begin{DoxyParamCaption}\item[{const string \&}]{value}{, }\item[{char}]{delimeter}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -279,11 +66,11 @@ This function splits the input string into a vector of substrings, using the spe
 \begin{DoxyReturn}{Returns}
 A vector of strings containing the split tokens. 
 \end{DoxyReturn}
-\mbox{\Hypertarget{namespaceUTILITIES_a0dc6c33ede494d7c07f06369098f3b36}\label{namespaceUTILITIES_a0dc6c33ede494d7c07f06369098f3b36}} 
-\index{UTILITIES@{UTILITIES}!tokenize@{tokenize}}
+\Hypertarget{namespaceUTILITIES_ac3a6b81c413390dcb5326548d0d54afe}\index{UTILITIES@{UTILITIES}!tokenize@{tokenize}}
 \index{tokenize@{tokenize}!UTILITIES@{UTILITIES}}
 \doxysubsubsection{\texorpdfstring{tokenize()}{tokenize()}}
-{\footnotesize\ttfamily vector$<$string$>$ UTILITIES\+::tokenize (\begin{DoxyParamCaption}\item[{const string \&}]{input }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily \label{namespaceUTILITIES_ac3a6b81c413390dcb5326548d0d54afe} 
+vector$<$ string $>$ UTILITIES\+::tokenize (\begin{DoxyParamCaption}\item[{const string \&}]{input}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 

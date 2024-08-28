@@ -1,0 +1,29 @@
+\doxysection{Json\+Creator.\+hpp}
+\hypertarget{JsonCreator_8hpp_source}{}\label{JsonCreator_8hpp_source}\index{JsonCreator.hpp@{JsonCreator.hpp}}
+\mbox{\hyperlink{JsonCreator_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ JSON\_CREATOR\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ JSON\_CREATOR\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{JsonPair_8hpp}{JsonPair.hpp}}"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classJsonCreator}{JsonCreator}}}
+\DoxyCodeLine{00011\ \{}
+\DoxyCodeLine{00012\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00017\ \ \ \ \ \mbox{\hyperlink{classJsonCreator_ad2506f69d9faeae8e8371e19a053932e}{JsonCreator}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ \&\mbox{\hyperlink{classJsonCreator_a253a8df6e5b5cc2e43ce72c27c017b2b}{value}});}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classJsonCreator_ad43a13717767fd518ad863acc7844906}{getValue}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ \&\textcolor{keywordtype}{object})\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classJson}{Json}}\ *\mbox{\hyperlink{classJsonCreator_a98189364ce8a725012c1d6e3886bf8b2}{createJson}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ \&\mbox{\hyperlink{classJsonCreator_a253a8df6e5b5cc2e43ce72c27c017b2b}{value}})\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classJsonCreator_afaab1c79a532b68f3ce41d9a01168b37}{\string~JsonCreator}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{classJsonCreator_a253a8df6e5b5cc2e43ce72c27c017b2b}{value}};}
+\DoxyCodeLine{00044\ \};}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00057\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceparser}{parser}}}
+\DoxyCodeLine{00058\ \{}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{namespaceparser_ace837bc1b97ad13af64cefb43db6b2f6}{parseValue}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ \&value,\ \textcolor{keywordtype}{size\_t}\ \&index);}
+\DoxyCodeLine{00060\ \};}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

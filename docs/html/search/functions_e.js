@@ -1,12 +1,6 @@
 var searchData=
 [
-  ['save_228',['save',['../classInterface.html#aa27e9df0290561f292c04535f5795aea',1,'Interface']]],
-  ['saveas_229',['saveAs',['../classInterface.html#addb08152cfb0271e6afba4180497a791',1,'Interface']]],
-  ['search_230',['search',['../classJsonArray.html#a23949c5ed3fb23237cc0f47a90b84baa',1,'JsonArray::search()'],['../classJsonObject.html#aeb0de113f07d57905da8e106c0eec621',1,'JsonObject::search()'],['../classJson.html#a381fc9d7d10f3adefa5639695ee9d620',1,'Json::search()']]],
-  ['set_231',['set',['../classJsonObject.html#ae56653b572ec14b418be45e6bcefd724',1,'JsonObject::set()'],['../classJson.html#aca3ba3e789d3e7c1d87258fed998fcb7',1,'Json::set()']]],
-  ['setkey_232',['setKey',['../classJsonPair.html#a923aa89542986da9e75401196f17edd0',1,'JsonPair']]],
-  ['setvalue_233',['setValue',['../classJsonPair.html#a43ade788cde5c6bf3a150de0c98f05f5',1,'JsonPair']]],
-  ['split_234',['split',['../namespaceUTILITIES.html#a09b4e7fd99b0f2a290fa0a3128227083',1,'UTILITIES']]],
-  ['stringcreator_235',['StringCreator',['../classStringCreator.html#a53a99ef3599548abf08389230eb3b12d',1,'StringCreator']]],
-  ['stringtobool_236',['stringToBool',['../classBoolCreator.html#a6e5d0b7cc99340d106c87bde70030ac5',1,'BoolCreator']]]
+  ['tokenize_0',['tokenize',['../namespaceUTILITIES.html#ac3a6b81c413390dcb5326548d0d54afe',1,'UTILITIES']]],
+  ['tolowercase_1',['toLowerCase',['../classCommandManager.html#a9286f95810b5c14435258ec2aae67c7d',1,'CommandManager']]],
+  ['tostring_2',['toString',['../classJsonArray.html#adaf401664744c4b92e4d2a2c452b3e2e',1,'JsonArray::toString()'],['../classJsonBool.html#a7f50329c5194408578a0fab9baa0ef5c',1,'JsonBool::toString()'],['../classJsonFloat.html#a10c3d1edd8509dd7adeef33b2f9c3f59',1,'JsonFloat::toString()'],['../classJsonInt.html#a13077995dae897348cd72024f0527886',1,'JsonInt::toString()'],['../classJsonNull.html#a2ee997c9399c79db802b784c8b204746',1,'JsonNull::toString()'],['../classJsonObject.html#aeba67ecdc81bd6c496753e38681d3654',1,'JsonObject::toString()'],['../classJsonString.html#a62c4e5622bbb4e51026601c347e26385',1,'JsonString::toString()'],['../classJson.html#a5e03cd6ea6ab5ddc6e3ea664f2d4b3e5',1,'Json::toString()']]]
 ];

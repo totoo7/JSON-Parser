@@ -3,7 +3,10 @@
 
 #include "JsonCreator.hpp"
 #include "JsonNull.hpp"
-
+/**
+ * @class NullCreator
+ * @brief A concrete implementation of JsonCreator that handles the creation of null JSON values.
+ */
 class NullCreator : public JsonCreator
 {
 public:

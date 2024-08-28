@@ -1,0 +1,28 @@
+\doxysection{Json\+Bool.\+hpp}
+\hypertarget{JsonBool_8hpp_source}{}\label{JsonBool_8hpp_source}\index{JsonBool.hpp@{JsonBool.hpp}}
+\mbox{\hyperlink{JsonBool_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ JSON\_BOOL\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ JSON\_BOOL\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Json_8hpp}{Json.hpp}}"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classJsonBool}{JsonBool}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classJson}{Json}}}
+\DoxyCodeLine{00012\ \{}
+\DoxyCodeLine{00013\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00017\ \ \ \mbox{\hyperlink{classJsonBool_ae69cdae72288e5a4c8e69afe9ff8ddcb}{JsonBool}}();}
+\DoxyCodeLine{00023\ \ \ \mbox{\hyperlink{classJsonBool_a451e3958c94621543bc3fec3d3e68d27}{JsonBool}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classJsonBool_a1ec5d0e421154e1d60a293d1db41df9f}{value}});}
+\DoxyCodeLine{00029\ \ \ \mbox{\hyperlink{classJsonBool_ad18a65d1d3a0a1478367b3b23c0a7548}{JsonBool}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classJsonBool}{JsonBool}}\ \&other);}
+\DoxyCodeLine{00036\ \ \ \mbox{\hyperlink{classJsonBool}{JsonBool}}\ \&\mbox{\hyperlink{classJsonBool_acaa17ec4e3f7c893842e546668abbccd}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classJsonBool}{JsonBool}}\ \&other);}
+\DoxyCodeLine{00042\ \ \ \mbox{\hyperlink{classJson}{Json}}\ *\mbox{\hyperlink{classJsonBool_aad7f75f2ab7ca38ccdbf316b7b350848}{clone}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00046\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classJsonBool_ac386e81b0a6101978f0d38dda68b39b0}{print}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00053\ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classJsonBool_aba8f10b9014c914a64dcab054c728f46}{contains}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ \&\mbox{\hyperlink{classJsonBool_a1ec5d0e421154e1d60a293d1db41df9f}{value}})\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00060\ \ \ std::string\ \mbox{\hyperlink{classJsonBool_a7f50329c5194408578a0fab9baa0ef5c}{toString}}(\textcolor{keywordtype}{int}\ indentLevel\ =\ 0)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00063\ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classJsonBool_a1ec5d0e421154e1d60a293d1db41df9f}{value}};}
+\DoxyCodeLine{00064\ \};}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

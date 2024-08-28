@@ -1,0 +1,22 @@
+digraph "Json"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  Node1 [id="Node000001",label="Json",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="Base class for all JSON objects."];
+  Node1 -> Node2 [id="edge8_Node000001_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="JsonArray",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classJsonArray.html",tooltip="Class representing a JSON array."];
+  Node1 -> Node3 [id="edge9_Node000001_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="JsonBool",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classJsonBool.html",tooltip="Class representing a boolean JSON value."];
+  Node1 -> Node4 [id="edge10_Node000001_Node000004",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="JsonFloat",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classJsonFloat.html",tooltip="Class representing a floating point JSON value."];
+  Node1 -> Node5 [id="edge11_Node000001_Node000005",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node5 [id="Node000005",label="JsonInt",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classJsonInt.html",tooltip="Class representing an integer JSON value."];
+  Node1 -> Node6 [id="edge12_Node000001_Node000006",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node6 [id="Node000006",label="JsonNull",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classJsonNull.html",tooltip="Class representing a JSON null value."];
+  Node1 -> Node7 [id="edge13_Node000001_Node000007",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node7 [id="Node000007",label="JsonObject",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classJsonObject.html",tooltip="Represents a JSON object consisting of key-value pairs. This class inherits from Json."];
+  Node1 -> Node8 [id="edge14_Node000001_Node000008",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node8 [id="Node000008",label="JsonString",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classJsonString.html",tooltip="Class representing a string JSON value."];
+}

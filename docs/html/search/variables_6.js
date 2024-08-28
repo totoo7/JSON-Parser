@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['name_264',['name',['../classCommand.html#a206f1dd0b28c9fafa0e457dc58bb66b4',1,'Command']]]
+  ['manager_0',['manager',['../classInterface.html#a25459b505846a576f73a1feb796b05b7',1,'Interface']]]
 ];

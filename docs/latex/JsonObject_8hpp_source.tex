@@ -1,0 +1,34 @@
+\doxysection{Json\+Object.\+hpp}
+\hypertarget{JsonObject_8hpp_source}{}\label{JsonObject_8hpp_source}\index{JsonObject.hpp@{JsonObject.hpp}}
+\mbox{\hyperlink{JsonObject_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ JSON\_OBJECT\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ JSON\_OBJECT\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Json_8hpp}{Json.hpp}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{JsonPair_8hpp}{JsonPair.hpp}}"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classJsonObject}{JsonObject}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classJson}{Json}}}
+\DoxyCodeLine{00012\ \{}
+\DoxyCodeLine{00013\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00017\ \ \ \ \ \mbox{\hyperlink{classJsonObject_aa41d053fc27e4fcf4f1c6f55ef28f4a9}{JsonObject}}();}
+\DoxyCodeLine{00022\ \ \ \ \ \mbox{\hyperlink{classJsonObject_a0bfc93ee795ae65bc33196f18aeed04a}{JsonObject}}(\textcolor{keyword}{const}\ vector<JsonPair>\ \&other);}
+\DoxyCodeLine{00027\ \ \ \ \ \mbox{\hyperlink{classJsonObject_a4273b552fb746887e25a94974cf396f8}{JsonObject}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classJsonObject}{JsonObject}}\ \&other);}
+\DoxyCodeLine{00033\ \ \ \ \ \mbox{\hyperlink{classJsonObject}{JsonObject}}\ \&\mbox{\hyperlink{classJsonObject_ae0515a8ebba9fca283f688adef99cff0}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classJsonObject}{JsonObject}}\ \&other);}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classJsonObject_aeb0de113f07d57905da8e106c0eec621}{search}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ \&key)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classJsonObject_a6f063d3f58845eef5bf670ba4f88c272}{create}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ \&path,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ \&newValue,\ \textcolor{keywordtype}{int}\ depth);}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classJsonObject_ae56653b572ec14b418be45e6bcefd724}{set}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ \&path,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ \&newValue,\ \textcolor{keywordtype}{int}\ depth);}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classJsonObject_a4d1f3c5e9c6989d0c72744122b5c299c}{erase}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ \&path,\ \textcolor{keywordtype}{int}\ depth);}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classJsonObject_a29deaa8578faea8d2829f95d784a7ab8}{move}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ \&from,\ \textcolor{keywordtype}{string}\ \&to,\ \textcolor{keywordtype}{int}\ depth);}
+\DoxyCodeLine{00071\ \ \ \ \ \mbox{\hyperlink{classJson}{Json}}\ *\mbox{\hyperlink{classJsonObject_a7dfa3669d295bc0741fd63e50484fc0f}{clone}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classJsonObject_a6be8e63aef151bc23bd498f4f289fcfd}{print}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classJsonObject_a9ba566001c08b389f027a941422e8cc4}{contains}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ \&value)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{classJsonObject_aeba67ecdc81bd6c496753e38681d3654}{toString}}(\textcolor{keywordtype}{int}\ indentLevel\ =\ 0)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00091\ \ \ \ \ \mbox{\hyperlink{classJsonObject_ae602ffbeeebd004a111a877a059dc02e}{\string~JsonObject}}();}
+\DoxyCodeLine{00092\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00093\ \ \ \ \ vector<JsonPair>\ \mbox{\hyperlink{classJsonObject_af5f67621bc5cf2db10bc382e4dfad64b}{pairs}};}
+\DoxyCodeLine{00094\ \};}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00096\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

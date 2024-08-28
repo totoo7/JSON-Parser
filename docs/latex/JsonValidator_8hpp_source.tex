@@ -1,0 +1,41 @@
+\doxysection{Json\+Validator.\+hpp}
+\hypertarget{JsonValidator_8hpp_source}{}\label{JsonValidator_8hpp_source}\index{JsonValidator.hpp@{JsonValidator.hpp}}
+\mbox{\hyperlink{JsonValidator_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ JSON\_VALIDATOR\_HPP}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ JSON\_VALIDATOR\_HPP}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00006\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classJsonValidator}{JsonValidator}}}
+\DoxyCodeLine{00012\ \{}
+\DoxyCodeLine{00013\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00021\ \ \ \ \ \mbox{\hyperlink{classJsonValidator_a3d8598c7a4439bf2d12a15441b4a567d}{JsonValidator}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ \&\mbox{\hyperlink{classJsonValidator_add7d5998f13c32bfecd45e676b228d29}{json}});}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classJsonValidator_a6c3ecf8e2d5af861a64d1f40441117b9}{validate}}();}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{classJsonValidator_a847eb45862b08b2d2d2f6878171c7f70}{getErrorMessage}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ \&\mbox{\hyperlink{classJsonValidator_add7d5998f13c32bfecd45e676b228d29}{json}};}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{classJsonValidator_ad86aa1fb8c39084d5e3d3f8889eb1569}{pos}};}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{classJsonValidator_aaad802edeb106c5d7cac2c4ebe122af1}{errorMessage}};}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classJsonValidator_acb92fa96b7e84ea60817725d874ed616}{skipWhitespace}}();}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classJsonValidator_ae30666a4bd7383d2323e385ab9dade5d}{isWhitespace}}(\textcolor{keywordtype}{char}\ c);}
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classJsonValidator_a3f0186513494e5b7d4256bd61ed6e855}{match}}(\textcolor{keywordtype}{char}\ expected);}
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classJsonValidator_a906402edb48e03337462f57788fb570f}{parseValue}}();}
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classJsonValidator_a2162a9e5979057194eae82dde08fd72e}{parseObject}}();}
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classJsonValidator_aab4f70f51f4b0d298d31e31af36d6e18}{parseArray}}();}
+\DoxyCodeLine{00103\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classJsonValidator_adedf28fad3e65e81fa0693d680a389e5}{parseString}}();}
+\DoxyCodeLine{00111\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classJsonValidator_ac4c275d076e55a233158d4fcab857295}{parseEscapeCharacter}}();}
+\DoxyCodeLine{00120\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classJsonValidator_a24553234d0fd7c404b6014dea4714a1a}{parseUnicode}}();}
+\DoxyCodeLine{00127\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classJsonValidator_ae515dd3164776a5ca3c5f21793cba7d0}{isHexDigit}}(\textcolor{keywordtype}{char}\ c);}
+\DoxyCodeLine{00134\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classJsonValidator_a5e9c1a06244920af7aa17d17a5e65ab1}{isDigit}}(\textcolor{keywordtype}{char}\ c);}
+\DoxyCodeLine{00143\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classJsonValidator_a8ef0f3054caaf3bc475c01f82042eb4c}{parseNumber}}();}
+\DoxyCodeLine{00144\ }
+\DoxyCodeLine{00152\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classJsonValidator_af3433b49c6215106d7dd709594ca70b0}{parseLiteral}}();}
+\DoxyCodeLine{00161\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classJsonValidator_a641e66a56d3ae667a3b44d789d0a0645}{setError}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ \&message);}
+\DoxyCodeLine{00162\ \};}
+\DoxyCodeLine{00163\ }
+\DoxyCodeLine{00164\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

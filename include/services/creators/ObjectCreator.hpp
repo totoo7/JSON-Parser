@@ -4,7 +4,10 @@
 #include "JsonCreator.hpp"
 #include "JsonFactory.hpp"
 #include "JsonObject.hpp"
-
+/**
+ * @class ObjectCreator
+ * @brief A concrete implementation of JsonCreator that handles the creation of object JSON values.
+ */
 class ObjectCreator : public JsonCreator
 {
 public:

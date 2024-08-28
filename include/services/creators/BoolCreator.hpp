@@ -3,7 +3,10 @@
 
 #include "JsonCreator.hpp"
 #include "JsonBool.hpp"
-
+/**
+ * @class BoolCreator
+ * @brief A concrete implementation of JsonCreator that handles the creation of boolean JSON values.
+ */
 class BoolCreator : public JsonCreator
 {
 public:

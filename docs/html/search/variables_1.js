@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['filename_258',['filename',['../classInterface.html#af55e9bb5a47274580c338860b2e71b0a',1,'Interface']]]
+  ['errormessage_0',['errorMessage',['../classJsonValidator.html#aaad802edeb106c5d7cac2c4ebe122af1',1,'JsonValidator']]]
 ];

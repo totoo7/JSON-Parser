@@ -1,0 +1,364 @@
+\doxysection{Json\+Validator Class Reference}
+\hypertarget{classJsonValidator}{}\label{classJsonValidator}\index{JsonValidator@{JsonValidator}}
+
+
+Class responsible for checking if the \doxylink{classJson}{Json} file is in the correct format.  
+
+
+
+
+{\ttfamily \#include $<$Json\+Validator.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classJsonValidator_a3d8598c7a4439bf2d12a15441b4a567d}{Json\+Validator}} (const string \&\mbox{\hyperlink{classJsonValidator_add7d5998f13c32bfecd45e676b228d29}{json}})
+\begin{DoxyCompactList}\small\item\em Constructor for the \doxylink{classJsonValidator}{Json\+Validator} class. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classJsonValidator_a6c3ecf8e2d5af861a64d1f40441117b9}{validate}} ()
+\begin{DoxyCompactList}\small\item\em Validates the JSON string. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classJsonValidator_a847eb45862b08b2d2d2f6878171c7f70}{get\+Error\+Message}} () const
+\begin{DoxyCompactList}\small\item\em Returns the error message if the validation fails. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classJsonValidator_acb92fa96b7e84ea60817725d874ed616}{skip\+Whitespace}} ()
+\begin{DoxyCompactList}\small\item\em Skips any whitespace characters in the JSON string. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classJsonValidator_ae30666a4bd7383d2323e385ab9dade5d}{is\+Whitespace}} (char c)
+\begin{DoxyCompactList}\small\item\em Checks if a character is a whitespace character. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classJsonValidator_a3f0186513494e5b7d4256bd61ed6e855}{match}} (char expected)
+\begin{DoxyCompactList}\small\item\em Attempts to match and consume an expected character. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classJsonValidator_a906402edb48e03337462f57788fb570f}{parse\+Value}} ()
+\begin{DoxyCompactList}\small\item\em Parses a JSON value. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classJsonValidator_a2162a9e5979057194eae82dde08fd72e}{parse\+Object}} ()
+\begin{DoxyCompactList}\small\item\em Parses a JSON object. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classJsonValidator_aab4f70f51f4b0d298d31e31af36d6e18}{parse\+Array}} ()
+\begin{DoxyCompactList}\small\item\em Parses a JSON array. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classJsonValidator_adedf28fad3e65e81fa0693d680a389e5}{parse\+String}} ()
+\begin{DoxyCompactList}\small\item\em Parses a JSON string. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classJsonValidator_ac4c275d076e55a233158d4fcab857295}{parse\+Escape\+Character}} ()
+\begin{DoxyCompactList}\small\item\em Parses an escape sequence in a JSON string. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classJsonValidator_a24553234d0fd7c404b6014dea4714a1a}{parse\+Unicode}} ()
+\begin{DoxyCompactList}\small\item\em Parses a Unicode escape sequence in a JSON string. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classJsonValidator_ae515dd3164776a5ca3c5f21793cba7d0}{is\+Hex\+Digit}} (char c)
+\begin{DoxyCompactList}\small\item\em Checks if a character is a hexadecimal digit. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classJsonValidator_a5e9c1a06244920af7aa17d17a5e65ab1}{is\+Digit}} (char c)
+\begin{DoxyCompactList}\small\item\em Checks if a character is a digit. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classJsonValidator_a8ef0f3054caaf3bc475c01f82042eb4c}{parse\+Number}} ()
+\begin{DoxyCompactList}\small\item\em Parses a JSON number. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classJsonValidator_af3433b49c6215106d7dd709594ca70b0}{parse\+Literal}} ()
+\begin{DoxyCompactList}\small\item\em Parses a JSON literal (true, false, or null). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classJsonValidator_a641e66a56d3ae667a3b44d789d0a0645}{set\+Error}} (const string \&message)
+\begin{DoxyCompactList}\small\item\em Sets the error message. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const string \& \mbox{\hyperlink{classJsonValidator_add7d5998f13c32bfecd45e676b228d29}{json}}
+\item 
+size\+\_\+t \mbox{\hyperlink{classJsonValidator_ad86aa1fb8c39084d5e3d3f8889eb1569}{pos}}
+\item 
+string \mbox{\hyperlink{classJsonValidator_aaad802edeb106c5d7cac2c4ebe122af1}{error\+Message}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class responsible for checking if the \doxylink{classJson}{Json} file is in the correct format. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classJsonValidator_a3d8598c7a4439bf2d12a15441b4a567d}\index{JsonValidator@{JsonValidator}!JsonValidator@{JsonValidator}}
+\index{JsonValidator@{JsonValidator}!JsonValidator@{JsonValidator}}
+\doxysubsubsection{\texorpdfstring{JsonValidator()}{JsonValidator()}}
+{\footnotesize\ttfamily \label{classJsonValidator_a3d8598c7a4439bf2d12a15441b4a567d} 
+Json\+Validator\+::\+Json\+Validator (\begin{DoxyParamCaption}\item[{const string \&}]{json}{}\end{DoxyParamCaption})}
+
+
+
+Constructor for the \doxylink{classJsonValidator}{Json\+Validator} class. 
+
+Initializes a new instance of the \doxylink{classJsonValidator}{Json\+Validator} class with the provided JSON string.
+
+
+\begin{DoxyParams}{Parameters}
+{\em json} & The JSON string to validate. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classJsonValidator_a847eb45862b08b2d2d2f6878171c7f70}\index{JsonValidator@{JsonValidator}!getErrorMessage@{getErrorMessage}}
+\index{getErrorMessage@{getErrorMessage}!JsonValidator@{JsonValidator}}
+\doxysubsubsection{\texorpdfstring{getErrorMessage()}{getErrorMessage()}}
+{\footnotesize\ttfamily \label{classJsonValidator_a847eb45862b08b2d2d2f6878171c7f70} 
+string Json\+Validator\+::get\+Error\+Message (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Returns the error message if the validation fails. 
+
+This function returns a descriptive error message indicating the reason and the position where the validation failed.
+
+\begin{DoxyReturn}{Returns}
+A string containing the error message. 
+\end{DoxyReturn}
+\Hypertarget{classJsonValidator_a5e9c1a06244920af7aa17d17a5e65ab1}\index{JsonValidator@{JsonValidator}!isDigit@{isDigit}}
+\index{isDigit@{isDigit}!JsonValidator@{JsonValidator}}
+\doxysubsubsection{\texorpdfstring{isDigit()}{isDigit()}}
+{\footnotesize\ttfamily \label{classJsonValidator_a5e9c1a06244920af7aa17d17a5e65ab1} 
+bool Json\+Validator\+::is\+Digit (\begin{DoxyParamCaption}\item[{char}]{c}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Checks if a character is a digit. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & The character to check. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the character is a digit (0-\/9), false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{classJsonValidator_ae515dd3164776a5ca3c5f21793cba7d0}\index{JsonValidator@{JsonValidator}!isHexDigit@{isHexDigit}}
+\index{isHexDigit@{isHexDigit}!JsonValidator@{JsonValidator}}
+\doxysubsubsection{\texorpdfstring{isHexDigit()}{isHexDigit()}}
+{\footnotesize\ttfamily \label{classJsonValidator_ae515dd3164776a5ca3c5f21793cba7d0} 
+bool Json\+Validator\+::is\+Hex\+Digit (\begin{DoxyParamCaption}\item[{char}]{c}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Checks if a character is a hexadecimal digit. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & The character to check. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the character is a hexadecimal digit (0-\/9, a-\/f, A-\/F), false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{classJsonValidator_ae30666a4bd7383d2323e385ab9dade5d}\index{JsonValidator@{JsonValidator}!isWhitespace@{isWhitespace}}
+\index{isWhitespace@{isWhitespace}!JsonValidator@{JsonValidator}}
+\doxysubsubsection{\texorpdfstring{isWhitespace()}{isWhitespace()}}
+{\footnotesize\ttfamily \label{classJsonValidator_ae30666a4bd7383d2323e385ab9dade5d} 
+bool Json\+Validator\+::is\+Whitespace (\begin{DoxyParamCaption}\item[{char}]{c}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Checks if a character is a whitespace character. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & The character to check. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the character is a whitespace character, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{classJsonValidator_a3f0186513494e5b7d4256bd61ed6e855}\index{JsonValidator@{JsonValidator}!match@{match}}
+\index{match@{match}!JsonValidator@{JsonValidator}}
+\doxysubsubsection{\texorpdfstring{match()}{match()}}
+{\footnotesize\ttfamily \label{classJsonValidator_a3f0186513494e5b7d4256bd61ed6e855} 
+bool Json\+Validator\+::match (\begin{DoxyParamCaption}\item[{char}]{expected}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Attempts to match and consume an expected character. 
+
+If the character at the current position matches the expected character, the position is advanced and the function returns true. Otherwise, it returns false.
+
+
+\begin{DoxyParams}{Parameters}
+{\em expected} & The expected character. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the expected character is found, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{classJsonValidator_aab4f70f51f4b0d298d31e31af36d6e18}\index{JsonValidator@{JsonValidator}!parseArray@{parseArray}}
+\index{parseArray@{parseArray}!JsonValidator@{JsonValidator}}
+\doxysubsubsection{\texorpdfstring{parseArray()}{parseArray()}}
+{\footnotesize\ttfamily \label{classJsonValidator_aab4f70f51f4b0d298d31e31af36d6e18} 
+bool Json\+Validator\+::parse\+Array (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Parses a JSON array. 
+
+This function attempts to parse a JSON array, which starts with \textquotesingle{}\mbox{[}\textquotesingle{} and ends with \textquotesingle{}\mbox{]}\textquotesingle{}. The array contains a sequence of values separated by commas.
+
+\begin{DoxyReturn}{Returns}
+true if the array is successfully parsed, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{classJsonValidator_ac4c275d076e55a233158d4fcab857295}\index{JsonValidator@{JsonValidator}!parseEscapeCharacter@{parseEscapeCharacter}}
+\index{parseEscapeCharacter@{parseEscapeCharacter}!JsonValidator@{JsonValidator}}
+\doxysubsubsection{\texorpdfstring{parseEscapeCharacter()}{parseEscapeCharacter()}}
+{\footnotesize\ttfamily \label{classJsonValidator_ac4c275d076e55a233158d4fcab857295} 
+bool Json\+Validator\+::parse\+Escape\+Character (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Parses an escape sequence in a JSON string. 
+
+This function handles the escape sequences found in JSON strings, such as "{}, \textbackslash{}, {\bfseries{}}, \textbackslash{}f, ~\newline
+, \textbackslash{}r, \textbackslash{}t, and \textbackslash{}u\+XXXX.
+
+\begin{DoxyReturn}{Returns}
+true if the escape sequence is valid, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{classJsonValidator_af3433b49c6215106d7dd709594ca70b0}\index{JsonValidator@{JsonValidator}!parseLiteral@{parseLiteral}}
+\index{parseLiteral@{parseLiteral}!JsonValidator@{JsonValidator}}
+\doxysubsubsection{\texorpdfstring{parseLiteral()}{parseLiteral()}}
+{\footnotesize\ttfamily \label{classJsonValidator_af3433b49c6215106d7dd709594ca70b0} 
+bool Json\+Validator\+::parse\+Literal (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Parses a JSON literal (true, false, or null). 
+
+This function attempts to parse JSON literals, which are the keywords true, false, and null.
+
+\begin{DoxyReturn}{Returns}
+true if the literal is successfully parsed, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{classJsonValidator_a8ef0f3054caaf3bc475c01f82042eb4c}\index{JsonValidator@{JsonValidator}!parseNumber@{parseNumber}}
+\index{parseNumber@{parseNumber}!JsonValidator@{JsonValidator}}
+\doxysubsubsection{\texorpdfstring{parseNumber()}{parseNumber()}}
+{\footnotesize\ttfamily \label{classJsonValidator_a8ef0f3054caaf3bc475c01f82042eb4c} 
+bool Json\+Validator\+::parse\+Number (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Parses a JSON number. 
+
+This function attempts to parse a JSON number, which can include an optional sign, integer part, fractional part, and exponent.
+
+\begin{DoxyReturn}{Returns}
+true if the number is successfully parsed, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{classJsonValidator_a2162a9e5979057194eae82dde08fd72e}\index{JsonValidator@{JsonValidator}!parseObject@{parseObject}}
+\index{parseObject@{parseObject}!JsonValidator@{JsonValidator}}
+\doxysubsubsection{\texorpdfstring{parseObject()}{parseObject()}}
+{\footnotesize\ttfamily \label{classJsonValidator_a2162a9e5979057194eae82dde08fd72e} 
+bool Json\+Validator\+::parse\+Object (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Parses a JSON object. 
+
+This function attempts to parse a JSON object, which starts with \textquotesingle{}\{\textquotesingle{} and ends with \textquotesingle{}\}\textquotesingle{}. The object contains key-\/value pairs, with the key being a string and the value being any JSON value.
+
+\begin{DoxyReturn}{Returns}
+true if the object is successfully parsed, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{classJsonValidator_adedf28fad3e65e81fa0693d680a389e5}\index{JsonValidator@{JsonValidator}!parseString@{parseString}}
+\index{parseString@{parseString}!JsonValidator@{JsonValidator}}
+\doxysubsubsection{\texorpdfstring{parseString()}{parseString()}}
+{\footnotesize\ttfamily \label{classJsonValidator_adedf28fad3e65e81fa0693d680a389e5} 
+bool Json\+Validator\+::parse\+String (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Parses a JSON string. 
+
+This function attempts to parse a JSON string, which is enclosed in double quotes. It handles escape sequences and ensures the string is well-\/formed.
+
+\begin{DoxyReturn}{Returns}
+true if the string is successfully parsed, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{classJsonValidator_a24553234d0fd7c404b6014dea4714a1a}\index{JsonValidator@{JsonValidator}!parseUnicode@{parseUnicode}}
+\index{parseUnicode@{parseUnicode}!JsonValidator@{JsonValidator}}
+\doxysubsubsection{\texorpdfstring{parseUnicode()}{parseUnicode()}}
+{\footnotesize\ttfamily \label{classJsonValidator_a24553234d0fd7c404b6014dea4714a1a} 
+bool Json\+Validator\+::parse\+Unicode (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Parses a Unicode escape sequence in a JSON string. 
+
+This function validates a Unicode escape sequence in the format \textbackslash{}u\+XXXX, where XXXX represents four hexadecimal digits.
+
+\begin{DoxyReturn}{Returns}
+true if the Unicode escape sequence is valid, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{classJsonValidator_a906402edb48e03337462f57788fb570f}\index{JsonValidator@{JsonValidator}!parseValue@{parseValue}}
+\index{parseValue@{parseValue}!JsonValidator@{JsonValidator}}
+\doxysubsubsection{\texorpdfstring{parseValue()}{parseValue()}}
+{\footnotesize\ttfamily \label{classJsonValidator_a906402edb48e03337462f57788fb570f} 
+bool Json\+Validator\+::parse\+Value (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Parses a JSON value. 
+
+This function attempts to parse a JSON value (e.\+g., string, object, array, number, literal).
+
+\begin{DoxyReturn}{Returns}
+true if the value is successfully parsed, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{classJsonValidator_a641e66a56d3ae667a3b44d789d0a0645}\index{JsonValidator@{JsonValidator}!setError@{setError}}
+\index{setError@{setError}!JsonValidator@{JsonValidator}}
+\doxysubsubsection{\texorpdfstring{setError()}{setError()}}
+{\footnotesize\ttfamily \label{classJsonValidator_a641e66a56d3ae667a3b44d789d0a0645} 
+void Json\+Validator\+::set\+Error (\begin{DoxyParamCaption}\item[{const string \&}]{message}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Sets the error message. 
+
+This function sets the error message when a validation error occurs, including the specific message and the position in the JSON string where the error was detected.
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & The error message to set. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classJsonValidator_acb92fa96b7e84ea60817725d874ed616}\index{JsonValidator@{JsonValidator}!skipWhitespace@{skipWhitespace}}
+\index{skipWhitespace@{skipWhitespace}!JsonValidator@{JsonValidator}}
+\doxysubsubsection{\texorpdfstring{skipWhitespace()}{skipWhitespace()}}
+{\footnotesize\ttfamily \label{classJsonValidator_acb92fa96b7e84ea60817725d874ed616} 
+void Json\+Validator\+::skip\+Whitespace (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Skips any whitespace characters in the JSON string. 
+
+Advances the position in the JSON string past any whitespace characters (spaces, tabs, newlines, or carriage returns). \Hypertarget{classJsonValidator_a6c3ecf8e2d5af861a64d1f40441117b9}\index{JsonValidator@{JsonValidator}!validate@{validate}}
+\index{validate@{validate}!JsonValidator@{JsonValidator}}
+\doxysubsubsection{\texorpdfstring{validate()}{validate()}}
+{\footnotesize\ttfamily \label{classJsonValidator_a6c3ecf8e2d5af861a64d1f40441117b9} 
+bool Json\+Validator\+::validate (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Validates the JSON string. 
+
+This function starts the validation process by parsing the JSON string from the current position. It returns true if the entire JSON string is valid, and false otherwise.
+
+\begin{DoxyReturn}{Returns}
+true if the JSON string is valid, false otherwise. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classJsonValidator_aaad802edeb106c5d7cac2c4ebe122af1}\index{JsonValidator@{JsonValidator}!errorMessage@{errorMessage}}
+\index{errorMessage@{errorMessage}!JsonValidator@{JsonValidator}}
+\doxysubsubsection{\texorpdfstring{errorMessage}{errorMessage}}
+{\footnotesize\ttfamily \label{classJsonValidator_aaad802edeb106c5d7cac2c4ebe122af1} 
+string Json\+Validator\+::error\+Message\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classJsonValidator_add7d5998f13c32bfecd45e676b228d29}\index{JsonValidator@{JsonValidator}!json@{json}}
+\index{json@{json}!JsonValidator@{JsonValidator}}
+\doxysubsubsection{\texorpdfstring{json}{json}}
+{\footnotesize\ttfamily \label{classJsonValidator_add7d5998f13c32bfecd45e676b228d29} 
+const string\& Json\+Validator\+::json\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classJsonValidator_ad86aa1fb8c39084d5e3d3f8889eb1569}\index{JsonValidator@{JsonValidator}!pos@{pos}}
+\index{pos@{pos}!JsonValidator@{JsonValidator}}
+\doxysubsubsection{\texorpdfstring{pos}{pos}}
+{\footnotesize\ttfamily \label{classJsonValidator_ad86aa1fb8c39084d5e3d3f8889eb1569} 
+size\+\_\+t Json\+Validator\+::pos\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{JsonValidator_8hpp}{Json\+Validator.\+hpp}}\end{DoxyCompactItemize}

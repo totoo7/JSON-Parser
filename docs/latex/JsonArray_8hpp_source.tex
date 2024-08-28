@@ -1,0 +1,31 @@
+\doxysection{Json\+Array.\+hpp}
+\hypertarget{JsonArray_8hpp_source}{}\label{JsonArray_8hpp_source}\index{JsonArray.hpp@{JsonArray.hpp}}
+\mbox{\hyperlink{JsonArray_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ JSON\_ARRAY\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ JSON\_ARRAY\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Json_8hpp}{Json.hpp}}"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classJsonArray}{JsonArray}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classJson}{Json}}}
+\DoxyCodeLine{00012\ \{}
+\DoxyCodeLine{00013\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00017\ \ \ \ \ \mbox{\hyperlink{classJsonArray_a304f5ede160dbc87f9ec7d7983bd1cbf}{JsonArray}}();}
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{classJsonArray_a629d2ba630f51d9cb94fcc9b96ae74ab}{JsonArray}}(\textcolor{keyword}{const}\ vector<Json*>\ \&value);}
+\DoxyCodeLine{00029\ \ \ \ \ \mbox{\hyperlink{classJsonArray_a752d493e149ed769e0a3a981dbcd076a}{JsonArray}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classJsonArray}{JsonArray}}\ \&other);}
+\DoxyCodeLine{00036\ \ \ \ \ \mbox{\hyperlink{classJsonArray}{JsonArray}}\ \&\mbox{\hyperlink{classJsonArray_ab98ac8b60af112518b3502a145a1b62f}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classJsonArray}{JsonArray}}\ \&other);}
+\DoxyCodeLine{00042\ \ \ \ \ \mbox{\hyperlink{classJson}{Json}}\ *\mbox{\hyperlink{classJsonArray_aef9fc68f9f273ece9d90f0cb4d92a5d6}{clone}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classJsonArray_a31a20ea664d9a2b9958b417523ad5213}{print}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{classJsonArray_adaf401664744c4b92e4d2a2c452b3e2e}{toString}}(\textcolor{keywordtype}{int}\ indentLevel\ =\ 0)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classJsonArray_a23949c5ed3fb23237cc0f47a90b84baa}{search}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ \&key)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classJsonArray_ac001343284602fa68667382855380c31}{contains}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ \&value)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classJsonArray_a1e1352324f5ba2c3086c0e2d89f903fa}{create}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ \&path,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ \&newValue,\ \textcolor{keywordtype}{int}\ depth\ =\ 0)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classJsonArray_abfb59d6f7f5d9ea7a0eec2b0b5287866}{erase}}(\textcolor{keyword}{const}\ std::string\ \&path,\ \textcolor{keywordtype}{int}\ depth\ =\ 0)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00090\ \ \ \ \ \mbox{\hyperlink{classJsonArray_afec55b2701a94ade8009381a7f1919f0}{\string~JsonArray}}();}
+\DoxyCodeLine{00091\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00092\ \ \ \ \ vector<Json\ *>\ \mbox{\hyperlink{classJsonArray_a2c3cc59f8a648d775f800e514c073380}{values}};}
+\DoxyCodeLine{00093\ \};}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00095\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

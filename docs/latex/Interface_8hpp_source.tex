@@ -1,0 +1,33 @@
+\doxysection{Interface.\+hpp}
+\hypertarget{Interface_8hpp_source}{}\label{Interface_8hpp_source}\index{Interface.hpp@{Interface.hpp}}
+\mbox{\hyperlink{Interface_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ INTERFACE\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ INTERFACE\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{JsonFactory_8hpp}{JsonFactory.hpp}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{CommandManager_8hpp}{CommandManager.hpp}}"{}}}
+\DoxyCodeLine{00009\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classInterface}{Interface}}}
+\DoxyCodeLine{00010\ \{}
+\DoxyCodeLine{00011\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00015\ \ \ \ \ \mbox{\hyperlink{classInterface_a4406d74c75bdfe150bf72be1f1cda8b1}{Interface}}();}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classInterface_a090a950300a463d91f8f361d3b333906}{run}}();}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classInterface_a882e418c559395e5aa39dcaca65d3d3b}{update}}();}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classInterface_ae151d51cbe742d14880ca8f29fa6a95a}{processUserInput}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ \&userInput);}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classInterface_a787ea62a39d76be8a35b4b64d5581592}{openFile}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ \&\mbox{\hyperlink{classInterface_af55e9bb5a47274580c338860b2e71b0a}{filename}});}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classInterface_addb08152cfb0271e6afba4180497a791}{saveAs}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ \&path,\ \textcolor{keywordtype}{string}\ \&newFilename);}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classInterface_aa27e9df0290561f292c04535f5795aea}{save}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classInterface_a73b06f0c3237ff4f60619888554a99e9}{printMenu}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00052\ \ \ \ \ \mbox{\hyperlink{classInterface_a19179888f29f18f1be54a3dfe98f68c0}{\string~Interface}}();}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classInterface_ab7d10dabb6307f50b39ca256f4527817}{isRunning}};}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{classInterface_af55e9bb5a47274580c338860b2e71b0a}{filename}};}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classInterface_acf10d0edf6b62e578e4b0d046bdc04ce}{isLoadedFile}};}
+\DoxyCodeLine{00058\ \ \ \ \ \mbox{\hyperlink{classJson}{Json}}\ *\mbox{\hyperlink{classInterface_a05ef659f5cb4d37a1ffe13b7eeb137c5}{json}};}
+\DoxyCodeLine{00059\ \ \ \ \ \mbox{\hyperlink{classCommandManager}{CommandManager}}\ \mbox{\hyperlink{classInterface_a25459b505846a576f73a1feb796b05b7}{manager}};}
+\DoxyCodeLine{00060\ \};}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

@@ -1,0 +1,28 @@
+\doxysection{Json\+String.\+hpp}
+\hypertarget{JsonString_8hpp_source}{}\label{JsonString_8hpp_source}\index{JsonString.hpp@{JsonString.hpp}}
+\mbox{\hyperlink{JsonString_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ JSON\_STRING\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ JSON\_STRING\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Json_8hpp}{Json.hpp}}"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classJsonString}{JsonString}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classJson}{Json}}}
+\DoxyCodeLine{00012\ \{}
+\DoxyCodeLine{00013\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00017\ \ \ \mbox{\hyperlink{classJsonString_ac8abbf10bf08a2cb269d307ba96f5b9a}{JsonString}}();}
+\DoxyCodeLine{00023\ \ \ \mbox{\hyperlink{classJsonString_aaa133a51f17a667bb7b3eba5e2d4ea74}{JsonString}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{classJsonString_a53128d23186dbe04177a64c1f745f83c}{value}});}
+\DoxyCodeLine{00029\ \ \ \mbox{\hyperlink{classJsonString_a12988b2872484f97140311e77a6687cb}{JsonString}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classJsonString}{JsonString}}\ \&other);}
+\DoxyCodeLine{00036\ \ \ \mbox{\hyperlink{classJsonString}{JsonString}}\ \&\mbox{\hyperlink{classJsonString_aa6991cab9dfc2b869cddc3d1a776636f}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classJsonString}{JsonString}}\ \&other);}
+\DoxyCodeLine{00042\ \ \ \mbox{\hyperlink{classJson}{Json}}\ *\mbox{\hyperlink{classJsonString_a87820a8386aeff19ed35812dc5d873df}{clone}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00049\ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{classJsonString_a62c4e5622bbb4e51026601c347e26385}{toString}}(\textcolor{keywordtype}{int}\ indentLevel\ =\ 0)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00056\ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classJsonString_a62ba3c93111efe0dcc36b8063b0eeb22}{contains}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ \&\mbox{\hyperlink{classJsonString_a53128d23186dbe04177a64c1f745f83c}{value}})\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00061\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classJsonString_a38bd1beb644c93556d61369017579110}{print}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00064\ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{classJsonString_a53128d23186dbe04177a64c1f745f83c}{value}};}
+\DoxyCodeLine{00065\ \};}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

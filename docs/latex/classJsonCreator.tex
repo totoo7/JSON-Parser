@@ -1,5 +1,5 @@
-\hypertarget{classJsonCreator}{}\doxysection{Json\+Creator Class Reference}
-\label{classJsonCreator}\index{JsonCreator@{JsonCreator}}
+\doxysection{Json\+Creator Class Reference}
+\hypertarget{classJsonCreator}{}\label{classJsonCreator}\index{JsonCreator@{JsonCreator}}
 
 
 Base class for all creators.  
@@ -11,25 +11,20 @@ Base class for all creators.
 
 
 
-Inheritance diagram for Json\+Creator\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=273pt]{classJsonCreator__inherit__graph}
-\end{center}
-\end{figure}
-\doxysubsection*{Public Member Functions}
+Inheritance diagram for Json\+Creator\+:
+% FIG 0
+\doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classJsonCreator_ad2506f69d9faeae8e8371e19a053932e}{Json\+Creator}} (const string \&\mbox{\hyperlink{classJsonCreator_a253a8df6e5b5cc2e43ce72c27c017b2b}{value}})
-\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classJson}{Json}} Creator object. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Construct a new \doxylink{classJson}{Json} Creator object. \end{DoxyCompactList}\item 
 virtual bool \mbox{\hyperlink{classJsonCreator_ad43a13717767fd518ad863acc7844906}{get\+Value}} (const string \&object) const =0
 \begin{DoxyCompactList}\small\item\em Get value object. The derived classes attempt to recognize the passed value parameter. \end{DoxyCompactList}\item 
-virtual \mbox{\hyperlink{classJson}{Json}} $\ast$ \mbox{\hyperlink{classJsonCreator_a2b4630e018665302be7608c4b1f4c85f}{create\+Json}} (const string \&\mbox{\hyperlink{classJsonCreator_a253a8df6e5b5cc2e43ce72c27c017b2b}{value}}) const =0
-\begin{DoxyCompactList}\small\item\em Attempts to create a new \mbox{\hyperlink{classJson}{Json}} object. \end{DoxyCompactList}\item 
-virtual \mbox{\hyperlink{classJsonCreator_afaab1c79a532b68f3ce41d9a01168b37}{$\sim$\+Json\+Creator}} ()=default
-\begin{DoxyCompactList}\small\item\em Destroy the \mbox{\hyperlink{classJson}{Json}} Creator object. Default destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Protected Attributes}
+virtual \mbox{\hyperlink{classJson}{Json}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classJsonCreator_a98189364ce8a725012c1d6e3886bf8b2}{create\+Json}} (const string \&\mbox{\hyperlink{classJsonCreator_a253a8df6e5b5cc2e43ce72c27c017b2b}{value}}) const =0
+\begin{DoxyCompactList}\small\item\em Attempts to create a new \doxylink{classJson}{Json} object. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classJsonCreator_afaab1c79a532b68f3ce41d9a01168b37}{\texorpdfstring{$\sim$}{\string~}\+Json\+Creator}} ()=default
+\begin{DoxyCompactList}\small\item\em Destroy the \doxylink{classJson}{Json} Creator object. Default destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
 string \mbox{\hyperlink{classJsonCreator_a253a8df6e5b5cc2e43ce72c27c017b2b}{value}}
@@ -40,43 +35,43 @@ string \mbox{\hyperlink{classJsonCreator_a253a8df6e5b5cc2e43ce72c27c017b2b}{valu
 Base class for all creators. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{classJsonCreator_ad2506f69d9faeae8e8371e19a053932e}\label{classJsonCreator_ad2506f69d9faeae8e8371e19a053932e}} 
-\index{JsonCreator@{JsonCreator}!JsonCreator@{JsonCreator}}
+\Hypertarget{classJsonCreator_ad2506f69d9faeae8e8371e19a053932e}\index{JsonCreator@{JsonCreator}!JsonCreator@{JsonCreator}}
 \index{JsonCreator@{JsonCreator}!JsonCreator@{JsonCreator}}
 \doxysubsubsection{\texorpdfstring{JsonCreator()}{JsonCreator()}}
-{\footnotesize\ttfamily Json\+Creator\+::\+Json\+Creator (\begin{DoxyParamCaption}\item[{const string \&}]{value }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{classJsonCreator_ad2506f69d9faeae8e8371e19a053932e} 
+Json\+Creator\+::\+Json\+Creator (\begin{DoxyParamCaption}\item[{const string \&}]{value}{}\end{DoxyParamCaption})}
 
 
 
-Construct a new \mbox{\hyperlink{classJson}{Json}} Creator object. 
+Construct a new \doxylink{classJson}{Json} Creator object. 
 
 
 \begin{DoxyParams}{Parameters}
 {\em value} & The creator\textquotesingle{}s identifier. \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{classJsonCreator_afaab1c79a532b68f3ce41d9a01168b37}\label{classJsonCreator_afaab1c79a532b68f3ce41d9a01168b37}} 
-\index{JsonCreator@{JsonCreator}!````~JsonCreator@{$\sim$JsonCreator}}
-\index{````~JsonCreator@{$\sim$JsonCreator}!JsonCreator@{JsonCreator}}
-\doxysubsubsection{\texorpdfstring{$\sim$JsonCreator()}{~JsonCreator()}}
-{\footnotesize\ttfamily virtual Json\+Creator\+::$\sim$\+Json\+Creator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+\Hypertarget{classJsonCreator_afaab1c79a532b68f3ce41d9a01168b37}\index{JsonCreator@{JsonCreator}!````~JsonCreator@{\texorpdfstring{$\sim$}{\string~}JsonCreator}}
+\index{````~JsonCreator@{\texorpdfstring{$\sim$}{\string~}JsonCreator}!JsonCreator@{JsonCreator}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}JsonCreator()}{\string~JsonCreator()}}
+{\footnotesize\ttfamily \label{classJsonCreator_afaab1c79a532b68f3ce41d9a01168b37} 
+virtual Json\+Creator\+::\texorpdfstring{$\sim$}{\string~}\+Json\+Creator (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
 
 
 
-Destroy the \mbox{\hyperlink{classJson}{Json}} Creator object. Default destructor. 
+Destroy the \doxylink{classJson}{Json} Creator object. Default destructor. 
 
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{classJsonCreator_a2b4630e018665302be7608c4b1f4c85f}\label{classJsonCreator_a2b4630e018665302be7608c4b1f4c85f}} 
-\index{JsonCreator@{JsonCreator}!createJson@{createJson}}
+\Hypertarget{classJsonCreator_a98189364ce8a725012c1d6e3886bf8b2}\index{JsonCreator@{JsonCreator}!createJson@{createJson}}
 \index{createJson@{createJson}!JsonCreator@{JsonCreator}}
 \doxysubsubsection{\texorpdfstring{createJson()}{createJson()}}
-{\footnotesize\ttfamily virtual \mbox{\hyperlink{classJson}{Json}}$\ast$ Json\+Creator\+::create\+Json (\begin{DoxyParamCaption}\item[{const string \&}]{value }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+{\footnotesize\ttfamily \label{classJsonCreator_a98189364ce8a725012c1d6e3886bf8b2} 
+virtual \mbox{\hyperlink{classJson}{Json}} \texorpdfstring{$\ast$}{*} Json\+Creator\+::create\+Json (\begin{DoxyParamCaption}\item[{const string \&}]{value}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
 
-Attempts to create a new \mbox{\hyperlink{classJson}{Json}} object. 
+Attempts to create a new \doxylink{classJson}{Json} object. 
 
 Pure virtual method. This method must be implemented by all derived classes for it\textquotesingle{}s own JSON type.
 
@@ -86,17 +81,17 @@ Pure virtual method. This method must be implemented by all derived classes for 
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-Json$\ast$ The value returned as a \mbox{\hyperlink{classJson}{Json}} pointer. 
+Json\texorpdfstring{$\ast$}{*} The value returned as a \doxylink{classJson}{Json} pointer. 
 \end{DoxyReturn}
 
 
-Implemented in \mbox{\hyperlink{classStringCreator_a217c83b4bb90ef15e4f26c82eaae6019}{String\+Creator}}, \mbox{\hyperlink{classObjectCreator_a41b3d4b0620c86790a12d832c9073112}{Object\+Creator}}, \mbox{\hyperlink{classNullCreator_ad49adbac991b0825bcf58183b02b6c24}{Null\+Creator}}, \mbox{\hyperlink{classIntCreator_a213534cc540255db0306f17de0533f3b}{Int\+Creator}}, \mbox{\hyperlink{classFloatCreator_afc53ef043d828bb7609a222616adbde6}{Float\+Creator}}, \mbox{\hyperlink{classBoolCreator_ac1cfd2ec1d5d0a409151666949cceedb}{Bool\+Creator}}, and \mbox{\hyperlink{classArrayCreator_a97998678a1a30e36fb7ac8a5364de07a}{Array\+Creator}}.
+Implemented in \mbox{\hyperlink{classArrayCreator_a1bce3931da67fa8a874f8afd37e9b839}{Array\+Creator}}, \mbox{\hyperlink{classBoolCreator_a7d1306e70dd4c8584af33622fc938e6f}{Bool\+Creator}}, \mbox{\hyperlink{classFloatCreator_a02ec4a7cd28900b44ec02a69a73f5bf8}{Float\+Creator}}, \mbox{\hyperlink{classIntCreator_a270895b32d54a99a86a6b760f8d4e453}{Int\+Creator}}, \mbox{\hyperlink{classNullCreator_a841de63591d28672fc6b05dd61af6ea4}{Null\+Creator}}, \mbox{\hyperlink{classObjectCreator_ae75a49a8b856cecf4594070ff239a3f6}{Object\+Creator}}, and \mbox{\hyperlink{classStringCreator_ab1d375d62dc363689f57ba09bccdb196}{String\+Creator}}.
 
-\mbox{\Hypertarget{classJsonCreator_ad43a13717767fd518ad863acc7844906}\label{classJsonCreator_ad43a13717767fd518ad863acc7844906}} 
-\index{JsonCreator@{JsonCreator}!getValue@{getValue}}
+\Hypertarget{classJsonCreator_ad43a13717767fd518ad863acc7844906}\index{JsonCreator@{JsonCreator}!getValue@{getValue}}
 \index{getValue@{getValue}!JsonCreator@{JsonCreator}}
 \doxysubsubsection{\texorpdfstring{getValue()}{getValue()}}
-{\footnotesize\ttfamily virtual bool Json\+Creator\+::get\+Value (\begin{DoxyParamCaption}\item[{const string \&}]{object }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+{\footnotesize\ttfamily \label{classJsonCreator_ad43a13717767fd518ad863acc7844906} 
+virtual bool Json\+Creator\+::get\+Value (\begin{DoxyParamCaption}\item[{const string \&}]{object}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
 
@@ -114,16 +109,16 @@ true if passed object is recognized, false otherwise.
 \end{DoxyReturn}
 
 
-Implemented in \mbox{\hyperlink{classStringCreator_aea455248f2bc0e8c61bdb6f4e4b1ac37}{String\+Creator}}, \mbox{\hyperlink{classObjectCreator_a7598de96d75040d04fff2c209202180e}{Object\+Creator}}, \mbox{\hyperlink{classNullCreator_a7ac2244ee82ae5344230184bd9aac636}{Null\+Creator}}, \mbox{\hyperlink{classIntCreator_a3a587cceb1e76ca3a5f413f6e6f3448b}{Int\+Creator}}, \mbox{\hyperlink{classFloatCreator_a1e9db2e4cfb0263c66b0820b0413cb17}{Float\+Creator}}, \mbox{\hyperlink{classBoolCreator_a9af5c1011d7535eb15df29d464d9f293}{Bool\+Creator}}, and \mbox{\hyperlink{classArrayCreator_af729cc992fc9c78a0774b10cafa3ead4}{Array\+Creator}}.
+Implemented in \mbox{\hyperlink{classArrayCreator_af729cc992fc9c78a0774b10cafa3ead4}{Array\+Creator}}, \mbox{\hyperlink{classBoolCreator_a9af5c1011d7535eb15df29d464d9f293}{Bool\+Creator}}, \mbox{\hyperlink{classFloatCreator_a1e9db2e4cfb0263c66b0820b0413cb17}{Float\+Creator}}, \mbox{\hyperlink{classIntCreator_a3a587cceb1e76ca3a5f413f6e6f3448b}{Int\+Creator}}, \mbox{\hyperlink{classNullCreator_a7ac2244ee82ae5344230184bd9aac636}{Null\+Creator}}, \mbox{\hyperlink{classObjectCreator_a7598de96d75040d04fff2c209202180e}{Object\+Creator}}, and \mbox{\hyperlink{classStringCreator_aea455248f2bc0e8c61bdb6f4e4b1ac37}{String\+Creator}}.
 
 
 
 \doxysubsection{Member Data Documentation}
-\mbox{\Hypertarget{classJsonCreator_a253a8df6e5b5cc2e43ce72c27c017b2b}\label{classJsonCreator_a253a8df6e5b5cc2e43ce72c27c017b2b}} 
-\index{JsonCreator@{JsonCreator}!value@{value}}
+\Hypertarget{classJsonCreator_a253a8df6e5b5cc2e43ce72c27c017b2b}\index{JsonCreator@{JsonCreator}!value@{value}}
 \index{value@{value}!JsonCreator@{JsonCreator}}
 \doxysubsubsection{\texorpdfstring{value}{value}}
-{\footnotesize\ttfamily string Json\+Creator\+::value\hspace{0.3cm}{\ttfamily [protected]}}
+{\footnotesize\ttfamily \label{classJsonCreator_a253a8df6e5b5cc2e43ce72c27c017b2b} 
+string Json\+Creator\+::value\hspace{0.3cm}{\ttfamily [protected]}}
 
 
 

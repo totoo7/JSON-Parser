@@ -1,0 +1,24 @@
+\doxysection{Command\+Manager.\+hpp}
+\hypertarget{CommandManager_8hpp_source}{}\label{CommandManager_8hpp_source}\index{CommandManager.hpp@{CommandManager.hpp}}
+\mbox{\hyperlink{CommandManager_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ COMMAND\_MANAGER\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ COMMAND\_MANAGER\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Command_8hpp}{Command.hpp}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classCommandManager}{CommandManager}}}
+\DoxyCodeLine{00011\ \{}
+\DoxyCodeLine{00012\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00016\ \ \ \ \ \mbox{\hyperlink{classCommandManager_a8a13226bf933396a3f35dfb5bee3e813}{CommandManager}}();}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classCommandManager_a50083e9e1876e984267cc360202f2dc9}{isValidCommand}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ \&name)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{classCommand}{Command}}\ *\mbox{\hyperlink{classCommandManager_a658b1ce8201e4ce725d32cc51455823f}{getCommand}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ \&name)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCommandManager_a9286f95810b5c14435258ec2aae67c7d}{toLowerCase}}(\textcolor{keywordtype}{string}\ \&name);}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00039\ \ \ \ \ vector<Command>\ \mbox{\hyperlink{classCommandManager_a1aca0bae70556ff8fe293e6611ffff6c}{commands}};}
+\DoxyCodeLine{00040\ \};}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

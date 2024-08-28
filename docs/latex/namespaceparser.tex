@@ -1,0 +1,38 @@
+\doxysection{parser Namespace Reference}
+\hypertarget{namespaceparser}{}\label{namespaceparser}\index{parser@{parser}}
+
+
+Parses a JSON value from a string.  
+
+
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{namespaceparser_ace837bc1b97ad13af64cefb43db6b2f6}{parse\+Value}} (const string \&value, size\+\_\+t \&index)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Parses a JSON value from a string. 
+
+This function extracts a single JSON value from the given string, starting at the position indicated by the {\ttfamily index} parameter. It handles JSON objects, arrays, strings, numbers, booleans, and null values. The function updates the {\ttfamily index} to point to the next character after the parsed value.
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The JSON string from which to parse the value. \\
+\hline
+{\em index} & A reference to the current position in the string. This is updated as the function parses the value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A string containing the parsed JSON value. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespaceparser_ace837bc1b97ad13af64cefb43db6b2f6}\index{parser@{parser}!parseValue@{parseValue}}
+\index{parseValue@{parseValue}!parser@{parser}}
+\doxysubsubsection{\texorpdfstring{parseValue()}{parseValue()}}
+{\footnotesize\ttfamily \label{namespaceparser_ace837bc1b97ad13af64cefb43db6b2f6} 
+string parser\+::parse\+Value (\begin{DoxyParamCaption}\item[{const string \&}]{value}{, }\item[{size\+\_\+t \&}]{index}{}\end{DoxyParamCaption})}
+

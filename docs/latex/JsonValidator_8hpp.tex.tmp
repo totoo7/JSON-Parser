@@ -1,0 +1,11 @@
+\doxysection{Json\+Validator.\+hpp File Reference}
+\hypertarget{JsonValidator_8hpp}{}\label{JsonValidator_8hpp}\index{JsonValidator.hpp@{JsonValidator.hpp}}
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+Include dependency graph for Json\+Validator.\+hpp\+:
+% FIG 0
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classJsonValidator}{Json\+Validator}}
+\begin{DoxyCompactList}\small\item\em Class responsible for checking if the \doxylink{classJson}{Json} file is in the correct format. \end{DoxyCompactList}\end{DoxyCompactItemize}

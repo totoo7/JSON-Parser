@@ -1,74 +1,84 @@
-\hypertarget{classNullCreator}{}\doxysection{Null\+Creator Class Reference}
-\label{classNullCreator}\index{NullCreator@{NullCreator}}
+\doxysection{Null\+Creator Class Reference}
+\hypertarget{classNullCreator}{}\label{classNullCreator}\index{NullCreator@{NullCreator}}
+
+
+A concrete implementation of \doxylink{classJsonCreator}{Json\+Creator} that handles the creation of null JSON values.  
+
+
 
 
 {\ttfamily \#include $<$Null\+Creator.\+hpp$>$}
 
 
 
-Inheritance diagram for Null\+Creator\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=153pt]{classNullCreator__inherit__graph}
-\end{center}
-\end{figure}
+Inheritance diagram for Null\+Creator\+:
+% FIG 0
 
 
-Collaboration diagram for Null\+Creator\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=153pt]{classNullCreator__coll__graph}
-\end{center}
-\end{figure}
-\doxysubsection*{Public Member Functions}
+Collaboration diagram for Null\+Creator\+:
+% FIG 1
+\doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classNullCreator_a0ebf80539f383a29131263b97849e882}{Null\+Creator}} ()
-\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classNullCreator}{Null\+Creator}} object. Initializes the \mbox{\hyperlink{classJsonCreator}{Json\+Creator}}\textquotesingle{}s value as \char`\"{}null\char`\"{} with it\textquotesingle{}s constructor. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classJson}{Json}} $\ast$ \mbox{\hyperlink{classNullCreator_ad49adbac991b0825bcf58183b02b6c24}{create\+Json}} (const string \&\mbox{\hyperlink{classJsonCreator_a253a8df6e5b5cc2e43ce72c27c017b2b}{value}}) const override
-\begin{DoxyCompactList}\small\item\em Creates a \mbox{\hyperlink{classJsonNull}{Json\+Null}}. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Construct a new \doxylink{classNullCreator}{Null\+Creator} object. Initializes the \doxylink{classJsonCreator}{Json\+Creator}\textquotesingle{}s value as "{}null"{} with it\textquotesingle{}s constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classJson}{Json}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classNullCreator_a841de63591d28672fc6b05dd61af6ea4}{create\+Json}} (const string \&\mbox{\hyperlink{classJsonCreator_a253a8df6e5b5cc2e43ce72c27c017b2b}{value}}) const override
+\begin{DoxyCompactList}\small\item\em Creates a \doxylink{classJsonNull}{Json\+Null}. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classNullCreator_a7ac2244ee82ae5344230184bd9aac636}{get\+Value}} (const string \&object) const override
 \begin{DoxyCompactList}\small\item\em Get the value object. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classNullCreator_a12f2e5ae700c28956293828f699c3e07}{$\sim$\+Null\+Creator}} ()=default
-\begin{DoxyCompactList}\small\item\em Destroy the \mbox{\hyperlink{classNullCreator}{Null\+Creator}} object. Default desctructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Additional Inherited Members}
+\mbox{\hyperlink{classNullCreator_a12f2e5ae700c28956293828f699c3e07}{\texorpdfstring{$\sim$}{\string~}\+Null\+Creator}} ()=default
+\begin{DoxyCompactList}\small\item\em Destroy the \doxylink{classNullCreator}{Null\+Creator} object. Default desctructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classJsonCreator}{Json\+Creator}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classJsonCreator_ad2506f69d9faeae8e8371e19a053932e}{Json\+Creator}} (const string \&\mbox{\hyperlink{classJsonCreator_a253a8df6e5b5cc2e43ce72c27c017b2b}{value}})
+\begin{DoxyCompactList}\small\item\em Construct a new \doxylink{classJson}{Json} Creator object. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classJsonCreator_afaab1c79a532b68f3ce41d9a01168b37}{\texorpdfstring{$\sim$}{\string~}\+Json\+Creator}} ()=default
+\begin{DoxyCompactList}\small\item\em Destroy the \doxylink{classJson}{Json} Creator object. Default destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classJsonCreator}{Json\+Creator}}}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classJsonCreator_a253a8df6e5b5cc2e43ce72c27c017b2b}{value}}
+\end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+A concrete implementation of \doxylink{classJsonCreator}{Json\+Creator} that handles the creation of null JSON values. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{classNullCreator_a0ebf80539f383a29131263b97849e882}\label{classNullCreator_a0ebf80539f383a29131263b97849e882}} 
-\index{NullCreator@{NullCreator}!NullCreator@{NullCreator}}
+\Hypertarget{classNullCreator_a0ebf80539f383a29131263b97849e882}\index{NullCreator@{NullCreator}!NullCreator@{NullCreator}}
 \index{NullCreator@{NullCreator}!NullCreator@{NullCreator}}
 \doxysubsubsection{\texorpdfstring{NullCreator()}{NullCreator()}}
-{\footnotesize\ttfamily Null\+Creator\+::\+Null\+Creator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{classNullCreator_a0ebf80539f383a29131263b97849e882} 
+Null\+Creator\+::\+Null\+Creator (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
 
 
-Construct a new \mbox{\hyperlink{classNullCreator}{Null\+Creator}} object. Initializes the \mbox{\hyperlink{classJsonCreator}{Json\+Creator}}\textquotesingle{}s value as \char`\"{}null\char`\"{} with it\textquotesingle{}s constructor. 
+Construct a new \doxylink{classNullCreator}{Null\+Creator} object. Initializes the \doxylink{classJsonCreator}{Json\+Creator}\textquotesingle{}s value as "{}null"{} with it\textquotesingle{}s constructor. 
 
-\mbox{\Hypertarget{classNullCreator_a12f2e5ae700c28956293828f699c3e07}\label{classNullCreator_a12f2e5ae700c28956293828f699c3e07}} 
-\index{NullCreator@{NullCreator}!````~NullCreator@{$\sim$NullCreator}}
-\index{````~NullCreator@{$\sim$NullCreator}!NullCreator@{NullCreator}}
-\doxysubsubsection{\texorpdfstring{$\sim$NullCreator()}{~NullCreator()}}
-{\footnotesize\ttfamily Null\+Creator\+::$\sim$\+Null\+Creator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+\Hypertarget{classNullCreator_a12f2e5ae700c28956293828f699c3e07}\index{NullCreator@{NullCreator}!````~NullCreator@{\texorpdfstring{$\sim$}{\string~}NullCreator}}
+\index{````~NullCreator@{\texorpdfstring{$\sim$}{\string~}NullCreator}!NullCreator@{NullCreator}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}NullCreator()}{\string~NullCreator()}}
+{\footnotesize\ttfamily \label{classNullCreator_a12f2e5ae700c28956293828f699c3e07} 
+Null\+Creator\+::\texorpdfstring{$\sim$}{\string~}\+Null\+Creator (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
 
 
 
-Destroy the \mbox{\hyperlink{classNullCreator}{Null\+Creator}} object. Default desctructor. 
+Destroy the \doxylink{classNullCreator}{Null\+Creator} object. Default desctructor. 
 
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{classNullCreator_ad49adbac991b0825bcf58183b02b6c24}\label{classNullCreator_ad49adbac991b0825bcf58183b02b6c24}} 
-\index{NullCreator@{NullCreator}!createJson@{createJson}}
+\Hypertarget{classNullCreator_a841de63591d28672fc6b05dd61af6ea4}\index{NullCreator@{NullCreator}!createJson@{createJson}}
 \index{createJson@{createJson}!NullCreator@{NullCreator}}
 \doxysubsubsection{\texorpdfstring{createJson()}{createJson()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classJson}{Json}}$\ast$ Null\+Creator\+::create\+Json (\begin{DoxyParamCaption}\item[{const string \&}]{value }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily \label{classNullCreator_a841de63591d28672fc6b05dd61af6ea4} 
+\mbox{\hyperlink{classJson}{Json}} \texorpdfstring{$\ast$}{*} Null\+Creator\+::create\+Json (\begin{DoxyParamCaption}\item[{const string \&}]{value}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
-Creates a \mbox{\hyperlink{classJsonNull}{Json\+Null}}. 
+Creates a \doxylink{classJsonNull}{Json\+Null}. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -76,17 +86,17 @@ Creates a \mbox{\hyperlink{classJsonNull}{Json\+Null}}.
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-Json$\ast$ 
+Json\texorpdfstring{$\ast$}{*} 
 \end{DoxyReturn}
 
 
-Implements \mbox{\hyperlink{classJsonCreator_a2b4630e018665302be7608c4b1f4c85f}{Json\+Creator}}.
+Implements \mbox{\hyperlink{classJsonCreator_a98189364ce8a725012c1d6e3886bf8b2}{Json\+Creator}}.
 
-\mbox{\Hypertarget{classNullCreator_a7ac2244ee82ae5344230184bd9aac636}\label{classNullCreator_a7ac2244ee82ae5344230184bd9aac636}} 
-\index{NullCreator@{NullCreator}!getValue@{getValue}}
+\Hypertarget{classNullCreator_a7ac2244ee82ae5344230184bd9aac636}\index{NullCreator@{NullCreator}!getValue@{getValue}}
 \index{getValue@{getValue}!NullCreator@{NullCreator}}
 \doxysubsubsection{\texorpdfstring{getValue()}{getValue()}}
-{\footnotesize\ttfamily bool Null\+Creator\+::get\+Value (\begin{DoxyParamCaption}\item[{const string \&}]{object }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily \label{classNullCreator_a7ac2244ee82ae5344230184bd9aac636} 
+bool Null\+Creator\+::get\+Value (\begin{DoxyParamCaption}\item[{const string \&}]{object}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
@@ -98,7 +108,7 @@ Get the value object.
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-true if the passed value is a \char`\"{}null\char`\"{}, false otherwise. 
+true if the passed value is a "{}null"{}, false otherwise. 
 \end{DoxyReturn}
 
 

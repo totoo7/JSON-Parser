@@ -3,7 +3,10 @@
 
 #include "JsonCreator.hpp"
 #include "JsonInt.hpp"
-
+/**
+ * @class IntCreator
+ * @brief A concrete implementation of JsonCreator that handles the creation of integer JSON values.
+ */
 class IntCreator : public JsonCreator
 {
 public:

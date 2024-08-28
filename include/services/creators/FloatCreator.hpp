@@ -4,6 +4,10 @@
 #include "JsonCreator.hpp"
 #include "JsonFloat.hpp"
 
+/**
+ * @class FloatCreator
+ * @brief A concrete implementation of JsonCreator that handles the creation of floating JSON values.
+ */
 class FloatCreator : public JsonCreator
 {
 public:

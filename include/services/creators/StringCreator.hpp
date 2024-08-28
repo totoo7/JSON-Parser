@@ -3,7 +3,10 @@
 
 #include "JsonCreator.hpp"
 #include "JsonString.hpp"
-
+/**
+ * @class StringCreator
+ * @brief A concrete implementation of JsonCreator that handles the creation of string JSON values.
+ */
 class StringCreator : public JsonCreator
 {
 public:

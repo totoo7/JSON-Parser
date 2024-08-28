@@ -1,5 +1,5 @@
-\hypertarget{classJsonFactory}{}\doxysection{Json\+Factory Class Reference}
-\label{classJsonFactory}\index{JsonFactory@{JsonFactory}}
+\doxysection{Json\+Factory Class Reference}
+\hypertarget{classJsonFactory}{}\label{classJsonFactory}\index{JsonFactory@{JsonFactory}}
 
 
 Polymorphic factory for JSON elements. Uses the Factory auto-\/registration design pattern. Uses Singleton pattern.  
@@ -9,39 +9,39 @@ Polymorphic factory for JSON elements. Uses the Factory auto-\/registration desi
 
 {\ttfamily \#include $<$Json\+Factory.\+hpp$>$}
 
-\doxysubsection*{Public Member Functions}
+\doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classJson}{Json}} $\ast$ \mbox{\hyperlink{classJsonFactory_a495d6bc1d202816c25bd50219949f466}{parse\+Value}} (string value) const
+\mbox{\hyperlink{classJson}{Json}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classJsonFactory_a456e473be17be3076209c7638606b917}{parse\+Value}} (const string \&value) const
 \begin{DoxyCompactList}\small\item\em Attempts to parse the passed value and returns a new JSON element pointer, depending on the value. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classJson}{Json}} $\ast$ \mbox{\hyperlink{classJsonFactory_aadf1fb22f42a68006ea6d1762bfd6f54}{parse\+File}} (string file\+Name) const
+\mbox{\hyperlink{classJson}{Json}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classJsonFactory_ad56d6300ea3e2d68e7bf792882de1d04}{parse\+File}} (string file\+Name) const
 \begin{DoxyCompactList}\small\item\em Attempts to parse the content of the passed file and returns a new JSON element pointer. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classJsonFactory_af25bee709243b2aba72ffcacff57c31b}{register\+Valid\+Json}} (const \mbox{\hyperlink{classJsonCreator}{Json\+Creator}} $\ast$creator)
-\begin{DoxyCompactList}\small\item\em Registers different \mbox{\hyperlink{classJsonCreator}{Json\+Creator}} objects. \end{DoxyCompactList}\item 
-const \mbox{\hyperlink{classJsonCreator}{Json\+Creator}} $\ast$ \mbox{\hyperlink{classJsonFactory_a0151b668ee5baa884d63e16b4fda895e}{get\+Creator}} (const string \&value) const
+void \mbox{\hyperlink{classJsonFactory_af25bee709243b2aba72ffcacff57c31b}{register\+Valid\+Json}} (const \mbox{\hyperlink{classJsonCreator}{Json\+Creator}} \texorpdfstring{$\ast$}{*}creator)
+\begin{DoxyCompactList}\small\item\em Registers different \doxylink{classJsonCreator}{Json\+Creator} objects. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classJsonCreator}{Json\+Creator}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classJsonFactory_adc7c2dd7fb2ec80cb27fb707e183c216}{get\+Creator}} (const string \&value) const
 \begin{DoxyCompactList}\small\item\em Get the creator object depending on the passed value. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classJsonFactory_a04155c2f2d0db6fe121ae89d7c7e0160}{Json\+Factory}} (\mbox{\hyperlink{classJsonFactory}{Json\+Factory}} const \&other)=delete
-\begin{DoxyCompactList}\small\item\em Disallow construction of a new \mbox{\hyperlink{classJsonFactory}{Json\+Factory}} object. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Disallow construction of a new \doxylink{classJsonFactory}{Json\+Factory} object. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classJsonFactory_aa642275dd2a223710760651113e2f4fd}{operator=}} (\mbox{\hyperlink{classJsonFactory}{Json\+Factory}} const \&other)=delete
-\begin{DoxyCompactList}\small\item\em Disallow copying of the \mbox{\hyperlink{classJsonFactory}{Json\+Factory}} instance. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactList}\small\item\em Disallow copying of the \doxylink{classJsonFactory}{Json\+Factory} instance. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-static \mbox{\hyperlink{classJsonFactory}{Json\+Factory}} \& \mbox{\hyperlink{classJsonFactory_a2f39e30a9f79b77cc7b355e087ec75db}{get}} ()
+static \mbox{\hyperlink{classJsonFactory}{Json\+Factory}} \& \mbox{\hyperlink{classJsonFactory_a205ac0ac21d13ae52092bd1e04015115}{get}} ()
 \begin{DoxyCompactList}\small\item\em This method ensures that there is only one instance of the class. Provides global access to that instance. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Private Member Functions}
+\doxysubsubsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classJson}{Json}} $\ast$ \mbox{\hyperlink{classJsonFactory_aa28a2e5bef7d885a11b4f754af30b9af}{parse\+Value}} (ifstream \&ifs) const
+\mbox{\hyperlink{classJson}{Json}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classJsonFactory_ab6c9427f5044b84c0ffe6eab24e7eccf}{parse\+Value}} (ifstream \&ifs) const
 \begin{DoxyCompactList}\small\item\em Reads the entire file into a string and calls the other parse\+Value method. Closes the file after receiving it. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classJsonFactory_ab9b6bddc08ad4899d5d0b5edcff3274b}{Json\+Factory}} ()
 \item 
-\mbox{\hyperlink{classJsonFactory_a4135acb6b236c495671e793c6aa67367}{$\sim$\+Json\+Factory}} ()
+\mbox{\hyperlink{classJsonFactory_a4135acb6b236c495671e793c6aa67367}{\texorpdfstring{$\sim$}{\string~}\+Json\+Factory}} ()
 \end{DoxyCompactItemize}
-\doxysubsection*{Private Attributes}
+\doxysubsubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
-vector$<$ const \mbox{\hyperlink{classJsonCreator}{Json\+Creator}} $\ast$ $>$ \mbox{\hyperlink{classJsonFactory_a9122e41c144367c484ea48165b7dd531}{creators}}
+vector$<$ const \mbox{\hyperlink{classJsonCreator}{Json\+Creator}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{classJsonFactory_a9122e41c144367c484ea48165b7dd531}{creators}}
 \end{DoxyCompactItemize}
 
 
@@ -49,49 +49,49 @@ vector$<$ const \mbox{\hyperlink{classJsonCreator}{Json\+Creator}} $\ast$ $>$ \m
 Polymorphic factory for JSON elements. Uses the Factory auto-\/registration design pattern. Uses Singleton pattern. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{classJsonFactory_a04155c2f2d0db6fe121ae89d7c7e0160}\label{classJsonFactory_a04155c2f2d0db6fe121ae89d7c7e0160}} 
-\index{JsonFactory@{JsonFactory}!JsonFactory@{JsonFactory}}
+\Hypertarget{classJsonFactory_a04155c2f2d0db6fe121ae89d7c7e0160}\index{JsonFactory@{JsonFactory}!JsonFactory@{JsonFactory}}
 \index{JsonFactory@{JsonFactory}!JsonFactory@{JsonFactory}}
 \doxysubsubsection{\texorpdfstring{JsonFactory()}{JsonFactory()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily Json\+Factory\+::\+Json\+Factory (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classJsonFactory}{Json\+Factory}} const \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+{\footnotesize\ttfamily \label{classJsonFactory_a04155c2f2d0db6fe121ae89d7c7e0160} 
+Json\+Factory\+::\+Json\+Factory (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classJsonFactory}{Json\+Factory}} const \&}]{other}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
 
 
 
-Disallow construction of a new \mbox{\hyperlink{classJsonFactory}{Json\+Factory}} object. 
+Disallow construction of a new \doxylink{classJsonFactory}{Json\+Factory} object. 
 
-\mbox{\Hypertarget{classJsonFactory_ab9b6bddc08ad4899d5d0b5edcff3274b}\label{classJsonFactory_ab9b6bddc08ad4899d5d0b5edcff3274b}} 
-\index{JsonFactory@{JsonFactory}!JsonFactory@{JsonFactory}}
+\Hypertarget{classJsonFactory_ab9b6bddc08ad4899d5d0b5edcff3274b}\index{JsonFactory@{JsonFactory}!JsonFactory@{JsonFactory}}
 \index{JsonFactory@{JsonFactory}!JsonFactory@{JsonFactory}}
 \doxysubsubsection{\texorpdfstring{JsonFactory()}{JsonFactory()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily Json\+Factory\+::\+Json\+Factory (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+{\footnotesize\ttfamily \label{classJsonFactory_ab9b6bddc08ad4899d5d0b5edcff3274b} 
+Json\+Factory\+::\+Json\+Factory (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
 
-\mbox{\Hypertarget{classJsonFactory_a4135acb6b236c495671e793c6aa67367}\label{classJsonFactory_a4135acb6b236c495671e793c6aa67367}} 
-\index{JsonFactory@{JsonFactory}!````~JsonFactory@{$\sim$JsonFactory}}
-\index{````~JsonFactory@{$\sim$JsonFactory}!JsonFactory@{JsonFactory}}
-\doxysubsubsection{\texorpdfstring{$\sim$JsonFactory()}{~JsonFactory()}}
-{\footnotesize\ttfamily Json\+Factory\+::$\sim$\+Json\+Factory (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+\Hypertarget{classJsonFactory_a4135acb6b236c495671e793c6aa67367}\index{JsonFactory@{JsonFactory}!````~JsonFactory@{\texorpdfstring{$\sim$}{\string~}JsonFactory}}
+\index{````~JsonFactory@{\texorpdfstring{$\sim$}{\string~}JsonFactory}!JsonFactory@{JsonFactory}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}JsonFactory()}{\string~JsonFactory()}}
+{\footnotesize\ttfamily \label{classJsonFactory_a4135acb6b236c495671e793c6aa67367} 
+Json\+Factory\+::\texorpdfstring{$\sim$}{\string~}\+Json\+Factory (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
 
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{classJsonFactory_a2f39e30a9f79b77cc7b355e087ec75db}\label{classJsonFactory_a2f39e30a9f79b77cc7b355e087ec75db}} 
-\index{JsonFactory@{JsonFactory}!get@{get}}
+\Hypertarget{classJsonFactory_a205ac0ac21d13ae52092bd1e04015115}\index{JsonFactory@{JsonFactory}!get@{get}}
 \index{get@{get}!JsonFactory@{JsonFactory}}
 \doxysubsubsection{\texorpdfstring{get()}{get()}}
-{\footnotesize\ttfamily static \mbox{\hyperlink{classJsonFactory}{Json\+Factory}}\& Json\+Factory\+::get (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily \label{classJsonFactory_a205ac0ac21d13ae52092bd1e04015115} 
+static \mbox{\hyperlink{classJsonFactory}{Json\+Factory}} \& Json\+Factory\+::get (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
 This method ensures that there is only one instance of the class. Provides global access to that instance. 
 
 \begin{DoxyReturn}{Returns}
-\mbox{\hyperlink{classJsonFactory}{Json\+Factory}}\& instance. 
+\doxylink{classJsonFactory}{Json\+Factory}\& instance. 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classJsonFactory_a0151b668ee5baa884d63e16b4fda895e}\label{classJsonFactory_a0151b668ee5baa884d63e16b4fda895e}} 
-\index{JsonFactory@{JsonFactory}!getCreator@{getCreator}}
+\Hypertarget{classJsonFactory_adc7c2dd7fb2ec80cb27fb707e183c216}\index{JsonFactory@{JsonFactory}!getCreator@{getCreator}}
 \index{getCreator@{getCreator}!JsonFactory@{JsonFactory}}
 \doxysubsubsection{\texorpdfstring{getCreator()}{getCreator()}}
-{\footnotesize\ttfamily const \mbox{\hyperlink{classJsonCreator}{Json\+Creator}}$\ast$ Json\+Factory\+::get\+Creator (\begin{DoxyParamCaption}\item[{const string \&}]{value }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily \label{classJsonFactory_adc7c2dd7fb2ec80cb27fb707e183c216} 
+const \mbox{\hyperlink{classJsonCreator}{Json\+Creator}} \texorpdfstring{$\ast$}{*} Json\+Factory\+::get\+Creator (\begin{DoxyParamCaption}\item[{const string \&}]{value}{}\end{DoxyParamCaption}) const}
 
 
 
@@ -103,23 +103,23 @@ Get the creator object depending on the passed value.
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-const Json\+Creator$\ast$. 
+const Json\+Creator\texorpdfstring{$\ast$}{*}. 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classJsonFactory_aa642275dd2a223710760651113e2f4fd}\label{classJsonFactory_aa642275dd2a223710760651113e2f4fd}} 
-\index{JsonFactory@{JsonFactory}!operator=@{operator=}}
+\Hypertarget{classJsonFactory_aa642275dd2a223710760651113e2f4fd}\index{JsonFactory@{JsonFactory}!operator=@{operator=}}
 \index{operator=@{operator=}!JsonFactory@{JsonFactory}}
 \doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
-{\footnotesize\ttfamily void Json\+Factory\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classJsonFactory}{Json\+Factory}} const \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+{\footnotesize\ttfamily \label{classJsonFactory_aa642275dd2a223710760651113e2f4fd} 
+void Json\+Factory\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classJsonFactory}{Json\+Factory}} const \&}]{other}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
 
 
 
-Disallow copying of the \mbox{\hyperlink{classJsonFactory}{Json\+Factory}} instance. 
+Disallow copying of the \doxylink{classJsonFactory}{Json\+Factory} instance. 
 
-\mbox{\Hypertarget{classJsonFactory_aadf1fb22f42a68006ea6d1762bfd6f54}\label{classJsonFactory_aadf1fb22f42a68006ea6d1762bfd6f54}} 
-\index{JsonFactory@{JsonFactory}!parseFile@{parseFile}}
+\Hypertarget{classJsonFactory_ad56d6300ea3e2d68e7bf792882de1d04}\index{JsonFactory@{JsonFactory}!parseFile@{parseFile}}
 \index{parseFile@{parseFile}!JsonFactory@{JsonFactory}}
 \doxysubsubsection{\texorpdfstring{parseFile()}{parseFile()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classJson}{Json}}$\ast$ Json\+Factory\+::parse\+File (\begin{DoxyParamCaption}\item[{string}]{file\+Name }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily \label{classJsonFactory_ad56d6300ea3e2d68e7bf792882de1d04} 
+\mbox{\hyperlink{classJson}{Json}} \texorpdfstring{$\ast$}{*} Json\+Factory\+::parse\+File (\begin{DoxyParamCaption}\item[{string}]{file\+Name}{}\end{DoxyParamCaption}) const}
 
 
 
@@ -131,31 +131,13 @@ Attempts to parse the content of the passed file and returns a new JSON element 
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-Json$\ast$ 
+Json\texorpdfstring{$\ast$}{*} 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classJsonFactory_aa28a2e5bef7d885a11b4f754af30b9af}\label{classJsonFactory_aa28a2e5bef7d885a11b4f754af30b9af}} 
-\index{JsonFactory@{JsonFactory}!parseValue@{parseValue}}
+\Hypertarget{classJsonFactory_a456e473be17be3076209c7638606b917}\index{JsonFactory@{JsonFactory}!parseValue@{parseValue}}
 \index{parseValue@{parseValue}!JsonFactory@{JsonFactory}}
 \doxysubsubsection{\texorpdfstring{parseValue()}{parseValue()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classJson}{Json}}$\ast$ Json\+Factory\+::parse\+Value (\begin{DoxyParamCaption}\item[{ifstream \&}]{ifs }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
-
-
-
-Reads the entire file into a string and calls the other parse\+Value method. Closes the file after receiving it. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em ifs} & \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-Json$\ast$ 
-\end{DoxyReturn}
-\mbox{\Hypertarget{classJsonFactory_a495d6bc1d202816c25bd50219949f466}\label{classJsonFactory_a495d6bc1d202816c25bd50219949f466}} 
-\index{JsonFactory@{JsonFactory}!parseValue@{parseValue}}
-\index{parseValue@{parseValue}!JsonFactory@{JsonFactory}}
-\doxysubsubsection{\texorpdfstring{parseValue()}{parseValue()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classJson}{Json}}$\ast$ Json\+Factory\+::parse\+Value (\begin{DoxyParamCaption}\item[{string}]{value }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily \label{classJsonFactory_a456e473be17be3076209c7638606b917} 
+\mbox{\hyperlink{classJson}{Json}} \texorpdfstring{$\ast$}{*} Json\+Factory\+::parse\+Value (\begin{DoxyParamCaption}\item[{const string \&}]{value}{}\end{DoxyParamCaption}) const}
 
 
 
@@ -167,17 +149,35 @@ Attempts to parse the passed value and returns a new JSON element pointer, depen
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-Json$\ast$ 
+Json\texorpdfstring{$\ast$}{*} 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classJsonFactory_af25bee709243b2aba72ffcacff57c31b}\label{classJsonFactory_af25bee709243b2aba72ffcacff57c31b}} 
-\index{JsonFactory@{JsonFactory}!registerValidJson@{registerValidJson}}
+\Hypertarget{classJsonFactory_ab6c9427f5044b84c0ffe6eab24e7eccf}\index{JsonFactory@{JsonFactory}!parseValue@{parseValue}}
+\index{parseValue@{parseValue}!JsonFactory@{JsonFactory}}
+\doxysubsubsection{\texorpdfstring{parseValue()}{parseValue()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classJsonFactory_ab6c9427f5044b84c0ffe6eab24e7eccf} 
+\mbox{\hyperlink{classJson}{Json}} \texorpdfstring{$\ast$}{*} Json\+Factory\+::parse\+Value (\begin{DoxyParamCaption}\item[{ifstream \&}]{ifs}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Reads the entire file into a string and calls the other parse\+Value method. Closes the file after receiving it. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ifs} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Json\texorpdfstring{$\ast$}{*} 
+\end{DoxyReturn}
+\Hypertarget{classJsonFactory_af25bee709243b2aba72ffcacff57c31b}\index{JsonFactory@{JsonFactory}!registerValidJson@{registerValidJson}}
 \index{registerValidJson@{registerValidJson}!JsonFactory@{JsonFactory}}
 \doxysubsubsection{\texorpdfstring{registerValidJson()}{registerValidJson()}}
-{\footnotesize\ttfamily void Json\+Factory\+::register\+Valid\+Json (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classJsonCreator}{Json\+Creator}} $\ast$}]{creator }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{classJsonFactory_af25bee709243b2aba72ffcacff57c31b} 
+void Json\+Factory\+::register\+Valid\+Json (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classJsonCreator}{Json\+Creator}} \texorpdfstring{$\ast$}{*}}]{creator}{}\end{DoxyParamCaption})}
 
 
 
-Registers different \mbox{\hyperlink{classJsonCreator}{Json\+Creator}} objects. 
+Registers different \doxylink{classJsonCreator}{Json\+Creator} objects. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -187,11 +187,11 @@ Registers different \mbox{\hyperlink{classJsonCreator}{Json\+Creator}} objects.
 
 
 \doxysubsection{Member Data Documentation}
-\mbox{\Hypertarget{classJsonFactory_a9122e41c144367c484ea48165b7dd531}\label{classJsonFactory_a9122e41c144367c484ea48165b7dd531}} 
-\index{JsonFactory@{JsonFactory}!creators@{creators}}
+\Hypertarget{classJsonFactory_a9122e41c144367c484ea48165b7dd531}\index{JsonFactory@{JsonFactory}!creators@{creators}}
 \index{creators@{creators}!JsonFactory@{JsonFactory}}
 \doxysubsubsection{\texorpdfstring{creators}{creators}}
-{\footnotesize\ttfamily vector$<$const \mbox{\hyperlink{classJsonCreator}{Json\+Creator}} $\ast$$>$ Json\+Factory\+::creators\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily \label{classJsonFactory_a9122e41c144367c484ea48165b7dd531} 
+vector$<$const \mbox{\hyperlink{classJsonCreator}{Json\+Creator}} \texorpdfstring{$\ast$}{*}$>$ Json\+Factory\+::creators\hspace{0.3cm}{\ttfamily [private]}}
 
 
 

@@ -1,0 +1,25 @@
+\doxysection{Array\+Creator.\+hpp}
+\hypertarget{ArrayCreator_8hpp_source}{}\label{ArrayCreator_8hpp_source}\index{ArrayCreator.hpp@{ArrayCreator.hpp}}
+\mbox{\hyperlink{ArrayCreator_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ ARRAY\_CREATOR\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ ARRAY\_CREATOR\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{JsonCreator_8hpp}{JsonCreator.hpp}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{JsonFactory_8hpp}{JsonFactory.hpp}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{JsonArray_8hpp}{JsonArray.hpp}}"{}}}
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classArrayCreator}{ArrayCreator}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classJsonCreator}{JsonCreator}}}
+\DoxyCodeLine{00012\ \{}
+\DoxyCodeLine{00013\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00018\ \ \ \ \ \mbox{\hyperlink{classArrayCreator_a01b2f99776d3c2716494037a35b9cf1b}{ArrayCreator}}();}
+\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{classJson}{Json}}\ *\mbox{\hyperlink{classArrayCreator_a1bce3931da67fa8a874f8afd37e9b839}{createJson}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ \&\mbox{\hyperlink{classJsonCreator_a253a8df6e5b5cc2e43ce72c27c017b2b}{value}})\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classArrayCreator_af729cc992fc9c78a0774b10cafa3ead4}{getValue}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ \&\textcolor{keywordtype}{object})\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00037\ \ \ \ \ \mbox{\hyperlink{classArrayCreator_a845a3d1d466939db07a88711efb24322}{\string~ArrayCreator}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00053\ \ \ \ \ \mbox{\hyperlink{classJson}{Json}}\ *\mbox{\hyperlink{classArrayCreator_a0b5dced85b00286a316f8b4f408595ce}{parseArray}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ \&\mbox{\hyperlink{classJsonCreator_a253a8df6e5b5cc2e43ce72c27c017b2b}{value}})\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00054\ \};}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

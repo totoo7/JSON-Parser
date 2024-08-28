@@ -1,0 +1,27 @@
+\doxysection{Json\+Int.\+hpp}
+\hypertarget{JsonInt_8hpp_source}{}\label{JsonInt_8hpp_source}\index{JsonInt.hpp@{JsonInt.hpp}}
+\mbox{\hyperlink{JsonInt_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ JSON\_INT\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ JSON\_INT\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Json_8hpp}{Json.hpp}}"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classJsonInt}{JsonInt}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classJson}{Json}}}
+\DoxyCodeLine{00012\ \{}
+\DoxyCodeLine{00013\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00017\ \ \ \mbox{\hyperlink{classJsonInt_aa14e0277f6b06413761dd2ce38f8691b}{JsonInt}}();}
+\DoxyCodeLine{00023\ \ \ \mbox{\hyperlink{classJsonInt_a32439c7e3239ee731bcbe2cfa796a96a}{JsonInt}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classJsonInt_a5fa7318f48977cd312a0cd4d22b1da61}{value}});}
+\DoxyCodeLine{00029\ \ \ \mbox{\hyperlink{classJsonInt_a57fcabdbe9b3d3e0ebe5a5ea12e10fa5}{JsonInt}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classJsonInt}{JsonInt}}\ \&other);}
+\DoxyCodeLine{00036\ \ \ \mbox{\hyperlink{classJsonInt}{JsonInt}}\ \&\mbox{\hyperlink{classJsonInt_ae64031e399cdc13ff8a9b529ddc99392}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classJsonInt}{JsonInt}}\ \&other);}
+\DoxyCodeLine{00042\ \ \ \mbox{\hyperlink{classJson}{Json}}\ *\mbox{\hyperlink{classJsonInt_ae5e419fd134794b9949bb420b7bb8149}{clone}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00047\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classJsonInt_a078d26703f996e4976d390e7b4e40259}{print}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00054\ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classJsonInt_ae3c9c2c3d95e281c7e86afae6fc7c431}{contains}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ \&\mbox{\hyperlink{classJsonInt_a5fa7318f48977cd312a0cd4d22b1da61}{value}})\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00061\ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{classJsonInt_a13077995dae897348cd72024f0527886}{toString}}(\textcolor{keywordtype}{int}\ indentLevel\ =\ 0)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00064\ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classJsonInt_a5fa7318f48977cd312a0cd4d22b1da61}{value}};}
+\DoxyCodeLine{00065\ \};}
+\DoxyCodeLine{00066\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

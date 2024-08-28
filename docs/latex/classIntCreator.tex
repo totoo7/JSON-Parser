@@ -1,79 +1,89 @@
-\hypertarget{classIntCreator}{}\doxysection{Int\+Creator Class Reference}
-\label{classIntCreator}\index{IntCreator@{IntCreator}}
+\doxysection{Int\+Creator Class Reference}
+\hypertarget{classIntCreator}{}\label{classIntCreator}\index{IntCreator@{IntCreator}}
+
+
+A concrete implementation of \doxylink{classJsonCreator}{Json\+Creator} that handles the creation of integer JSON values.  
+
+
 
 
 {\ttfamily \#include $<$Int\+Creator.\+hpp$>$}
 
 
 
-Inheritance diagram for Int\+Creator\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=153pt]{classIntCreator__inherit__graph}
-\end{center}
-\end{figure}
+Inheritance diagram for Int\+Creator\+:
+% FIG 0
 
 
-Collaboration diagram for Int\+Creator\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=153pt]{classIntCreator__coll__graph}
-\end{center}
-\end{figure}
-\doxysubsection*{Public Member Functions}
+Collaboration diagram for Int\+Creator\+:
+% FIG 1
+\doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classIntCreator_a271d39197bf4385235bb48fd770b7632}{Int\+Creator}} ()
-\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classIntCreator}{Int\+Creator}} object. Initializes the \mbox{\hyperlink{classJsonCreator}{Json\+Creator}}\textquotesingle{}s value as \char`\"{}int\char`\"{} with it\textquotesingle{}s constructor. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classJson}{Json}} $\ast$ \mbox{\hyperlink{classIntCreator_a213534cc540255db0306f17de0533f3b}{create\+Json}} (const string \&\mbox{\hyperlink{classJsonCreator_a253a8df6e5b5cc2e43ce72c27c017b2b}{value}}) const override
-\begin{DoxyCompactList}\small\item\em Creates a \mbox{\hyperlink{classJsonInt}{Json\+Int}}. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Construct a new \doxylink{classIntCreator}{Int\+Creator} object. Initializes the \doxylink{classJsonCreator}{Json\+Creator}\textquotesingle{}s value as "{}int"{} with it\textquotesingle{}s constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classJson}{Json}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classIntCreator_a270895b32d54a99a86a6b760f8d4e453}{create\+Json}} (const string \&\mbox{\hyperlink{classJsonCreator_a253a8df6e5b5cc2e43ce72c27c017b2b}{value}}) const override
+\begin{DoxyCompactList}\small\item\em Creates a \doxylink{classJsonInt}{Json\+Int}. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classIntCreator_a3a587cceb1e76ca3a5f413f6e6f3448b}{get\+Value}} (const string \&object) const override
 \begin{DoxyCompactList}\small\item\em Get the value object. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classIntCreator_af3760a8592ea534e03a04cdc2c393b7f}{$\sim$\+Int\+Creator}} ()=default
-\begin{DoxyCompactList}\small\item\em Destroy the \mbox{\hyperlink{classIntCreator}{Int\+Creator}} object. Default destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Private Member Functions}
+\mbox{\hyperlink{classIntCreator_af3760a8592ea534e03a04cdc2c393b7f}{\texorpdfstring{$\sim$}{\string~}\+Int\+Creator}} ()=default
+\begin{DoxyCompactList}\small\item\em Destroy the \doxylink{classIntCreator}{Int\+Creator} object. Default destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classJsonCreator}{Json\+Creator}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classJsonCreator_ad2506f69d9faeae8e8371e19a053932e}{Json\+Creator}} (const string \&\mbox{\hyperlink{classJsonCreator_a253a8df6e5b5cc2e43ce72c27c017b2b}{value}})
+\begin{DoxyCompactList}\small\item\em Construct a new \doxylink{classJson}{Json} Creator object. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classJsonCreator_afaab1c79a532b68f3ce41d9a01168b37}{\texorpdfstring{$\sim$}{\string~}\+Json\+Creator}} ()=default
+\begin{DoxyCompactList}\small\item\em Destroy the \doxylink{classJson}{Json} Creator object. Default destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 bool \mbox{\hyperlink{classIntCreator_ab358f9e79f8e8ba7ab5015532febf7af}{is\+Int}} (const string \&\mbox{\hyperlink{classJsonCreator_a253a8df6e5b5cc2e43ce72c27c017b2b}{value}}) const
 \begin{DoxyCompactList}\small\item\em Checks if a string represents a valid integer. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Additional Inherited Members}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classJsonCreator}{Json\+Creator}}}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classJsonCreator_a253a8df6e5b5cc2e43ce72c27c017b2b}{value}}
+\end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+A concrete implementation of \doxylink{classJsonCreator}{Json\+Creator} that handles the creation of integer JSON values. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{classIntCreator_a271d39197bf4385235bb48fd770b7632}\label{classIntCreator_a271d39197bf4385235bb48fd770b7632}} 
-\index{IntCreator@{IntCreator}!IntCreator@{IntCreator}}
+\Hypertarget{classIntCreator_a271d39197bf4385235bb48fd770b7632}\index{IntCreator@{IntCreator}!IntCreator@{IntCreator}}
 \index{IntCreator@{IntCreator}!IntCreator@{IntCreator}}
 \doxysubsubsection{\texorpdfstring{IntCreator()}{IntCreator()}}
-{\footnotesize\ttfamily Int\+Creator\+::\+Int\+Creator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{classIntCreator_a271d39197bf4385235bb48fd770b7632} 
+Int\+Creator\+::\+Int\+Creator (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
 
 
-Construct a new \mbox{\hyperlink{classIntCreator}{Int\+Creator}} object. Initializes the \mbox{\hyperlink{classJsonCreator}{Json\+Creator}}\textquotesingle{}s value as \char`\"{}int\char`\"{} with it\textquotesingle{}s constructor. 
+Construct a new \doxylink{classIntCreator}{Int\+Creator} object. Initializes the \doxylink{classJsonCreator}{Json\+Creator}\textquotesingle{}s value as "{}int"{} with it\textquotesingle{}s constructor. 
 
-\mbox{\Hypertarget{classIntCreator_af3760a8592ea534e03a04cdc2c393b7f}\label{classIntCreator_af3760a8592ea534e03a04cdc2c393b7f}} 
-\index{IntCreator@{IntCreator}!````~IntCreator@{$\sim$IntCreator}}
-\index{````~IntCreator@{$\sim$IntCreator}!IntCreator@{IntCreator}}
-\doxysubsubsection{\texorpdfstring{$\sim$IntCreator()}{~IntCreator()}}
-{\footnotesize\ttfamily Int\+Creator\+::$\sim$\+Int\+Creator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+\Hypertarget{classIntCreator_af3760a8592ea534e03a04cdc2c393b7f}\index{IntCreator@{IntCreator}!````~IntCreator@{\texorpdfstring{$\sim$}{\string~}IntCreator}}
+\index{````~IntCreator@{\texorpdfstring{$\sim$}{\string~}IntCreator}!IntCreator@{IntCreator}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}IntCreator()}{\string~IntCreator()}}
+{\footnotesize\ttfamily \label{classIntCreator_af3760a8592ea534e03a04cdc2c393b7f} 
+Int\+Creator\+::\texorpdfstring{$\sim$}{\string~}\+Int\+Creator (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
 
 
 
-Destroy the \mbox{\hyperlink{classIntCreator}{Int\+Creator}} object. Default destructor. 
+Destroy the \doxylink{classIntCreator}{Int\+Creator} object. Default destructor. 
 
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{classIntCreator_a213534cc540255db0306f17de0533f3b}\label{classIntCreator_a213534cc540255db0306f17de0533f3b}} 
-\index{IntCreator@{IntCreator}!createJson@{createJson}}
+\Hypertarget{classIntCreator_a270895b32d54a99a86a6b760f8d4e453}\index{IntCreator@{IntCreator}!createJson@{createJson}}
 \index{createJson@{createJson}!IntCreator@{IntCreator}}
 \doxysubsubsection{\texorpdfstring{createJson()}{createJson()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classJson}{Json}}$\ast$ Int\+Creator\+::create\+Json (\begin{DoxyParamCaption}\item[{const string \&}]{value }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily \label{classIntCreator_a270895b32d54a99a86a6b760f8d4e453} 
+\mbox{\hyperlink{classJson}{Json}} \texorpdfstring{$\ast$}{*} Int\+Creator\+::create\+Json (\begin{DoxyParamCaption}\item[{const string \&}]{value}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
-Creates a \mbox{\hyperlink{classJsonInt}{Json\+Int}}. 
+Creates a \doxylink{classJsonInt}{Json\+Int}. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -81,17 +91,17 @@ Creates a \mbox{\hyperlink{classJsonInt}{Json\+Int}}.
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-Json$\ast$ 
+Json\texorpdfstring{$\ast$}{*} 
 \end{DoxyReturn}
 
 
-Implements \mbox{\hyperlink{classJsonCreator_a2b4630e018665302be7608c4b1f4c85f}{Json\+Creator}}.
+Implements \mbox{\hyperlink{classJsonCreator_a98189364ce8a725012c1d6e3886bf8b2}{Json\+Creator}}.
 
-\mbox{\Hypertarget{classIntCreator_a3a587cceb1e76ca3a5f413f6e6f3448b}\label{classIntCreator_a3a587cceb1e76ca3a5f413f6e6f3448b}} 
-\index{IntCreator@{IntCreator}!getValue@{getValue}}
+\Hypertarget{classIntCreator_a3a587cceb1e76ca3a5f413f6e6f3448b}\index{IntCreator@{IntCreator}!getValue@{getValue}}
 \index{getValue@{getValue}!IntCreator@{IntCreator}}
 \doxysubsubsection{\texorpdfstring{getValue()}{getValue()}}
-{\footnotesize\ttfamily bool Int\+Creator\+::get\+Value (\begin{DoxyParamCaption}\item[{const string \&}]{object }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily \label{classIntCreator_a3a587cceb1e76ca3a5f413f6e6f3448b} 
+bool Int\+Creator\+::get\+Value (\begin{DoxyParamCaption}\item[{const string \&}]{object}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
@@ -109,11 +119,11 @@ true if the passed value is a valid integer value, false otherwise.
 
 Implements \mbox{\hyperlink{classJsonCreator_ad43a13717767fd518ad863acc7844906}{Json\+Creator}}.
 
-\mbox{\Hypertarget{classIntCreator_ab358f9e79f8e8ba7ab5015532febf7af}\label{classIntCreator_ab358f9e79f8e8ba7ab5015532febf7af}} 
-\index{IntCreator@{IntCreator}!isInt@{isInt}}
+\Hypertarget{classIntCreator_ab358f9e79f8e8ba7ab5015532febf7af}\index{IntCreator@{IntCreator}!isInt@{isInt}}
 \index{isInt@{isInt}!IntCreator@{IntCreator}}
 \doxysubsubsection{\texorpdfstring{isInt()}{isInt()}}
-{\footnotesize\ttfamily bool Int\+Creator\+::is\+Int (\begin{DoxyParamCaption}\item[{const string \&}]{value }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily \label{classIntCreator_ab358f9e79f8e8ba7ab5015532febf7af} 
+bool Int\+Creator\+::is\+Int (\begin{DoxyParamCaption}\item[{const string \&}]{value}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
