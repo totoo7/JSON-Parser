@@ -51,8 +51,7 @@ private:
      * @brief Parses a JSON object string and constructs a JsonObject.
      *
      * This method processes the input string to extract key-value pairs and constructs
-     * a `JsonObject` from them. It uses `parseObjectKey` to extract keys and
-     * `UTILITIES::parseValue` to extract values. The extracted values are parsed
+     * a `JsonObject` from them. The extracted values are parsed
      * into `Json` objects using the `JsonFactory`. Each parsed key-value pair is stored
      * in a vector of `JsonPair` and used to create a new `JsonObject`.
      *

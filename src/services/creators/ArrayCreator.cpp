@@ -20,8 +20,7 @@ Json *ArrayCreator::parseArray(const string &value) const
     vector<Json*> values;
     while (index < value.length())
     {
-        string element = UTILITIES::parseValue(value, index);
-        index++;
+        string element = parser::parseValue(value, index);
         Json *temp = JsonFactory::get().parseValue(element);
         values.push_back(temp->clone());
         delete temp;

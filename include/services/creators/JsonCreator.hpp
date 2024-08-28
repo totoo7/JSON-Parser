@@ -43,4 +43,8 @@ protected:
     string value;
 };
 
+namespace parser {
+    string parseValue(const string &value, size_t &index);
+};
+
 #endif

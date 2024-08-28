@@ -21,7 +21,7 @@ Json *ObjectCreator::parseObject(const string &value) const
     while (index < value.length())
     {
         string key(parseObjectKey(value, index));
-        string element(UTILITIES::parseValue(value, index));
+        string element(parser::parseValue(value, index));
         if (element.empty())
             continue;
 

@@ -344,7 +344,7 @@ bool JsonValidator::parseLiteral()
     return false;
 }
 
-void JsonValidator::setError(const std::string &message)
+void JsonValidator::setError(const string &message)
 {
-    errorMessage = message + " at position " + std::to_string(pos);
+    errorMessage = message + " at position " + to_string(pos);
 }

@@ -38,7 +38,7 @@ private:
      * @brief Parses a JSON array string and constructs a JsonArray.
      *
      * This method processes the input string to extract values and constructs
-     * a JsonArray from them. It uses UTILITIES::parseValue to extract values from
+     * a JsonArray from them. It uses parser::parseValue to extract values from
      * the input string. Each extracted value is parsed into a Json object using
      * the JsonFactory. The parsed Json objects are cloned and stored in a vector
      * of Json*, which is then used to create a new JsonArray. The temporary `Json`
