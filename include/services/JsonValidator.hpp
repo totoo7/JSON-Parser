@@ -39,7 +39,7 @@ public:
     string getErrorMessage() const;
 
 private:
-    const string &json;
+    const string json;
     size_t pos;
     string errorMessage;
     /**
